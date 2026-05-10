@@ -410,6 +410,95 @@ export const dictionary = {
     },
 
     floatingWhats: "WhatsApp",
+
+    strategyConcierce: {
+      eyebrow: "AI Strategy Concierge",
+      title: "Chat with a premium digital strategist.",
+      subtitle: "Get personalized insights in 2 minutes. No forms, no wait.",
+      greeting: "Hi! I'm ManageFlow's strategy concierge. Let me understand your business.",
+      quickOptions: [
+        "Website Design",
+        "Brand Identity",
+        "Social Media",
+        "Ads & Marketing",
+        "AI Automation",
+        "Pricing",
+        "Book a Call"
+      ],
+      questions: {
+        business: "What type of business do you run?",
+        goal: "What's your main goal right now?",
+        bilingual: "Do you need Arabic + English?",
+        timeline: "What's your timeline?"
+      },
+      followUpOptions: {
+        goal: ["Build a website", "Refresh branding", "Grow on social", "Run ads", "Automate processes"],
+        timeline: ["Urgent (2-4 weeks)", "Standard (4-8 weeks)", "Flexible (whenever)"]
+      },
+      summary: "Here's what I understand...",
+      ctaPrimary: "Chat on WhatsApp",
+      ctaSecondary: "Book 45-min strategy session"
+    },
+
+    websiteAudit: {
+      eyebrow: "Free Website Audit",
+      title: "Get a free audit of your website.",
+      subtitle: "See what's working, what's not, and what to fix next.",
+      inputPlaceholder: "Enter your website URL (e.g., yoursite.com)",
+      submitButton: "Get Audit",
+      scanningSteps: [
+        "Reviewing brand impression...",
+        "Checking UX clarity...",
+        "Checking conversion flow...",
+        "Reviewing Arabic/English readiness...",
+        "Checking trust signals..."
+      ],
+      resultTitle: "Your Website Audit Results",
+      scoreLabels: [
+        "Brand Presence",
+        "User Experience",
+        "Conversion Readiness",
+        "Trust & Credibility",
+        "Content Clarity"
+      ],
+      recommendations: "Key areas to improve:",
+      cta: "Send us your website for a real human review"
+    },
+
+    pricingConfigurator: {
+      eyebrow: "Pricing Estimator",
+      title: "Estimate your project cost.",
+      subtitle: "Transparent, flexible pricing based on your scope.",
+      services: [
+        { label: "Website Design", description: "3-5 pages, mobile-ready" },
+        { label: "Brand Identity", description: "Logo, guidelines, system" },
+        { label: "Social Media", description: "Monthly content + management" },
+        { label: "Ads & Marketing", description: "Campaign setup & creative" },
+        { label: "Content Creation", description: "Copywriting & design" },
+        { label: "AI Automation", description: "Chatbot, workflows, integrations" }
+      ],
+      options: {
+        bilingual: "Bilingual (EN/AR)",
+        webPages: "Number of pages",
+        socialPosts: "Monthly social posts",
+        urgency: "Urgency level"
+      },
+      estimatedInvestment: "Estimated investment:",
+      disclaimer: "Final pricing depends on scope after consultation.",
+      cta: "Book your 45-minute strategy session"
+    },
+
+    beforeAfter: {
+      eyebrow: "See Our Creative Impact",
+      title: "From ordinary to extraordinary.",
+      subtitle: "Hover to see the transformation.",
+      scenarios: [
+        { label: "Brand Identity", description: "From generic to premium" },
+        { label: "Social Media", description: "From zero to growth-ready" },
+        { label: "Website", description: "From outdated to conversion-focused" },
+        { label: "Ads Creative", description: "From placeholder to compelling" }
+      ]
+    },
   },
 
   ar: {
@@ -821,6 +910,95 @@ export const dictionary = {
     },
 
     floatingWhats: "واتساب",
+
+    strategyConcierce: {
+      eyebrow: "مستشار الإستراتيجية الذكي",
+      title: "تحدث مع إستراتيجي رقمي متخصص.",
+      subtitle: "احصل على رؤية شخصية في دقيقتين. بدون نماذج معقدة.",
+      greeting: "مرحباً! أنا مستشار ManageFlow. دعني أفهم احتياجات عملك.",
+      quickOptions: [
+        "تصميم موقع",
+        "هوية العلامة",
+        "وسائل التواصل",
+        "الإعلانات والتسويق",
+        "أتمتة ذكية",
+        "الأسعار",
+        "احجز استشارة"
+      ],
+      questions: {
+        business: "ما نوع عملك؟",
+        goal: "ما أهدافك الرئيسية؟",
+        bilingual: "هل تحتاج إلى عربي وإنجليزي؟",
+        timeline: "ما الجدول الزمني لديك؟"
+      },
+      followUpOptions: {
+        goal: ["بناء موقع ويب", "تحديث الهوية", "النمو في التواصل", "إطلاق إعلانات", "أتمتة العمليات"],
+        timeline: ["عاجل (٢-٤ أسابيع)", "عادي (٤-٨ أسابيع)", "مرن (في أي وقت)"]
+      },
+      summary: "إليك ما فهمته...",
+      ctaPrimary: "تحدث على الواتساب",
+      ctaSecondary: "احجز استشارة ٤٥ دقيقة"
+    },
+
+    websiteAudit: {
+      eyebrow: "تقييم موقعك مجاني",
+      title: "احصل على تقييم مجاني لموقعك.",
+      subtitle: "شاهد ما ينجح وما لا ينجح والخطوات التالية.",
+      inputPlaceholder: "أدخل رابط موقعك (مثل: yoursite.com)",
+      submitButton: "احصل على التقييم",
+      scanningSteps: [
+        "مراجعة انطباع العلامة...",
+        "التحقق من وضوح التجربة...",
+        "فحص سير التحويل...",
+        "مراجعة الجاهزية للعربية والإنجليزية...",
+        "فحص إشارات الثقة..."
+      ],
+      resultTitle: "نتائج تقييم موقعك",
+      scoreLabels: [
+        "حضور العلامة",
+        "تجربة المستخدم",
+        "جاهزية التحويل",
+        "الثقة والمصداقية",
+        "وضوح المحتوى"
+      ],
+      recommendations: "المجالات الرئيسية للتحسين:",
+      cta: "أرسل موقعك للمراجعة الحقيقية من فريقنا"
+    },
+
+    pricingConfigurator: {
+      eyebrow: "حاسبة الأسعار",
+      title: "احسب تكلفة مشروعك.",
+      subtitle: "أسعار شفافة ومرنة حسب احتياجاتك.",
+      services: [
+        { label: "تصميم الموقع", description: "٣-٥ صفحات، محسّن للهاتف" },
+        { label: "هوية العلامة", description: "لوغو، إرشادات، نظام كامل" },
+        { label: "وسائل التواصل", description: "إدارة شهرية للمحتوى" },
+        { label: "الإعلانات والتسويق", description: "إعداد الحملات والإبداعات" },
+        { label: "كتابة المحتوى", description: "النصوص والتصميم" },
+        { label: "أتمتة ذكية", description: "تشات ذكي، سير عمل، تكاملات" }
+      ],
+      options: {
+        bilingual: "ثنائي اللغة (عربي/إنجليزي)",
+        webPages: "عدد الصفحات",
+        socialPosts: "عدد منشورات التواصل شهرياً",
+        urgency: "سرعة التنفيذ"
+      },
+      estimatedInvestment: "الاستثمار المتوقع:",
+      disclaimer: "السعر النهائي يعتمد على التفاصيل بعد استشارة.",
+      cta: "احجز استشارة ٤٥ دقيقة"
+    },
+
+    beforeAfter: {
+      eyebrow: "تأثير إبداعنا",
+      title: "من العادي إلى الاستثنائي.",
+      subtitle: "مرّر الماوس لرؤية التحول.",
+      scenarios: [
+        { label: "هوية العلامة", description: "من عام إلى متميز" },
+        { label: "وسائل التواصل", description: "من صفر إلى النمو الفعلي" },
+        { label: "الموقع", description: "من قديم إلى محقق نتائج" },
+        { label: "الإعلانات الإبداعية", description: "من اختبار إلى احترافي" }
+      ]
+    },
   },
 } as const;
 
