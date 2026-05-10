@@ -7,7 +7,7 @@ import { useLang } from "@/i18n/LanguageProvider";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
+import { buildWhatsAppLink } from "@/lib/constants";
 
 interface PricingRange {
   min: number;
@@ -303,13 +303,16 @@ export function PricingConfigurator() {
                   animate={{ opacity: 1, y: 0 }}
                   className="pt-4 border-t border-paper/10"
                 >
-                  <Button
-                    external
-                    href="https://cal.com/manageflow"
-                    className="w-full"
+                  <a
+                    href={buildWhatsAppLink(
+                      `I'm interested in: ${selectedServices.join(", ")}. Estimated budget: ${formatPrice(estimatedPrice.min)} - ${formatPrice(estimatedPrice.max)}`
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full rounded-full px-6 py-3.5 text-sm font-medium bg-paper text-ink hover:bg-bone transition-colors duration-500"
                   >
                     {dict.cta}
-                  </Button>
+                  </a>
                 </motion.div>
               )}
             </motion.div>

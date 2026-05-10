@@ -7,7 +7,6 @@ import { useLang } from "@/i18n/LanguageProvider";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
 import { buildWhatsAppLink } from "@/lib/constants";
 
 type Step = "welcome" | "business" | "goal" | "bilingual" | "timeline" | "summary";
@@ -291,25 +290,15 @@ export function StrategyConcierce() {
                       </p>
                     </div>
 
-                    <div className="space-y-2">
-                      <a
-                        href={whatsappLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 rounded-[8px] bg-champagne/20 px-4 py-3 text-[13px] text-paper transition-colors hover:bg-champagne/30"
-                      >
-                        {dict.ctaPrimary}
-                        <ChevronRight size={14} strokeWidth={2} />
-                      </a>
-                      <Button
-                        variant="outline"
-                        className="w-full"
-                        external
-                        href="https://cal.com/manageflow"
-                      >
-                        {dict.ctaSecondary}
-                      </Button>
-                    </div>
+                    <a
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 rounded-[8px] bg-champagne/20 px-4 py-3 text-[13px] text-paper transition-colors hover:bg-champagne/30"
+                    >
+                      {dict.ctaPrimary}
+                      <ChevronRight size={14} strokeWidth={2} />
+                    </a>
                   </motion.div>
                 )}
               </AnimatePresence>
