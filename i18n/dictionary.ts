@@ -19,7 +19,7 @@ export const dictionary = {
         "that refuse to look ordinary.",
       ],
       sub: "Premium websites, brand systems, and launch assets — built by an Emirati-led studio for ambitious hospitality, beauty, retail, and real estate businesses across the GCC.",
-      ctaPrimary: "Start a project",
+      ctaPrimary: "Book your strategy call",
       ctaSecondary: "Get your site audited",
       meta: [
         "UAE-based",
@@ -528,6 +528,38 @@ export const dictionary = {
       cta: "Book your 45-minute strategy session"
     },
 
+    whyManageFlow: {
+      eyebrow: "Why choose ManageFlow",
+      title: "Built for your success",
+      sub: "We're not a generic agency. Here's what makes us different.",
+      items: [
+        {
+          title: "Built for UAE businesses",
+          description: "Designed specifically for GCC brands and local context. We understand your market."
+        },
+        {
+          title: "Premium-first execution",
+          description: "Every deliverable reflects luxury standards. No shortcuts, no compromise on quality."
+        },
+        {
+          title: "Transparent starting pricing",
+          description: "Clear price points. No hidden costs. Final quotes depend on scope during consultation."
+        },
+        {
+          title: "Bilingual-ready solutions",
+          description: "English and Arabic considered equally from concept. Both languages feel native."
+        },
+        {
+          title: "Founder-led creative direction",
+          description: "The studio lead works directly on your project. Your work gets personal attention."
+        },
+        {
+          title: "Fast, focused delivery",
+          description: "Limited capacity means your project is a priority. Scoped timelines, defined milestones."
+        }
+      ]
+    },
+
     beforeAfter: {
       eyebrow: "Concept Transformations",
       title: "Concept transformations. Real potential.",
@@ -560,7 +592,7 @@ export const dictionary = {
         "التي ترفض أن تبدو عادية.",
       ],
       sub: "مواقع راقية، أنظمة هويات، وأصول إطلاق — من استوديو يقوده مؤسّس إماراتي للأعمال الطموحة في الضيافة، التجميل، التجزئة، والعقارات في الخليج.",
-      ctaPrimary: "ابدأ مشروعك",
+      ctaPrimary: "احجز استشارة استراتيجية",
       ctaSecondary: "قيّم موقعك",
       meta: [
         "مقرّنا في الإمارات",
@@ -1067,6 +1099,38 @@ export const dictionary = {
       estimatedInvestment: "الاستثمار المتوقع:",
       disclaimer: "السعر النهائي يعتمد على التفاصيل بعد استشارة.",
       cta: "احجز استشارة ٤٥ دقيقة"
+    },
+
+    whyManageFlow: {
+      eyebrow: "لماذا اختر مانجفلو",
+      title: "بُنيت لنجاحك",
+      sub: "نحن لسنا وكالة عامة. إليك ما يميزنا.",
+      items: [
+        {
+          title: "مصنوعة للأعمال الخليجية",
+          description: "مصممة خصيصاً لعلامات الخليج والسياق المحلي. نفهم سوقك."
+        },
+        {
+          title: "التنفيذ يبدأ من الفخامة",
+          description: "كل عمل يعكس معايير الفخامة. لا حقل للاختصارات، بدون أي تنازلات على الجودة."
+        },
+        {
+          title: "أسعار شفافة",
+          description: "نقاط سعر واضحة. لا تكاليف خفية. العروض النهائية تعتمد على التفاصيل."
+        },
+        {
+          title: "حلول بلغتين جاهزة",
+          description: "الإنجليزية والعربية متعادلتان منذ الفكرة الأولى. كلا اللغتين تشعران بالطبيعية."
+        },
+        {
+          title: "الاتجاه الإبداعي من المؤسِّس",
+          description: "قائد الاستوديو يعمل مباشرة على مشروعك. عملك يحظى برعاية شخصية."
+        },
+        {
+          title: "تسليم سريع ومركز",
+          description: "الطاقة المحدودة تعني مشروعك له أولوية. جداول زمنية محددة، مراحل واضحة."
+        }
+      ]
     },
 
     beforeAfter: {
