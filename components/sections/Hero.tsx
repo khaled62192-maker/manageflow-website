@@ -72,7 +72,7 @@ export function Hero() {
               {t.hero.ctaPrimary}
             </Button>
             <a
-              href="#work"
+              href="#audit"
               className="link-underline text-[14px] font-medium tracking-wide text-paper/85 hover:text-paper"
             >
               {t.hero.ctaSecondary}

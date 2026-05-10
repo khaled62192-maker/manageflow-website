@@ -20,7 +20,7 @@ export const dictionary = {
       ],
       sub: "Premium websites, brand systems, and launch assets — built by an Emirati-led studio for ambitious hospitality, beauty, retail, and real estate businesses across the GCC.",
       ctaPrimary: "Start a project",
-      ctaSecondary: "View our work",
+      ctaSecondary: "Get your site audited",
       meta: [
         "UAE-based",
         "GCC-focused",
@@ -496,7 +496,8 @@ export const dictionary = {
         { label: "Brand Identity", description: "From generic to premium" },
         { label: "Social Media", description: "From zero to growth-ready" },
         { label: "Website", description: "From outdated to conversion-focused" },
-        { label: "Ads Creative", description: "From placeholder to compelling" }
+        { label: "Ads Creative", description: "From placeholder to compelling" },
+        { label: "AI Automation", description: "From manual to seamless" }
       ]
     },
   },
@@ -520,7 +521,7 @@ export const dictionary = {
       ],
       sub: "مواقع راقية، أنظمة هويات، وأصول إطلاق — من استوديو يقوده مؤسّس إماراتي للأعمال الطموحة في الضيافة، التجميل، التجزئة، والعقارات في الخليج.",
       ctaPrimary: "ابدأ مشروعك",
-      ctaSecondary: "شاهد أعمالنا",
+      ctaSecondary: "قيّم موقعك",
       meta: [
         "مقرّنا في الإمارات",
         "تركيزنا على الخليج",
@@ -996,7 +997,8 @@ export const dictionary = {
         { label: "هوية العلامة", description: "من عام إلى متميز" },
         { label: "وسائل التواصل", description: "من صفر إلى النمو الفعلي" },
         { label: "الموقع", description: "من قديم إلى محقق نتائج" },
-        { label: "الإعلانات الإبداعية", description: "من اختبار إلى احترافي" }
+        { label: "الإعلانات الإبداعية", description: "من اختبار إلى احترافي" },
+        { label: "أتمتة الذكاء الاصطناعي", description: "من يدوي إلى سلس" }
       ]
     },
   },

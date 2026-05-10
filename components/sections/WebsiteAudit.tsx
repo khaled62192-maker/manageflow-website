@@ -97,7 +97,7 @@ export function WebsiteAudit() {
   );
 
   return (
-    <section className="relative bg-onyx py-24 sm:py-32 lg:py-36">
+    <section id="audit" className="relative bg-onyx py-24 sm:py-32 lg:py-36">
       <Container size="wide">
         <SectionHeader
           index="06"

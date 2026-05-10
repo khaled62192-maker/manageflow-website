@@ -44,36 +44,71 @@ const showcases: ShowcaseCard[] = [
 // ========== BRAND IDENTITY MOCKUP ==========
 function BrandingMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full flex flex-col p-6 gap-6 justify-between">
+    <div className="h-full w-full flex flex-col p-4 gap-5 justify-between">
       {isBefore ? (
-        // BEFORE: Weak, generic logo
+        // BEFORE: Weak, generic, clumsy logo
         <div className="space-y-4">
-          <div className="flex items-center gap-2">
-            <div className="h-10 w-10 bg-gray-500 rounded"></div>
-            <div className="text-sm text-gray-400">Generic Co.</div>
+          <div className="space-y-2">
+            <div className="text-xs text-gray-500">Logo Mark</div>
+            <div className="h-12 w-12 bg-gray-600 rounded-sm flex items-center justify-center">
+              <div className="text-xs text-gray-700">X</div>
+            </div>
           </div>
-          <div className="text-xl font-serif text-gray-400">Bad Font</div>
+          <div className="space-y-2">
+            <div className="text-xs text-gray-500">Wordmark</div>
+            <div className="text-lg font-serif text-gray-600" style={{ letterSpacing: "0.05em" }}>
+              GENERIC
+            </div>
+          </div>
+          <div className="space-y-2 pt-2 border-t border-gray-600">
+            <div className="text-xs text-gray-500">Colors</div>
+            <div className="flex gap-1.5">
+              <div className="h-4 w-4 bg-gray-600 rounded"></div>
+              <div className="h-4 w-4 bg-gray-500 rounded"></div>
+              <div className="h-4 w-4 bg-yellow-600 rounded"></div>
+            </div>
+          </div>
         </div>
       ) : (
         // AFTER: Premium brand system
         <div className="space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="h-10 w-10 bg-gradient-to-br from-champagne to-champagne/60 rounded-sm"></div>
-            <div className="text-xs font-medium text-champagne tracking-widest">MANAGEFLOW</div>
-          </div>
+          {/* Logo */}
           <div className="space-y-2">
-            <div className="text-xs text-paper/60">Color System</div>
-            <div className="flex gap-2">
-              <div className="h-6 w-6 bg-champagne rounded-sm"></div>
-              <div className="h-6 w-6 bg-champagne/60 rounded-sm"></div>
-              <div className="h-6 w-6 bg-champagne/30 rounded-sm"></div>
-              <div className="h-6 w-6 bg-paper/30 rounded-sm"></div>
+            <div className="text-xs text-paper/40 uppercase tracking-wider">Logo System</div>
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-sm bg-gradient-to-br from-champagne via-champagne/80 to-champagne/60 flex items-center justify-center">
+                <div className="text-xs font-serif text-ink">◆</div>
+              </div>
+              <div className="text-xs font-medium text-paper tracking-[0.15em]">MANAGEFLOW</div>
             </div>
           </div>
-          <div className="pt-2 border-t border-paper/10">
-            <div className="text-xs text-paper/40">Type System</div>
-            <div className="text-2xl font-serif text-paper mt-2">Aa</div>
-            <div className="text-xs text-paper/60 mt-1">Fraunces</div>
+
+          {/* Color Palette */}
+          <div className="space-y-1.5">
+            <div className="text-xs text-paper/40 uppercase tracking-wider">Palette</div>
+            <div className="space-y-1">
+              <div className="flex gap-2 items-center">
+                <div className="h-5 w-8 rounded-sm bg-champagne"></div>
+                <div className="text-xs text-paper/50">Primary</div>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div className="h-5 w-8 rounded-sm bg-champagne/50"></div>
+                <div className="text-xs text-paper/50">Secondary</div>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div className="h-5 w-8 rounded-sm bg-paper/25"></div>
+                <div className="text-xs text-paper/50">Accent</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Typography */}
+          <div className="space-y-1 pt-2 border-t border-paper/10">
+            <div className="text-xs text-paper/40 uppercase tracking-wider">Typography</div>
+            <div className="space-y-1">
+              <div className="text-sm font-serif text-paper">Headlines</div>
+              <div className="text-xs text-paper/60">Fraunces · 600</div>
+            </div>
           </div>
         </div>
       )}
@@ -84,29 +119,61 @@ function BrandingMockup({ isBefore }: { isBefore: boolean }) {
 // ========== SOCIAL MEDIA MOCKUP ==========
 function SocialMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full p-4 flex flex-col">
+    <div className="h-full w-full p-4 flex flex-col gap-3">
       {isBefore ? (
-        // BEFORE: Messy, inconsistent feed
+        // BEFORE: Chaotic, inconsistent feed
         <div className="space-y-3">
-          <div className="bg-gray-600 h-16 rounded"></div>
-          <div className="text-xs text-gray-500">Random text...</div>
-          <div className="bg-gray-700 h-20 rounded"></div>
-          <div className="text-xs text-gray-500">No consistency</div>
+          <div className="flex items-center gap-2 pb-2 border-b border-gray-600">
+            <div className="h-5 w-5 rounded-full bg-gray-600"></div>
+            <div className="text-xs text-gray-500">randombrand</div>
+          </div>
+          <div className="space-y-2">
+            <div className="bg-gradient-to-r from-blue-700 to-purple-700 h-14 rounded-sm"></div>
+            <div className="bg-yellow-600 h-14 rounded-sm"></div>
+            <div className="bg-red-700 h-14 rounded-sm"></div>
+          </div>
+          <div className="text-xs text-gray-500">No theme...</div>
         </div>
       ) : (
-        // AFTER: Premium Instagram-style grid
+        // AFTER: Premium Instagram-style curated feed
         <div className="space-y-2">
-          {/* Feed header */}
-          <div className="flex items-center gap-2 pb-2 border-b border-paper/10">
-            <div className="h-6 w-6 rounded-full bg-champagne/40"></div>
-            <div className="text-xs text-paper/70">@brand</div>
+          {/* Profile header */}
+          <div className="flex items-center justify-between pb-3 border-b border-paper/10">
+            <div className="flex items-center gap-2">
+              <div className="h-6 w-6 rounded-full bg-gradient-to-br from-champagne/60 to-champagne/40"></div>
+              <div className="text-xs text-paper/80 font-medium">Brand Name</div>
+            </div>
+            <div className="text-xs text-paper/40">· · ·</div>
           </div>
-          {/* 2x2 grid */}
-          <div className="grid grid-cols-2 gap-1.5 flex-1">
-            <div className="aspect-square bg-gradient-to-br from-champagne/40 to-champagne/10 rounded-sm"></div>
-            <div className="aspect-square bg-gradient-to-br from-champagne/30 to-champagne/5 rounded-sm"></div>
-            <div className="aspect-square bg-gradient-to-br from-champagne/35 to-champagne/15 rounded-sm"></div>
-            <div className="aspect-square bg-gradient-to-br from-champagne/25 to-champagne/8 rounded-sm"></div>
+
+          {/* 2x2 Instagram grid */}
+          <div className="grid grid-cols-2 gap-2 flex-1">
+            {/* Post 1 */}
+            <div className="aspect-square rounded-sm bg-gradient-to-br from-champagne/50 via-champagne/30 to-champagne/10 p-2 flex flex-col justify-between">
+              <div className="text-xs text-paper/60">Summer</div>
+              <div className="text-xs text-paper/40">Campaign</div>
+            </div>
+
+            {/* Post 2 */}
+            <div className="aspect-square rounded-sm bg-gradient-to-br from-champagne/40 to-champagne/5 p-2 flex items-center justify-center">
+              <div className="text-xs text-paper/50 text-center">Brand Story</div>
+            </div>
+
+            {/* Post 3 */}
+            <div className="aspect-square rounded-sm bg-gradient-to-br from-champagne/35 to-paper/10 p-2 flex items-end">
+              <div className="text-xs text-paper/60">Product</div>
+            </div>
+
+            {/* Post 4 */}
+            <div className="aspect-square rounded-sm bg-gradient-to-br from-champagne/25 to-champagne/0 p-2 flex items-center">
+              <div className="text-xs text-paper/40 italic">Moment</div>
+            </div>
+          </div>
+
+          {/* Engagement hints */}
+          <div className="flex gap-2 pt-1 text-xs text-paper/40">
+            <span>♥ 324</span>
+            <span>· 47</span>
           </div>
         </div>
       )}
@@ -119,44 +186,77 @@ function WebsiteMockup({ isBefore }: { isBefore: boolean }) {
   return (
     <div className="h-full w-full flex flex-col bg-onyx/50">
       {/* Header/Nav */}
-      <div className="h-10 border-b border-paper/10 px-4 flex items-center">
+      <div className="h-8 border-b px-3 flex items-center justify-between" style={{ borderColor: isBefore ? "#555" : "#ffffff1a" }}>
         {isBefore ? (
-          <div className="h-2 w-12 bg-gray-600 rounded"></div>
+          <>
+            <div className="h-2 w-14 bg-gray-600 rounded"></div>
+            <div className="flex gap-2">
+              <div className="h-2 w-6 bg-gray-600 rounded"></div>
+              <div className="h-2 w-6 bg-gray-600 rounded"></div>
+            </div>
+          </>
         ) : (
-          <div className="h-2 w-16 bg-champagne rounded"></div>
+          <>
+            <div className="h-2 w-16 bg-champagne/60 rounded-sm"></div>
+            <div className="flex gap-3 items-center">
+              <div className="text-xs text-paper/50">About</div>
+              <div className="text-xs text-paper/50">Work</div>
+              <div className="h-5 px-2 bg-champagne/20 rounded-sm text-paper text-xs flex items-center">Contact</div>
+            </div>
+          </>
         )}
       </div>
 
       {/* Hero section */}
-      <div className="flex-1 flex flex-col justify-center px-4 py-4 gap-3">
+      <div className="flex-1 flex flex-col justify-center px-4 py-3 gap-3">
         {isBefore ? (
-          // BEFORE: Outdated layout
+          // BEFORE: Outdated, cluttered
           <div className="space-y-3">
-            <div className="h-12 bg-gray-700 rounded"></div>
-            <div className="h-2 w-full bg-gray-600 rounded"></div>
-            <div className="h-2 w-4/5 bg-gray-600 rounded"></div>
-            <div className="h-6 bg-gray-700 rounded mt-3"></div>
+            <div className="text-sm font-serif text-gray-600">ALL CAPS HEADLINE</div>
+            <div className="space-y-1.5">
+              <div className="h-2 w-full bg-gray-700 rounded"></div>
+              <div className="h-2 w-full bg-gray-700 rounded"></div>
+              <div className="h-2 w-2/3 bg-gray-700 rounded"></div>
+            </div>
+            <div className="h-6 w-20 bg-gray-600 rounded mt-3"></div>
           </div>
         ) : (
-          // AFTER: Modern premium layout
-          <div className="space-y-3">
-            <div className="h-10 bg-gradient-to-r from-champagne/30 to-champagne/5 rounded-lg"></div>
-            <div className="space-y-1.5">
-              <div className="h-2 w-full bg-paper/15 rounded-full"></div>
-              <div className="h-2 w-4/5 bg-paper/10 rounded-full"></div>
+          // AFTER: Modern, premium, with hierarchy
+          <div className="space-y-2">
+            {/* Eyebrow */}
+            <div className="text-xs text-champagne/60 uppercase tracking-widest">Creative Studio</div>
+
+            {/* Headline */}
+            <div className="space-y-1">
+              <div className="h-6 bg-gradient-to-r from-paper/30 to-paper/10 rounded"></div>
+              <div className="h-6 w-4/5 bg-gradient-to-r from-paper/25 to-transparent rounded"></div>
             </div>
+
+            {/* Supporting text */}
+            <div className="pt-1 space-y-1">
+              <div className="h-2 w-full bg-paper/8 rounded-full"></div>
+              <div className="h-2 w-3/4 bg-paper/6 rounded-full"></div>
+            </div>
+
+            {/* CTA */}
             <div className="pt-2 flex gap-2">
-              <div className="h-6 flex-1 bg-champagne/20 rounded-full"></div>
-              <div className="h-6 flex-1 bg-paper/10 rounded-full"></div>
+              <div className="h-5 px-3 bg-champagne/25 rounded-full text-xs flex items-center text-paper">Explore →</div>
             </div>
           </div>
         )}
       </div>
 
-      {/* Footer */}
-      <div className="h-8 border-t border-paper/10 px-4 flex items-center">
-        <div className="h-1 w-20 bg-paper/15 rounded-full"></div>
-      </div>
+      {/* Featured section */}
+      {!isBefore && (
+        <div className="px-3 pb-3 space-y-2">
+          <div className="text-xs text-paper/40">Featured</div>
+          <div className="grid grid-cols-3 gap-2">
+            <div className="h-8 bg-gradient-to-br from-champagne/20 to-champagne/5 rounded-sm"></div>
+            <div className="h-8 bg-gradient-to-br from-champagne/15 to-champagne/0 rounded-sm"></div>
+            <div className="h-8 bg-paper/10 rounded-sm"></div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -164,27 +264,41 @@ function WebsiteMockup({ isBefore }: { isBefore: boolean }) {
 // ========== ADS CREATIVE MOCKUP ==========
 function AdsMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full p-5 flex flex-col justify-between gap-3">
+    <div className="h-full w-full p-4 flex flex-col justify-between">
       {isBefore ? (
-        // BEFORE: Weak generic ad
+        // BEFORE: Weak, low-effort ad with clashing design
         <div className="space-y-2">
-          <div className="h-20 bg-gray-600 rounded"></div>
-          <div className="text-xs text-gray-500">Generic ad text</div>
-          <div className="h-6 bg-gray-700 rounded"></div>
+          <div className="h-20 bg-gradient-to-r from-blue-700 to-purple-700 rounded flex items-center justify-center">
+            <div className="text-xs text-white">Stock Image</div>
+          </div>
+          <div className="space-y-1">
+            <div className="text-xs font-bold text-gray-600">CHEAP HEADLINE</div>
+            <div className="text-xs text-gray-500 leading-tight">Limited time offer click now!!!</div>
+          </div>
         </div>
       ) : (
-        // AFTER: Premium campaign concept
-        <div className="space-y-2">
-          <div className="text-xs font-medium text-champagne tracking-widest">CAMPAIGN</div>
-          <div className="h-16 bg-gradient-to-br from-champagne/25 to-champagne/5 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-xs text-paper/60">Creative Asset</div>
+        // AFTER: Premium campaign concept with elegant copy
+        <div className="space-y-3">
+          {/* Visual area */}
+          <div className="h-20 bg-gradient-to-br from-champagne/40 via-champagne/15 to-champagne/5 rounded-sm flex items-center justify-center relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-8 h-8 bg-champagne/20 rounded-full blur-lg"></div>
+            <div className="absolute bottom-2 left-2 w-4 h-4 bg-champagne/30 rounded-full"></div>
+            <div className="text-xs text-paper/40">Premium Design</div>
+          </div>
+
+          {/* Copy */}
+          <div className="space-y-1.5">
+            <div className="text-xs font-serif text-paper leading-snug">Luxury meets function</div>
+            <div className="text-xs text-paper/70 leading-[1.4]">
+              Experience premium design that elevates every moment.
             </div>
           </div>
         </div>
       )}
-      <div className={isBefore ? "h-6 bg-gray-700 rounded" : "h-7 bg-champagne/20 rounded-full text-xs flex items-center justify-center text-paper font-medium"}>
-        {!isBefore && "Learn More →"}
+
+      {/* CTA */}
+      <div className={isBefore ? "h-5 bg-gray-700 rounded text-xs text-gray-600 flex items-center justify-center" : "h-6 bg-champagne/25 rounded-full text-xs flex items-center justify-center text-paper font-medium"}>
+        {isBefore ? "CLICK HERE" : "Discover →"}
       </div>
     </div>
   );
@@ -193,48 +307,70 @@ function AdsMockup({ isBefore }: { isBefore: boolean }) {
 // ========== AI AUTOMATION MOCKUP ==========
 function AutomationMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full p-4 flex flex-col gap-3">
+    <div className="h-full w-full p-4 flex flex-col gap-4">
       {isBefore ? (
         // BEFORE: Chaotic manual workflow
-        <div className="space-y-2">
-          <div className="flex gap-1">
-            <div className="h-6 w-6 bg-gray-600 rounded"></div>
-            <div className="flex-1 h-6 bg-gray-700 rounded"></div>
-            <div className="h-6 w-6 bg-gray-600 rounded"></div>
+        <div className="space-y-3">
+          <div className="text-xs text-gray-500 uppercase">Chaos</div>
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <div className="h-8 w-8 bg-gray-600 rounded-full flex items-center justify-center text-xs">📝</div>
+              <div className="flex-1 h-3 bg-gray-700 rounded"></div>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-8 w-8 bg-gray-600 rounded-full flex items-center justify-center text-xs">📧</div>
+              <div className="flex-1 h-3 bg-gray-700 rounded"></div>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-8 w-8 bg-gray-600 rounded-full flex items-center justify-center text-xs">✗</div>
+              <div className="flex-1 h-3 bg-gray-700 rounded"></div>
+            </div>
           </div>
-          <div className="h-2 w-4/5 bg-gray-600 rounded"></div>
-          <div className="flex gap-1 mt-2">
-            <div className="flex-1 h-6 bg-gray-700 rounded"></div>
-            <div className="h-6 w-6 bg-gray-600 rounded"></div>
-          </div>
-          <div className="text-xs text-gray-500">Manual tasks...</div>
+          <div className="text-xs text-gray-500">Multiple tools, manual work</div>
         </div>
       ) : (
-        // AFTER: Elegant automation dashboard
+        // AFTER: Elegant automation flow
         <div className="space-y-2">
-          {/* Top bar */}
-          <div className="flex items-center gap-2 pb-2 border-b border-paper/10">
-            <div className="h-4 w-4 rounded-full bg-champagne/40"></div>
-            <div className="text-xs text-paper/70 flex-1">Automation Flow</div>
-            <div className="h-1 w-8 bg-paper/10 rounded-full"></div>
+          {/* Header */}
+          <div className="flex items-center justify-between pb-2 border-b border-paper/10">
+            <div className="text-xs text-champagne/70 uppercase tracking-wider">Automation</div>
+            <div className="h-1 w-6 bg-paper/10 rounded-full"></div>
           </div>
+
           {/* Workflow nodes */}
-          <div className="space-y-1.5">
+          <div className="space-y-2 py-1">
+            {/* Node 1: Inquiry */}
             <div className="flex items-center gap-2">
-              <div className="h-3 w-3 rounded-full bg-champagne/30"></div>
-              <div className="h-1 w-full bg-paper/8 rounded-full"></div>
-              <div className="text-xs text-paper/40">→</div>
+              <div className="h-4 w-4 rounded-full bg-champagne/50 flex-shrink-0"></div>
+              <div className="flex-1 h-0.5 bg-gradient-to-r from-champagne/30 to-transparent"></div>
+              <div className="text-xs text-paper/40">Receive</div>
             </div>
+
+            {/* Node 2: Process */}
             <div className="flex items-center gap-2">
-              <div className="h-3 w-3 rounded-full bg-champagne/50"></div>
-              <div className="h-1 w-full bg-paper/8 rounded-full"></div>
-              <div className="text-xs text-paper/40">→</div>
+              <div className="h-4 w-4 rounded-full bg-champagne/40 flex-shrink-0"></div>
+              <div className="flex-1 h-0.5 bg-gradient-to-r from-champagne/25 to-transparent"></div>
+              <div className="text-xs text-paper/40">Process</div>
             </div>
+
+            {/* Node 3: Response */}
             <div className="flex items-center gap-2">
-              <div className="h-3 w-3 rounded-full bg-champagne/40"></div>
+              <div className="h-4 w-4 rounded-full bg-champagne/60 flex-shrink-0"></div>
+              <div className="flex-1 h-0.5 bg-gradient-to-r from-champagne/35 to-transparent"></div>
+              <div className="text-xs text-paper/40">Send</div>
+            </div>
+
+            {/* Node 4: Analyze */}
+            <div className="flex items-center gap-2">
+              <div className="h-4 w-4 rounded-full bg-champagne/45 flex-shrink-0"></div>
+              <div className="text-xs text-paper/40">Log</div>
             </div>
           </div>
-          <div className="text-xs text-champagne/60 pt-1">Seamless</div>
+
+          {/* Status indicator */}
+          <div className="pt-2 border-t border-paper/10">
+            <div className="text-xs text-champagne/60">↻ Active 24/7</div>
+          </div>
         </div>
       )}
     </div>
