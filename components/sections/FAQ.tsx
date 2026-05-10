@@ -25,7 +25,7 @@ export function FAQ() {
     >
       <Container size="wide">
         <SectionHeader
-          index="06"
+          index="09"
           eyebrow={t.faq.eyebrow}
           title={t.faq.title}
           sub={t.faq.sub}

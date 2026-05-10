@@ -13,7 +13,7 @@ export function Process() {
     <section id="process" className="relative bg-ink py-24 sm:py-32 lg:py-36">
       <Container size="wide">
         <SectionHeader
-          index="04"
+          index="08"
           eyebrow={t.process.eyebrow}
           title={t.process.title}
           sub={t.process.sub}

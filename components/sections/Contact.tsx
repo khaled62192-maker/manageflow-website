@@ -53,7 +53,7 @@ export function Contact() {
     >
       <Container size="wide">
         <SectionHeader
-          index="07"
+          index="10"
           eyebrow={t.contact.eyebrow}
           title={t.contact.title}
           sub={t.contact.sub}
