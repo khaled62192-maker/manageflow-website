@@ -459,9 +459,9 @@ export const dictionary = {
       quickOptions: [
         "Website Design",
         "Brand Identity",
-        "Social Media",
-        "Ads & Marketing",
-        "AI Automation",
+        "Trust & Credibility",
+        "Sales Materials",
+        "Campaign Creative",
         "Pricing",
         "Book a Call"
       ],
@@ -472,7 +472,7 @@ export const dictionary = {
         timeline: "What's your timeline?"
       },
       followUpOptions: {
-        goal: ["Build a website", "Refresh branding", "Grow on social", "Run ads", "Automate processes"],
+        goal: ["Build a website", "Refresh branding", "Build trust & credibility", "Create sales materials", "Develop campaign creative"],
         timeline: ["Urgent (2-4 weeks)", "Standard (4-8 weeks)", "Flexible (whenever)"]
       },
       summary: "Here's what I understand...",
@@ -510,17 +510,14 @@ export const dictionary = {
       title: "Estimate your project cost.",
       subtitle: "Transparent, flexible pricing based on your scope.",
       services: [
-        { label: "Website Design", description: "3-5 pages, mobile-ready" },
-        { label: "Brand Identity", description: "Logo, guidelines, system" },
-        { label: "Social Media", description: "Monthly content + management" },
-        { label: "Ads & Marketing", description: "Campaign setup & creative" },
-        { label: "Content Creation", description: "Copywriting & design" },
-        { label: "AI Automation", description: "Chatbot, workflows, integrations" }
+        { label: "Website Design", description: "Premium responsive business websites" },
+        { label: "Brand Identity", description: "Logo, visual system, brand foundations" },
+        { label: "Trust & Credibility", description: "Trust signals, credibility upgrades" },
+        { label: "Sales Materials", description: "Company profiles, proposals, decks" },
+        { label: "Campaign Creative", description: "Campaign concepts and creative assets" }
       ],
       options: {
         bilingual: "Bilingual (EN/AR)",
-        webPages: "Number of pages",
-        socialPosts: "Monthly social posts",
         urgency: "Urgency level"
       },
       estimatedInvestment: "Estimated investment:",
@@ -1030,11 +1027,11 @@ export const dictionary = {
       subtitle: "احصل على رؤية شخصية في دقيقتين. بدون نماذج معقدة.",
       greeting: "مرحباً! أنا مستشار ManageFlow. دعني أفهم احتياجات عملك.",
       quickOptions: [
-        "تصميم موقع",
+        "تصميم الموقع",
         "هوية العلامة",
-        "وسائل التواصل",
-        "الإعلانات والتسويق",
-        "أتمتة ذكية",
+        "الثقة والمصداقية",
+        "المواد التسويقية",
+        "إبداع الحملات",
         "الأسعار",
         "احجز استشارة"
       ],
@@ -1045,7 +1042,7 @@ export const dictionary = {
         timeline: "ما الجدول الزمني لديك؟"
       },
       followUpOptions: {
-        goal: ["بناء موقع ويب", "تحديث الهوية", "النمو في التواصل", "إطلاق إعلانات", "أتمتة العمليات"],
+        goal: ["بناء موقع ويب", "تحديث الهوية", "بناء الثقة والمصداقية", "إنشاء مواد تسويقية", "تطوير إبداعات حملات"],
         timeline: ["عاجل (٢-٤ أسابيع)", "عادي (٤-٨ أسابيع)", "مرن (في أي وقت)"]
       },
       summary: "إليك ما فهمته...",
@@ -1083,17 +1080,14 @@ export const dictionary = {
       title: "احسب تكلفة مشروعك.",
       subtitle: "أسعار شفافة ومرنة حسب احتياجاتك.",
       services: [
-        { label: "تصميم الموقع", description: "٣-٥ صفحات، محسّن للهاتف" },
-        { label: "هوية العلامة", description: "لوغو، إرشادات، نظام كامل" },
-        { label: "وسائل التواصل", description: "إدارة شهرية للمحتوى" },
-        { label: "الإعلانات والتسويق", description: "إعداد الحملات والإبداعات" },
-        { label: "كتابة المحتوى", description: "النصوص والتصميم" },
-        { label: "أتمتة ذكية", description: "تشات ذكي، سير عمل، تكاملات" }
+        { label: "تصميم الموقع", description: "مواقع ويب راقية وسريعة التجاوب" },
+        { label: "هوية العلامة", description: "لوغو، نظام بصري، أساسيات الهوية" },
+        { label: "الثقة والمصداقية", description: "إشارات الثقة، تحسينات المصداقية" },
+        { label: "المواد التسويقية", description: "ملفات تعريفية، عروض توضيحية" },
+        { label: "إبداع الحملات", description: "مفاهيم حملات وأصول إبداعية" }
       ],
       options: {
         bilingual: "ثنائي اللغة (عربي/إنجليزي)",
-        webPages: "عدد الصفحات",
-        socialPosts: "عدد منشورات التواصل شهرياً",
         urgency: "سرعة التنفيذ"
       },
       estimatedInvestment: "الاستثمار المتوقع:",

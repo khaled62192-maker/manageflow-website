@@ -15,12 +15,11 @@ interface PricingRange {
 }
 
 const servicePrices: Record<string, PricingRange> = {
-  website: { min: 6500, max: 15000 },
-  branding: { min: 3500, max: 8000 },
-  social: { min: 2500, max: 6000 },
-  ads: { min: 3000, max: 8000 },
-  content: { min: 2000, max: 5000 },
-  ai: { min: 5000, max: 12000 }
+  websitedesign: { min: 6500, max: 15000 },
+  brandidentity: { min: 3500, max: 8000 },
+  trustandcredibility: { min: 2000, max: 5000 },
+  salesmaterials: { min: 2500, max: 6000 },
+  campaigncreative: { min: 3000, max: 8000 }
 };
 
 export function PricingConfigurator() {
@@ -29,8 +28,6 @@ export function PricingConfigurator() {
 
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [bilingual, setBilingual] = useState(false);
-  const [webPages, setWebPages] = useState("5");
-  const [socialPosts, setSocialPosts] = useState("8");
   const [urgency, setUrgency] = useState("standard");
 
   const toggleService = (service: string) => {
@@ -191,50 +188,6 @@ export function PricingConfigurator() {
                       className="hidden"
                     />
                   </label>
-                </div>
-
-                {/* Web Pages */}
-                <div>
-                  <p className="text-[13px] font-medium text-paper mb-2">
-                    {dict.options.webPages}
-                  </p>
-                  <div className="flex gap-2">
-                    {["3", "5", "10+"].map((option) => (
-                      <button
-                        key={option}
-                        onClick={() => setWebPages(option)}
-                        className={`rounded-[8px] px-4 py-2 text-[12px] transition-all ${
-                          webPages === option
-                            ? "bg-champagne/20 text-paper"
-                            : "border border-paper/20 text-paper/60 hover:border-paper/40"
-                        }`}
-                      >
-                        {option} pages
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Social Posts */}
-                <div>
-                  <p className="text-[13px] font-medium text-paper mb-2">
-                    {dict.options.socialPosts}
-                  </p>
-                  <div className="flex gap-2">
-                    {["4", "8", "12+"].map((option) => (
-                      <button
-                        key={option}
-                        onClick={() => setSocialPosts(option)}
-                        className={`rounded-[8px] px-4 py-2 text-[12px] transition-all ${
-                          socialPosts === option
-                            ? "bg-champagne/20 text-paper"
-                            : "border border-paper/20 text-paper/60 hover:border-paper/40"
-                        }`}
-                      >
-                        {option} posts
-                      </button>
-                    ))}
-                  </div>
                 </div>
 
                 {/* Urgency */}

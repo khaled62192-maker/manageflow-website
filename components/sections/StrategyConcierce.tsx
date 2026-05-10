@@ -136,8 +136,8 @@ export function StrategyConcierce() {
                         {[
                           "How much does a website cost?",
                           "What's included in branding?",
-                          "Can you manage social media?",
-                          "Tell me about AI automation",
+                          "How do you build trust signals?",
+                          "What sales materials do you create?",
                           "When can you start?"
                         ].map((chip, i) => (
                           <motion.button
