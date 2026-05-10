@@ -32,8 +32,23 @@ export function Services() {
       : `${t.services.pricePrefix} ${t.services.currency} ${p}`;
 
   return (
-    <section id="services" className="relative bg-ink py-24 sm:py-32 lg:py-36">
-      <Container size="wide">
+    <section id="services" className="relative overflow-hidden bg-ink py-24 sm:py-32 lg:py-36">
+      {/* Section atmosphere */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: [
+            "radial-gradient(ellipse 80% 60% at 90% 5%,  rgba(194,165,123,0.10), transparent 58%)",
+            "radial-gradient(ellipse 65% 55% at 5%  80%, rgba(65,80,95,0.22),    transparent 62%)",
+            "radial-gradient(ellipse 60% 40% at 50% 0%,  rgba(65,80,95,0.10),    transparent 55%)",
+          ].join(","),
+        }}
+      />
+      {/* Film grain */}
+      <div className="grain pointer-events-none absolute inset-0" aria-hidden />
+
+      <Container size="wide" className="relative z-10">
         <SectionHeader
           index="02"
           eyebrow={t.services.eyebrow}
@@ -156,7 +171,12 @@ function TierCard({
 }) {
   const isCustom = !tier.price;
   return (
-    <div className="relative flex h-full flex-col rounded-[18px] border border-paper/10 bg-onyx/65 p-6 transition-colors duration-500 hover:border-paper/20 sm:p-7">
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-[18px] border border-paper/10 bg-onyx/70 p-6 transition-all duration-500 hover:border-champagne/25 card-lift sm:p-7">
+      {/* Champagne top accent */}
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-gradient-to-r from-champagne/55 via-champagne/30 to-transparent transition-transform duration-700 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover:scale-x-100"
+      />
       <span className="text-[10.5px] uppercase tracking-[0.22em] text-champagne/85">
         {tier.name}
       </span>

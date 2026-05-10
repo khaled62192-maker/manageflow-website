@@ -42,7 +42,7 @@ export function SectionHeader({
               <span
                 className={cn(
                   "font-mono text-[11px] tracking-[0.2em]",
-                  onDark ? "text-paper/45" : "text-ash",
+                  onDark ? "text-champagne/50" : "text-ash",
                 )}
               >
                 {index}
@@ -50,7 +50,12 @@ export function SectionHeader({
             )}
             {index && eyebrow && (
               <span
-                className={cn("h-px w-8", onDark ? "bg-paper/15" : "bg-line")}
+                className={cn(
+                  "h-px w-10",
+                  onDark
+                    ? "bg-gradient-to-r from-champagne/35 to-transparent"
+                    : "bg-line"
+                )}
                 aria-hidden
               />
             )}

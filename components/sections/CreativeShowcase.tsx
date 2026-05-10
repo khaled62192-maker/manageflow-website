@@ -20,10 +20,22 @@ export function CreativeShowcase() {
   return (
     <section
       id="work"
-      className="relative border-y border-paper/[0.06] bg-onyx py-24 sm:py-32 lg:py-36"
+      className="relative overflow-hidden border-y border-paper/[0.06] bg-onyx py-24 sm:py-32 lg:py-36"
     >
+      {/* Dramatic ambient backdrop */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: [
+            "radial-gradient(ellipse 80% 60% at 92% 5%,  rgba(194,165,123,0.10), transparent 62%)",
+            "radial-gradient(ellipse 65% 55% at 6%  88%, rgba(65,80,95,0.22),    transparent 65%)",
+            "radial-gradient(ellipse 55% 35% at 50% 0%,  rgba(65,80,95,0.10),    transparent 52%)",
+          ].join(","),
+        }}
+      />
       <Container size="wide">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+        <div className="relative z-10 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             index="03"
             eyebrow={t.showcase.eyebrow}
@@ -33,7 +45,7 @@ export function CreativeShowcase() {
           />
         </div>
 
-        <div className="mt-14 grid gap-5 sm:mt-16 sm:grid-cols-2 sm:gap-6 lg:gap-8">
+        <div className="relative z-10 mt-14 grid gap-5 sm:mt-16 sm:grid-cols-2 sm:gap-6 lg:gap-8">
           {t.showcase.items.map((item, i) => (
             <Reveal key={item.title} y={28} delay={i * 0.06}>
               <ConceptTile
@@ -55,6 +67,8 @@ export function CreativeShowcase() {
           </div>
         </Reveal>
       </Container>
+      {/* Film grain */}
+      <div className="grain pointer-events-none absolute inset-0" aria-hidden />
     </section>
   );
 }
@@ -77,13 +91,23 @@ function ConceptTile({
 
   return (
     <motion.article
-      whileHover={prefersReduced ? undefined : { y: -4 }}
+      whileHover={prefersReduced ? undefined : { y: -8 }}
       transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
-      className="group relative flex h-full flex-col overflow-hidden rounded-[20px] border border-paper/10 bg-ink transition-colors duration-500 hover:border-paper/20 sm:rounded-[24px]"
+      className="card-premium group relative flex h-full flex-col overflow-hidden rounded-[24px] sm:rounded-[28px]"
     >
+      {/* Top champagne hairline — always subtle, glows on hover */}
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-champagne/40 to-transparent"
+        className="absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-champagne/45 to-transparent"
+      />
+      {/* Hover inner glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-10 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+        style={{
+          background:
+            "radial-gradient(500px 300px at 50% 0%, rgba(194,165,123,0.06), transparent 65%)",
+        }}
       />
 
       {/* Mockup stage — fixed aspect for consistent tile heights */}
@@ -92,8 +116,11 @@ function ConceptTile({
           aria-hidden
           className="absolute inset-0"
           style={{
-            background:
-              "radial-gradient(560px 320px at 50% 40%, rgba(194,165,123,0.10), transparent 70%), radial-gradient(700px 400px at 90% 100%, rgba(65,80,95,0.16), transparent 70%)",
+            background: [
+              "radial-gradient(600px 350px at 50% 35%, rgba(194,165,123,0.14), transparent 68%)",
+              "radial-gradient(700px 450px at 90% 100%, rgba(65,80,95,0.20), transparent 68%)",
+              "radial-gradient(400px 250px at 10% 0%,   rgba(65,80,95,0.14), transparent 65%)",
+            ].join(","),
           }}
         />
         <div

@@ -402,8 +402,23 @@ export function BeforeAfterShowcase() {
   };
 
   return (
-    <section id="work" className="relative bg-onyx py-24 sm:py-32 lg:py-36">
-      <Container size="wide">
+    <section id="work" className="relative overflow-hidden bg-onyx py-28 sm:py-36 lg:py-44">
+      {/* Dramatic atmospheric backdrop */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: [
+            "radial-gradient(ellipse 85% 60% at 92% 6%,  rgba(194,165,123,0.10), transparent 58%)",
+            "radial-gradient(ellipse 70% 55% at 5%  85%, rgba(65,80,95,0.22),    transparent 60%)",
+            "radial-gradient(ellipse 60% 40% at 50% 0%,  rgba(65,80,95,0.12),    transparent 52%)",
+          ].join(","),
+        }}
+      />
+      {/* Film grain */}
+      <div className="grain pointer-events-none absolute inset-0" aria-hidden />
+
+      <Container size="wide" className="relative z-10">
         <SectionHeader
           index="04"
           eyebrow={dict.eyebrow}
@@ -442,9 +457,9 @@ export function BeforeAfterShowcase() {
                   className={`group ${isTouch ? "cursor-pointer" : ""}`}
                 >
                   {/* Card container */}
-                  <div className="relative rounded-[24px] border-2 border-paper/25 bg-gradient-to-br from-onyx to-onyx/50 p-1 transition-all duration-500 hover:border-champagne/40 hover:shadow-[0_0_30px_rgba(194,165,123,0.15)]">
+                  <div className="relative rounded-[28px] border border-paper/[0.12] bg-gradient-to-br from-[#171f29] via-onyx/90 to-ink/80 p-1.5 transition-all duration-500 card-lift hover:border-champagne/30">
                     {/* Mockup area */}
-                    <div className="relative h-80 overflow-hidden rounded-[20px] bg-onyx/80">
+                    <div className="relative h-80 overflow-hidden rounded-[22px] bg-ink/90">
                       {/* BEFORE STATE */}
                       <motion.div
                         initial={{ opacity: 1, x: 0 }}
@@ -482,23 +497,21 @@ export function BeforeAfterShowcase() {
                       {/* Labels */}
                       <motion.div
                         initial={{ opacity: 1 }}
-                        animate={{
-                          opacity: isRevealed ? 0 : 1
-                        }}
+                        animate={{ opacity: isRevealed ? 0 : 1 }}
                         transition={{ duration: 0.3 }}
-                        className="absolute bottom-4 left-4 z-30 text-xs text-paper/60"
+                        className="absolute bottom-4 left-4 z-30 inline-flex items-center gap-1.5 rounded-full border border-paper/15 bg-ink/60 px-2.5 py-1 text-[10.5px] tracking-[0.12em] text-paper/55 backdrop-blur-sm"
                       >
+                        <span className="h-1 w-1 rounded-full bg-paper/40" aria-hidden />
                         Before
                       </motion.div>
 
                       <motion.div
                         initial={{ opacity: 0 }}
-                        animate={{
-                          opacity: isRevealed ? 1 : 0
-                        }}
+                        animate={{ opacity: isRevealed ? 1 : 0 }}
                         transition={{ duration: 0.3 }}
-                        className="absolute bottom-4 right-4 z-30 text-xs text-champagne font-medium"
+                        className="absolute bottom-4 right-4 z-30 inline-flex items-center gap-1.5 rounded-full border border-champagne/30 bg-champagne/10 px-2.5 py-1 text-[10.5px] font-medium tracking-[0.12em] text-champagne backdrop-blur-sm"
                       >
+                        <span className="h-1 w-1 rounded-full bg-champagne glow-breathe" aria-hidden />
                         After
                       </motion.div>
 

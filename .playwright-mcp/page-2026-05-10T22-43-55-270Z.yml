@@ -1,0 +1,792 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "ManageFlow — home" [ref=e5] [cursor=pointer]:
+        - /url: "#top"
+        - generic [ref=e6]:
+          - img [ref=e8]
+          - generic [ref=e11]: ManageFlow
+      - navigation "Primary" [ref=e12]:
+        - link "What we do" [ref=e13] [cursor=pointer]:
+          - /url: "#services"
+        - link "Creative Concepts" [ref=e14] [cursor=pointer]:
+          - /url: "#work"
+        - link "Process" [ref=e15] [cursor=pointer]:
+          - /url: "#process"
+        - link "Contact" [ref=e16] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e17]:
+        - group "Language" [ref=e18]:
+          - button "EN" [pressed] [ref=e19]
+          - button "AR" [ref=e20]
+        - link "Start a project" [ref=e21] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=e22]: Start a project
+          - img [ref=e24]
+  - main [ref=e26]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e32]: "01"
+        - generic [ref=e34]: Founder-led studio · United Arab Emirates
+      - heading "Digital presence for GCC brands that refuse to look ordinary." [level=1] [ref=e35]:
+        - generic [ref=e36]: Digital presence for GCC brands
+        - generic [ref=e37]: that refuse to look ordinary.
+      - paragraph [ref=e38]: Premium websites, brand systems, and launch assets — built by an Emirati-led studio for ambitious hospitality, beauty, retail, and real estate businesses across the GCC.
+      - generic [ref=e39]:
+        - link "Book your strategy call" [ref=e40] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=e41]: Book your strategy call
+          - img [ref=e43]
+        - link "Get your free website review" [ref=e45] [cursor=pointer]:
+          - /url: "#review"
+      - list [ref=e48]:
+        - listitem [ref=e49]: UAE-based
+        - listitem [ref=e51]: GCC-focused
+        - listitem [ref=e53]: Bilingual EN / AR
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: "02"
+          - generic [ref=e62]: What we do
+        - heading "Five clear offerings. One standard." [level=2] [ref=e64]
+        - paragraph [ref=e66]: Premium, understandable, and built for UAE businesses. Clear starting points. Transparent pricing.
+      - list [ref=e67]:
+        - listitem [ref=e68]:
+          - button "01 Brand Identity Identity 2 tiers" [expanded] [ref=e70]:
+            - generic [ref=e71]: "01"
+            - generic [ref=e72]:
+              - generic [ref=e73]: Brand Identity
+              - generic [ref=e74]:
+                - generic [ref=e75]: Identity
+                - generic [ref=e76]: ·
+                - generic [ref=e77]: 2 tiers
+            - img [ref=e79]
+          - generic [ref=e82]:
+            - paragraph [ref=e83]: Craft a visual identity your audience remembers.
+            - generic [ref=e84]:
+              - generic [ref=e85]:
+                - generic [ref=e86]: Starting Package
+                - paragraph [ref=e87]: from AED 1,500
+                - paragraph [ref=e88]: Essential brand identity foundation.
+                - generic [ref=e89]:
+                  - text: Includes
+                  - list [ref=e90]:
+                    - listitem [ref=e91]:
+                      - generic [ref=e93]: Custom logo concept
+                    - listitem [ref=e94]:
+                      - generic [ref=e96]: Color palette
+                    - listitem [ref=e97]:
+                      - generic [ref=e99]: Typography direction
+                    - listitem [ref=e100]:
+                      - generic [ref=e102]: Mini brand guideline
+                    - listitem [ref=e103]:
+                      - generic [ref=e105]: Basic brand assets
+              - generic [ref=e106]:
+                - generic [ref=e107]: Premium Upsells
+                - paragraph [ref=e108]: Custom quote
+                - paragraph [ref=e109]: Expand your identity system.
+                - generic [ref=e110]:
+                  - text: Includes
+                  - list [ref=e111]:
+                    - listitem [ref=e112]:
+                      - generic [ref=e114]: Business cards
+                    - listitem [ref=e115]:
+                      - generic [ref=e117]: Packaging design
+                    - listitem [ref=e118]:
+                      - generic [ref=e120]: Full brand systems
+                    - listitem [ref=e121]:
+                      - generic [ref=e123]: Social templates
+                    - listitem [ref=e124]:
+                      - generic [ref=e126]: Advanced brand guidelines
+        - listitem [ref=e127]:
+          - button "02 Website Design Web 2 tiers" [ref=e129]:
+            - generic [ref=e130]: "02"
+            - generic [ref=e131]:
+              - generic [ref=e132]: Website Design
+              - generic [ref=e133]:
+                - generic [ref=e134]: Web
+                - generic [ref=e135]: ·
+                - generic [ref=e136]: 2 tiers
+            - img [ref=e138]
+          - generic [ref=e140]:
+            - paragraph [ref=e141]: Premium digital experiences designed to convert.
+            - generic [ref=e142]:
+              - generic [ref=e143]:
+                - generic [ref=e144]: Starting Package
+                - paragraph [ref=e145]: from AED 2,500
+                - paragraph [ref=e146]: Premium responsive website foundation.
+                - generic [ref=e147]:
+                  - text: Includes
+                  - list [ref=e148]:
+                    - listitem [ref=e149]:
+                      - generic [ref=e151]: Premium responsive website
+                    - listitem [ref=e152]:
+                      - generic [ref=e154]: Mobile optimization
+                    - listitem [ref=e155]:
+                      - generic [ref=e157]: WhatsApp/contact integration
+                    - listitem [ref=e158]:
+                      - generic [ref=e160]: Clean premium UI
+                    - listitem [ref=e161]:
+                      - generic [ref=e163]: Basic multi-section structure
+              - generic [ref=e164]:
+                - generic [ref=e165]: Premium Upsells
+                - paragraph [ref=e166]: Custom quote
+                - paragraph [ref=e167]: Enhance your digital presence.
+                - generic [ref=e168]:
+                  - text: Includes
+                  - list [ref=e169]:
+                    - listitem [ref=e170]:
+                      - generic [ref=e172]: Arabic + English bilingual
+                    - listitem [ref=e173]:
+                      - generic [ref=e175]: Booking systems
+                    - listitem [ref=e176]:
+                      - generic [ref=e178]: Advanced animations
+                    - listitem [ref=e179]:
+                      - generic [ref=e181]: Additional pages
+                    - listitem [ref=e182]:
+                      - generic [ref=e184]: Landing pages
+                    - listitem [ref=e185]:
+                      - generic [ref=e187]: Copywriting
+                    - listitem [ref=e188]:
+                      - generic [ref=e190]: CMS integration
+        - listitem [ref=e191]:
+          - button "03 Professional Presence Presence 2 tiers" [ref=e193]:
+            - generic [ref=e194]: "03"
+            - generic [ref=e195]:
+              - generic [ref=e196]: Professional Presence
+              - generic [ref=e197]:
+                - generic [ref=e198]: Presence
+                - generic [ref=e199]: ·
+                - generic [ref=e200]: 2 tiers
+            - img [ref=e202]
+          - generic [ref=e204]:
+            - paragraph [ref=e205]: Look more professional and build trust before the first conversation.
+            - generic [ref=e206]:
+              - generic [ref=e207]:
+                - generic [ref=e208]: Starting Package
+                - paragraph [ref=e209]: from AED 1,200
+                - paragraph [ref=e210]: Professional design upgrades that build immediate trust.
+                - generic [ref=e211]:
+                  - text: Includes
+                  - list [ref=e212]:
+                    - listitem [ref=e213]:
+                      - generic [ref=e215]: Professional visual upgrades
+                    - listitem [ref=e216]:
+                      - generic [ref=e218]: Google Business profile polish
+                    - listitem [ref=e219]:
+                      - generic [ref=e221]: Testimonials & reviews section
+                    - listitem [ref=e222]:
+                      - generic [ref=e224]: Contact clarity improvements
+                    - listitem [ref=e225]:
+                      - generic [ref=e227]: Trust signal enhancements
+              - generic [ref=e228]:
+                - generic [ref=e229]: Premium Upsells
+                - paragraph [ref=e230]: Custom quote
+                - paragraph [ref=e231]: Deepen your professional standing.
+                - generic [ref=e232]:
+                  - text: Includes
+                  - list [ref=e233]:
+                    - listitem [ref=e234]:
+                      - generic [ref=e236]: Review generation assets
+                    - listitem [ref=e237]:
+                      - generic [ref=e239]: Credibility collateral
+                    - listitem [ref=e240]:
+                      - generic [ref=e242]: Certification display design
+                    - listitem [ref=e243]:
+                      - generic [ref=e245]: Full credibility audit
+        - listitem [ref=e246]:
+          - button "04 Sales Materials Sales 2 tiers" [ref=e248]:
+            - generic [ref=e249]: "04"
+            - generic [ref=e250]:
+              - generic [ref=e251]: Sales Materials
+              - generic [ref=e252]:
+                - generic [ref=e253]: Sales
+                - generic [ref=e254]: ·
+                - generic [ref=e255]: 2 tiers
+            - img [ref=e257]
+          - generic [ref=e259]:
+            - paragraph [ref=e260]: Professional materials that help your business sell with confidence.
+            - generic [ref=e261]:
+              - generic [ref=e262]:
+                - generic [ref=e263]: Starting Package
+                - paragraph [ref=e264]: from AED 900
+                - paragraph [ref=e265]: Choose one premium sales material.
+                - generic [ref=e266]:
+                  - text: Includes
+                  - list [ref=e267]:
+                    - listitem [ref=e268]:
+                      - generic [ref=e270]: Company profile
+                    - listitem [ref=e271]:
+                      - generic [ref=e273]: Proposal template
+                    - listitem [ref=e274]:
+                      - generic [ref=e276]: Brochure
+                    - listitem [ref=e277]:
+                      - generic [ref=e279]: Pitch deck
+                    - listitem [ref=e280]:
+                      - generic [ref=e282]: Capability deck
+              - generic [ref=e283]:
+                - generic [ref=e284]: Premium Upsells
+                - paragraph [ref=e285]: Custom quote
+                - paragraph [ref=e286]: Expand your materials toolkit.
+                - generic [ref=e287]:
+                  - text: Includes
+                  - list [ref=e288]:
+                    - listitem [ref=e289]:
+                      - generic [ref=e291]: Additional pages
+                    - listitem [ref=e292]:
+                      - generic [ref=e294]: Bilingual versions
+                    - listitem [ref=e295]:
+                      - generic [ref=e297]: Premium presentation design
+                    - listitem [ref=e298]:
+                      - generic [ref=e300]: Presentation animations
+                    - listitem [ref=e301]:
+                      - generic [ref=e303]: Multi-document packages
+        - listitem [ref=e304]:
+          - button "05 Promotional Campaigns Promo 2 tiers" [ref=e306]:
+            - generic [ref=e307]: "05"
+            - generic [ref=e308]:
+              - generic [ref=e309]: Promotional Campaigns
+              - generic [ref=e310]:
+                - generic [ref=e311]: Promo
+                - generic [ref=e312]: ·
+                - generic [ref=e313]: 2 tiers
+            - img [ref=e315]
+          - generic [ref=e317]:
+            - paragraph [ref=e318]: Clear, branded campaigns that promote your business and drive action.
+            - generic [ref=e319]:
+              - generic [ref=e320]:
+                - generic [ref=e321]: Starting Package
+                - paragraph [ref=e322]: from AED 1,000
+                - paragraph [ref=e323]: Essential campaign creative assets.
+                - generic [ref=e324]:
+                  - text: Includes
+                  - list [ref=e325]:
+                    - listitem [ref=e326]:
+                      - generic [ref=e328]: Campaign concept & direction
+                    - listitem [ref=e329]:
+                      - generic [ref=e331]: Promotional visual design
+                    - listitem [ref=e332]:
+                      - generic [ref=e334]: Ad creative assets (2–3 formats)
+              - generic [ref=e335]:
+                - generic [ref=e336]: Premium Upsells
+                - paragraph [ref=e337]: Custom quote
+                - paragraph [ref=e338]: Expand your campaign reach.
+                - generic [ref=e339]:
+                  - text: Includes
+                  - list [ref=e340]:
+                    - listitem [ref=e341]:
+                      - generic [ref=e343]: Multiple creatives
+                    - listitem [ref=e344]:
+                      - generic [ref=e346]: Campaign bundles
+                    - listitem [ref=e347]:
+                      - generic [ref=e349]: Ramadan & Eid campaign packages
+                    - listitem [ref=e350]:
+                      - generic [ref=e352]: Bilingual campaign assets
+                    - listitem [ref=e353]:
+                      - generic [ref=e355]: Motion/video assets
+                    - listitem [ref=e356]:
+                      - generic [ref=e358]: Launch campaign packages
+    - generic [ref=e360]:
+      - generic [ref=e361]:
+        - generic [ref=e363]:
+          - generic [ref=e364]: "03"
+          - generic [ref=e366]: Why choose ManageFlow
+        - heading "Built for your success" [level=2] [ref=e368]
+        - paragraph [ref=e370]: We're not a generic agency. Here's what makes us different.
+      - generic [ref=e371]:
+        - generic [ref=e374]:
+          - generic: "01"
+          - text: "01"
+          - heading "Built for UAE businesses" [level=3] [ref=e376]
+          - paragraph [ref=e377]: Designed specifically for GCC brands and local context. We understand your market.
+        - generic [ref=e380]:
+          - generic: "02"
+          - text: "02"
+          - heading "Premium-first execution" [level=3] [ref=e382]
+          - paragraph [ref=e383]: Every deliverable reflects luxury standards. No shortcuts, no compromise on quality.
+        - generic [ref=e386]:
+          - generic: "03"
+          - text: "03"
+          - heading "Transparent starting pricing" [level=3] [ref=e388]
+          - paragraph [ref=e389]: Clear price points listed openly. Final quotes depend on scope — confirmed together.
+        - generic [ref=e392]:
+          - generic: "04"
+          - text: "04"
+          - heading "Bilingual-ready solutions" [level=3] [ref=e394]
+          - paragraph [ref=e395]: English and Arabic considered equally from concept. Both languages feel native.
+        - generic [ref=e398]:
+          - generic: "05"
+          - text: "05"
+          - heading "Founder-led creative direction" [level=3] [ref=e400]
+          - paragraph [ref=e401]: The studio lead works directly on your project. Your work gets personal attention.
+        - generic [ref=e404]:
+          - generic: "06"
+          - text: "06"
+          - heading "Fast, focused delivery" [level=3] [ref=e406]
+          - paragraph [ref=e407]: Limited capacity means your project is a priority. Scoped timelines, defined milestones.
+    - generic [ref=e409]:
+      - generic [ref=e410]:
+        - generic [ref=e412]:
+          - generic [ref=e413]: "04"
+          - generic [ref=e415]: Creative Concepts
+        - heading "Concept transformations. Real potential." [level=2] [ref=e417]
+        - paragraph [ref=e419]: Hover to reveal what's possible.
+      - generic [ref=e421]:
+        - generic [ref=e423]:
+          - generic [ref=e424]:
+            - generic [ref=e427]:
+              - generic [ref=e428]:
+                - generic [ref=e429]: Logo
+                - generic [ref=e430]:
+                  - generic [ref=e431]: MB
+                  - generic [ref=e432]: MAISON BREW
+              - generic [ref=e434]: Colors
+              - generic [ref=e440]:
+                - generic [ref=e441]: Font
+                - generic [ref=e442]: Arial · Times New Roman
+              - generic [ref=e443]:
+                - generic [ref=e444]: Applications
+                - generic [ref=e445]: Inconsistent usage
+            - generic [ref=e448]:
+              - generic [ref=e449]:
+                - generic [ref=e450]: Identity
+                - generic [ref=e451]:
+                  - generic [ref=e453]: 𝓜
+                  - generic [ref=e454]:
+                    - generic [ref=e455]: MAISON
+                    - generic [ref=e456]: B R E W
+              - generic [ref=e457]:
+                - generic [ref=e458]: Palette
+                - generic [ref=e459]:
+                  - generic [ref=e462]: Champagne
+                  - generic [ref=e465]: Espresso
+                  - generic [ref=e468]: Cream
+                  - generic [ref=e471]: Ivory
+              - generic [ref=e472]:
+                - generic [ref=e473]: Typography
+                - generic [ref=e474]:
+                  - generic [ref=e475]: Fraunces Display
+                  - generic [ref=e476]: Inter Body
+              - generic [ref=e477]: + Business card · Packaging · Signage
+            - generic [ref=e478]: Before
+            - generic [ref=e480]: After
+          - generic [ref=e482]:
+            - generic [ref=e483]:
+              - heading "Brand Identity" [level=3] [ref=e484]
+              - generic [ref=e485]: ✓
+            - paragraph [ref=e486]: From weak to memorable
+        - generic [ref=e488]:
+          - generic [ref=e489]:
+            - generic [ref=e491]:
+              - generic [ref=e492]:
+                - generic [ref=e493]: MAISON CAFE
+                - generic [ref=e494]:
+                  - generic [ref=e495]: HOME
+                  - generic [ref=e496]: MENU
+              - generic [ref=e498]:
+                - generic [ref=e499]: WELCOME!!!
+                - generic [ref=e504]: BUY NOW!!!
+            - generic [ref=e506]:
+              - generic [ref=e507]:
+                - generic [ref=e508]: Maison Brew
+                - generic [ref=e509]:
+                  - generic [ref=e510]: Reserve
+                  - generic [ref=e511]: Heritage
+                  - generic [ref=e512]: Contact
+              - generic [ref=e513]:
+                - generic [ref=e514]:
+                  - generic [ref=e515]:
+                    - generic [ref=e516]: Specialty Coffee
+                    - generic [ref=e518]: Moments of refined craft
+                    - generic [ref=e520]: Carefully selected origins. Premium roasting. Presented with intention.
+                  - generic [ref=e522]: Reserve your spot →
+                - generic [ref=e523]:
+                  - generic [ref=e524]: Collections
+                  - generic [ref=e525]:
+                    - generic [ref=e526]: Heritage
+                    - generic [ref=e527]: Reserve
+                    - generic [ref=e528]: Single Origin
+            - generic [ref=e529]: Before
+            - generic [ref=e531]: After
+          - generic [ref=e533]:
+            - generic [ref=e534]:
+              - heading "Website Design" [level=3] [ref=e535]
+              - generic [ref=e536]: ✓
+            - paragraph [ref=e537]: From outdated to premium
+        - generic [ref=e539]:
+          - generic [ref=e540]:
+            - generic [ref=e543]:
+              - generic [ref=e544]: About
+              - generic [ref=e549]: No testimonials
+              - generic [ref=e550]: Contact unclear
+            - generic [ref=e553]:
+              - generic [ref=e554]:
+                - generic [ref=e555]: Testimonial
+                - generic [ref=e556]:
+                  - generic [ref=e557]: "\"Exceptional attention to craft and detail.\""
+                  - generic [ref=e558]: — Premium Client, Dubai
+              - generic [ref=e559]:
+                - generic [ref=e560]: Credentials
+                - generic [ref=e561]:
+                  - generic [ref=e562]:
+                    - generic [ref=e563]: ✓
+                    - generic [ref=e564]: 8+ years heritage
+                  - generic [ref=e565]:
+                    - generic [ref=e566]: ✓
+                    - generic [ref=e567]: 600+ satisfied patrons
+                  - generic [ref=e568]:
+                    - generic [ref=e569]: ✓
+                    - generic [ref=e570]: Premium certification
+              - generic [ref=e572]:
+                - generic [ref=e573]: Contact
+                - generic [ref=e574]: +971 4 XXXX XXXX
+                - generic [ref=e575]: hello@maisonbrew.ae
+            - generic [ref=e576]: Before
+            - generic [ref=e578]: After
+          - generic [ref=e580]:
+            - generic [ref=e581]:
+              - heading "Professional Presence" [level=3] [ref=e582]
+              - generic [ref=e583]: ✓
+            - paragraph [ref=e584]: From invisible to trusted
+        - generic [ref=e586]:
+          - generic [ref=e587]:
+            - generic [ref=e590]:
+              - generic [ref=e591]: proposal_final_v3.docx
+              - generic [ref=e597]: Times New Roman
+              - generic [ref=e598]: 1-inch margins
+            - generic [ref=e601]:
+              - generic [ref=e602]: Presentation Deck
+              - generic [ref=e603]:
+                - generic [ref=e604]:
+                  - generic [ref=e605]: Maison Brew
+                  - generic [ref=e606]: Business Proposal
+                - generic [ref=e608]: Our Heritage & Vision
+                - generic [ref=e610]: Premium Value Proposition
+                - generic [ref=e612]: Next Steps & Partnership
+              - generic [ref=e613]: 12 slides · premium typeface · refined hierarchy
+            - generic [ref=e614]: Before
+            - generic [ref=e616]: After
+          - generic [ref=e618]:
+            - generic [ref=e619]:
+              - heading "Sales Materials" [level=3] [ref=e620]
+              - generic [ref=e621]: ✓
+            - paragraph [ref=e622]: From amateur to professional
+        - generic [ref=e624]:
+          - generic [ref=e625]:
+            - generic [ref=e627]:
+              - generic [ref=e628]:
+                - generic [ref=e629]: MEGA SALE!!!
+                - generic [ref=e630]:
+                  - generic [ref=e631]: 50% OFF NOW
+                  - generic [ref=e632]: Act immediately!!!
+              - generic [ref=e633]: BUY NOW
+            - generic [ref=e635]:
+              - generic [ref=e636]:
+                - generic [ref=e637]:
+                  - generic [ref=e639]: Savor the Craft
+                  - generic [ref=e640]: Heritage meets innovation
+                - generic [ref=e641]:
+                  - generic [ref=e642]: Premium Experiences
+                  - generic [ref=e643]: Thoughtfully curated. Exceptionally crafted.
+              - generic [ref=e644]: Discover →
+            - generic [ref=e645]: Before
+            - generic [ref=e647]: After
+          - generic [ref=e649]:
+            - generic [ref=e650]:
+              - heading "Promotional Campaigns" [level=3] [ref=e651]
+              - generic [ref=e652]: ✓
+            - paragraph [ref=e653]: From forgettable to premium
+    - generic [ref=e655]:
+      - generic [ref=e656]:
+        - generic [ref=e658]:
+          - generic [ref=e659]: "05"
+          - generic [ref=e661]: Build Your Package
+        - heading "Build your perfect package." [level=2] [ref=e663]
+        - paragraph [ref=e665]: Tell us what you need. We'll put the right package together for you.
+      - generic [ref=e669]:
+        - paragraph [ref=e671]: Hi! Select what you need and we'll build your package together.
+        - generic [ref=e672]:
+          - button "Website Design" [ref=e673]
+          - button "Brand Identity" [ref=e674]
+          - button "Professional Presence" [ref=e675]
+          - button "Sales Materials" [ref=e676]
+          - button "Promotional Campaigns" [ref=e677]
+          - button "Pricing" [ref=e678]
+          - button "Book a Call" [ref=e679]
+    - generic [ref=e681]:
+      - generic [ref=e682]:
+        - generic [ref=e684]:
+          - generic [ref=e685]: "06"
+          - generic [ref=e687]: Free Website Review
+        - heading "Get a free review of your website." [level=2] [ref=e689]
+        - paragraph [ref=e691]: See what's working, what's holding you back, and what to fix first.
+      - generic [ref=e694]:
+        - textbox "Enter your website URL (e.g., yoursite.com)" [ref=e695]
+        - button "Get My Free Review" [ref=e696]
+    - generic [ref=e698]:
+      - generic [ref=e699]:
+        - generic [ref=e701]:
+          - generic [ref=e702]: "07"
+          - generic [ref=e704]: Pricing Estimator
+        - heading "Estimate your project cost." [level=2] [ref=e706]
+        - paragraph [ref=e708]: Transparent, flexible pricing based on your scope.
+      - generic [ref=e711]:
+        - generic [ref=e712]:
+          - heading "Select Services" [level=3] [ref=e713]
+          - generic [ref=e714]:
+            - button "Website Design Premium responsive business websites" [ref=e715]:
+              - generic [ref=e718]:
+                - paragraph [ref=e719]: Website Design
+                - paragraph [ref=e720]: Premium responsive business websites
+            - button "Brand Identity Logo, visual system, brand foundations" [ref=e721]:
+              - generic [ref=e724]:
+                - paragraph [ref=e725]: Brand Identity
+                - paragraph [ref=e726]: Logo, visual system, brand foundations
+            - button "Professional Presence Professional presence, credibility upgrades" [ref=e727]:
+              - generic [ref=e730]:
+                - paragraph [ref=e731]: Professional Presence
+                - paragraph [ref=e732]: Professional presence, credibility upgrades
+            - button "Sales Materials Company profiles, proposals, decks" [ref=e733]:
+              - generic [ref=e736]:
+                - paragraph [ref=e737]: Sales Materials
+                - paragraph [ref=e738]: Company profiles, proposals, decks
+            - button "Promotional Campaigns Promotional campaigns and creative assets" [ref=e739]:
+              - generic [ref=e742]:
+                - paragraph [ref=e743]: Promotional Campaigns
+                - paragraph [ref=e744]: Promotional campaigns and creative assets
+        - generic [ref=e745]:
+          - generic [ref=e749] [cursor=pointer]:
+            - paragraph [ref=e750]: Bilingual (EN/AR)
+            - paragraph [ref=e751]: +30% to estimate
+          - generic [ref=e752]:
+            - paragraph [ref=e753]: Urgency level
+            - generic [ref=e754]:
+              - button "Standard (4-8 weeks)" [ref=e755]
+              - button "Rush (+20%)" [ref=e756]
+        - paragraph [ref=e758]: Select services to see pricing estimate
+    - generic [ref=e759]:
+      - generic [ref=e761]:
+        - generic [ref=e762]: Brand strategy
+        - generic [ref=e764]: Visual identity
+        - generic [ref=e766]: Editorial websites
+        - generic [ref=e768]: Promotional campaigns
+        - generic [ref=e770]: Bilingual delivery
+        - generic [ref=e772]: Launch direction
+        - generic [ref=e774]: Premium content
+        - generic [ref=e776]: Founder-led execution
+        - generic [ref=e778]: Brand strategy
+        - generic [ref=e780]: Visual identity
+        - generic [ref=e782]: Editorial websites
+        - generic [ref=e784]: Promotional campaigns
+        - generic [ref=e786]: Bilingual delivery
+        - generic [ref=e788]: Launch direction
+        - generic [ref=e790]: Premium content
+        - generic [ref=e792]: Founder-led execution
+        - generic [ref=e794]: Brand strategy
+        - generic [ref=e796]: Visual identity
+        - generic [ref=e798]: Editorial websites
+        - generic [ref=e800]: Promotional campaigns
+        - generic [ref=e802]: Bilingual delivery
+        - generic [ref=e804]: Launch direction
+        - generic [ref=e806]: Premium content
+        - generic [ref=e808]: Founder-led execution
+      - generic [ref=e811]:
+        - generic [ref=e812]:
+          - generic [ref=e813]: How we work
+          - heading "Premium delivery, without the agency overhead." [level=2] [ref=e815]
+        - list [ref=e818]:
+          - listitem [ref=e819]:
+            - heading "Founder-led, based in the UAE" [level=3] [ref=e821]
+            - paragraph [ref=e822]: You work directly with the studio lead. No account chains, no handoffs — local context, regional sensibility.
+          - listitem [ref=e823]:
+            - heading "Bilingual by design" [level=3] [ref=e825]
+            - paragraph [ref=e826]: Native English and Arabic — written, designed, and considered for both audiences from the first sketch.
+          - listitem [ref=e827]:
+            - heading "No outsourcing" [level=3] [ref=e829]
+            - paragraph [ref=e830]: Every asset is designed and built in-studio. No subcontracting, no offshoring — just the studio's hand on the work.
+          - listitem [ref=e831]:
+            - heading "Transparent starting points" [level=3] [ref=e833]
+            - paragraph [ref=e834]: We share clear starting prices here so you can plan with confidence. The final investment is confirmed together during our scoping conversation — no surprises, no hidden costs.
+          - listitem [ref=e835]:
+            - heading "Limited capacity for quality control" [level=3] [ref=e837]
+            - paragraph [ref=e838]: A small number of engagements at a time. Each one receives the studio's full focus.
+          - listitem [ref=e839]:
+            - heading "Scoped, not improvised" [level=3] [ref=e841]
+            - paragraph [ref=e842]: Deliverables and timelines agreed in writing before we start. Scope, milestones, and revisions are defined during scoping — never assumed.
+    - generic [ref=e844]:
+      - generic [ref=e845]:
+        - generic [ref=e847]:
+          - generic [ref=e848]: "08"
+          - generic [ref=e850]: Process
+        - heading "How we work." [level=2] [ref=e852]
+        - paragraph [ref=e854]: Five steps from first conversation to launch. Clear scope at every stage — no surprises between brief and delivery.
+      - list [ref=e855]:
+        - listitem [ref=e856]:
+          - generic [ref=e858]: "01"
+          - heading "Brand review" [level=3] [ref=e860]
+          - paragraph [ref=e861]: We open with a short, structured review of your business, audience, and ambition.
+        - listitem [ref=e862]:
+          - generic [ref=e864]: "02"
+          - heading "Scoping" [level=3] [ref=e866]
+          - paragraph [ref=e867]: Positioning, deliverables, and timeline — agreed in writing before any execution begins.
+        - listitem [ref=e868]:
+          - generic [ref=e870]: "03"
+          - heading "Design" [level=3] [ref=e872]
+          - paragraph [ref=e873]: Typography, motion, words, and image — every detail considered, every decision intentional.
+        - listitem [ref=e874]:
+          - generic [ref=e876]: "04"
+          - heading "Refine" [level=3] [ref=e878]
+          - paragraph [ref=e879]: We tighten and polish at agreed checkpoints until the work feels effortless.
+        - listitem [ref=e880]:
+          - generic [ref=e882]: "05"
+          - heading "Launch" [level=3] [ref=e884]
+          - paragraph [ref=e885]: We bring the work to market — and support what comes after.
+    - generic [ref=e887]:
+      - generic [ref=e888]:
+        - generic [ref=e890]:
+          - generic [ref=e891]: "09"
+          - generic [ref=e893]: Client questions
+        - heading "Working with the studio." [level=2] [ref=e895]
+        - paragraph [ref=e897]: Practical answers to the questions we hear most often. Anything else, send us a brief.
+      - list [ref=e898]:
+        - listitem [ref=e899]:
+          - button "How do we begin?" [expanded] [ref=e901]:
+            - generic [ref=e902]: How do we begin?
+            - img [ref=e904]
+          - paragraph [ref=e907]: Send a brief through the contact section. We respond within one working day with the next steps.
+        - listitem [ref=e908]:
+          - button "Do you work with all businesses?" [ref=e910]:
+            - generic [ref=e911]: Do you work with all businesses?
+            - img [ref=e913]
+          - paragraph [ref=e915]: We focus on premium hospitality, restaurants, beauty and wellness, real estate, and ambitious founder-led businesses across the UAE and the wider GCC. For projects outside that range, get in touch — we'll be honest about whether the studio is the right fit.
+        - listitem [ref=e916]:
+          - button "Do you offer Arabic delivery?" [ref=e918]:
+            - generic [ref=e919]: Do you offer Arabic delivery?
+            - img [ref=e921]
+          - paragraph [ref=e923]: Yes. Bilingual EN/AR is the studio default. Both languages are written and designed together from the first sketch — never added on at the end.
+        - listitem [ref=e924]:
+          - button "How are projects scoped?" [ref=e926]:
+            - generic [ref=e927]: How are projects scoped?
+            - img [ref=e929]
+          - paragraph [ref=e931]: Each project opens with a brief conversation about your goals. From there we agree on scope and deliverables before any work begins. Final pricing is confirmed during scoping.
+        - listitem [ref=e932]:
+          - button "Can you refine an existing brand?" [ref=e934]:
+            - generic [ref=e935]: Can you refine an existing brand?
+            - img [ref=e937]
+          - paragraph [ref=e939]: Often. We work as much with refinement and rebrands as with first-time launches. A brief conversation is the cleanest way to assess the right path.
+        - listitem [ref=e940]:
+          - button "Do you support ongoing retainers?" [ref=e942]:
+            - generic [ref=e943]: Do you support ongoing retainers?
+            - img [ref=e945]
+          - paragraph [ref=e947]: Yes. Ongoing content and brand presence support is available for select clients after a project completes and the system is established.
+    - generic [ref=e949]:
+      - generic [ref=e950]:
+        - generic [ref=e952]:
+          - generic [ref=e953]: "10"
+          - generic [ref=e955]: Contact
+        - heading "Start a project." [level=2] [ref=e957]
+        - paragraph [ref=e959]: Send us a brief, or reach the studio on a direct channel. We respond within one working day.
+      - list [ref=e961]:
+        - listitem [ref=e962]: Response within 24h
+        - listitem [ref=e964]: UAE business hours (GMT+4)
+        - listitem [ref=e966]: Bilingual EN / AR
+        - listitem [ref=e968]: Founder-led execution
+      - generic [ref=e970]:
+        - generic [ref=e971]:
+          - generic [ref=e972]: Direct channels
+          - list [ref=e973]:
+            - listitem [ref=e974]:
+              - link "WhatsApp / Call +971 56 212 6267" [ref=e976] [cursor=pointer]:
+                - /url: https://wa.me/971562126267
+                - generic [ref=e977]:
+                  - img [ref=e979]
+                  - generic [ref=e981]:
+                    - generic [ref=e982]: WhatsApp / Call
+                    - generic [ref=e983]: +971 56 212 6267
+                - img [ref=e984]
+            - listitem [ref=e987]:
+              - link "Email hello@manageflow.ae" [ref=e989] [cursor=pointer]:
+                - /url: mailto:hello@manageflow.ae
+                - generic [ref=e990]:
+                  - img [ref=e992]
+                  - generic [ref=e995]:
+                    - generic [ref=e996]: Email
+                    - generic [ref=e997]: hello@manageflow.ae
+                - img [ref=e998]
+          - paragraph [ref=e1003]: ManageFlow · United Arab Emirates
+        - generic [ref=e1004]:
+          - generic [ref=e1005]: Send a brief
+          - generic [ref=e1006]:
+            - generic [ref=e1007]:
+              - generic [ref=e1008]:
+                - generic [ref=e1009]: Your name*
+                - textbox "Your name*" [ref=e1010]
+              - generic [ref=e1011]:
+                - generic [ref=e1012]: Company (optional)
+                - textbox "Company (optional)" [ref=e1013]
+            - generic [ref=e1014]:
+              - generic [ref=e1015]: Tell us about your brand or project*
+              - textbox "Tell us about your brand or project*" [ref=e1016]
+            - generic [ref=e1018]:
+              - generic [ref=e1019]:
+                - paragraph [ref=e1020]: Your details open in your email client. Nothing is stored on this site.
+                - paragraph [ref=e1021]: We review every inquiry personally and typically respond within one working day.
+              - generic [ref=e1022]:
+                - button "Send brief" [ref=e1023]:
+                  - generic [ref=e1024]: Send brief
+                  - img [ref=e1026]
+                - generic [ref=e1028]: Opens in your email client
+  - contentinfo [ref=e1029]:
+    - generic [ref=e1031]:
+      - generic [ref=e1032]:
+        - paragraph [ref=e1033]: ManageFlow.
+        - paragraph [ref=e1034]: Founder-led boutique digital studio. United Arab Emirates.
+        - paragraph [ref=e1035]: Working directly with founders and operators who care about details, positioning, and digital trust.
+      - generic [ref=e1036]:
+        - generic [ref=e1037]:
+          - generic [ref=e1038]:
+            - img [ref=e1040]
+            - generic [ref=e1043]: ManageFlow
+          - paragraph [ref=e1044]: Handcrafted in the UAE.
+          - group "Language" [ref=e1046]:
+            - button "EN" [pressed] [ref=e1047]
+            - button "AR" [ref=e1048]
+        - generic [ref=e1049]:
+          - heading "Navigate" [level=3] [ref=e1050]
+          - list [ref=e1052]:
+            - listitem [ref=e1053]:
+              - link "What we do" [ref=e1054] [cursor=pointer]:
+                - /url: "#services"
+            - listitem [ref=e1055]:
+              - link "Creative Concepts" [ref=e1056] [cursor=pointer]:
+                - /url: "#work"
+            - listitem [ref=e1057]:
+              - link "Process" [ref=e1058] [cursor=pointer]:
+                - /url: "#process"
+            - listitem [ref=e1059]:
+              - link "Contact" [ref=e1060] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e1061]:
+          - heading "Contact" [level=3] [ref=e1062]
+          - list [ref=e1064]:
+            - listitem [ref=e1065]:
+              - link "WhatsApp / Call +971 56 212 6267" [ref=e1066] [cursor=pointer]:
+                - /url: https://wa.me/971562126267
+                - generic [ref=e1067]: WhatsApp / Call
+                - generic [ref=e1068]: +971 56 212 6267
+            - listitem [ref=e1069]:
+              - link "Email hello@manageflow.ae" [ref=e1070] [cursor=pointer]:
+                - /url: mailto:hello@manageflow.ae
+                - generic [ref=e1071]: Email
+                - generic [ref=e1072]: hello@manageflow.ae
+        - generic [ref=e1073]:
+          - heading "Studio" [level=3] [ref=e1074]
+          - list [ref=e1076]:
+            - listitem [ref=e1077]: United Arab Emirates
+            - listitem [ref=e1078]: EN · AR
+            - listitem [ref=e1079]: By appointment
+      - generic [ref=e1080]:
+        - generic [ref=e1081]: © 2026 ManageFlow. All rights reserved.
+        - generic [ref=e1082]: United Arab Emirates
+  - button "Open Next.js Dev Tools" [ref=e1088] [cursor=pointer]:
+    - img [ref=e1089]

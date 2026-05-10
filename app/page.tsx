@@ -13,31 +13,35 @@ import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 
+function SectionSep() {
+  return <div className="section-sep" aria-hidden />;
+}
+
 export default function HomePage() {
   return (
     <>
       <Navbar />
       <main className="relative">
-        {/* 1. Hero */}
         <Hero />
-        {/* 2. What we do */}
+        <SectionSep />
         <Services />
-        {/* 3. Why ManageFlow */}
+        <SectionSep />
         <WhyManageFlow />
-        {/* 4. Concept Transformations */}
+        <SectionSep />
         <BeforeAfterShowcase />
-        {/* 5. Strategy Concierge — lead capture */}
+        <SectionSep />
         <StrategyConcierce />
-        {/* 6. Website Audit — engagement tool */}
+        <SectionSep />
         <WebsiteAudit />
-        {/* 7. Pricing Configurator — lead qualification */}
+        <SectionSep />
         <PricingConfigurator />
-        {/* 8. Trust + Process — earned credibility */}
+        <SectionSep />
         <TrustSignals />
+        <SectionSep />
         <Process />
-        {/* 9. FAQ — remove final objections */}
+        <SectionSep />
         <FAQ />
-        {/* 10. Contact — single conversion endpoint */}
+        <SectionSep />
         <Contact />
       </main>
       <Footer />

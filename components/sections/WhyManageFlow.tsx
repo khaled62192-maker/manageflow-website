@@ -1,24 +1,44 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { useLang } from "@/i18n/LanguageProvider";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Reveal } from "@/components/ui/Reveal";
 
-interface WhyItem {
-  title: string;
-  description: string;
-}
+interface WhyItem { title: string; description: string; }
+
+const cardVariant: Variants = {
+  hidden: { opacity: 0, y: 30, scale: 0.97 },
+  show:   {
+    opacity: 1, y: 0, scale: 1,
+    transition: { duration: 0.75, ease: "easeOut" as const },
+  },
+};
+
+const nums = ["01","02","03","04","05","06"];
 
 export function WhyManageFlow() {
   const { t } = useLang();
-  const dict = t.whyManageFlow;
+  const dict  = t.whyManageFlow;
   const items = dict.items as readonly WhyItem[];
 
   return (
-    <section className="relative bg-ink py-24 sm:py-32 lg:py-36">
-      <Container size="wide">
+    <section className="relative overflow-hidden bg-ink py-28 sm:py-36 lg:py-44">
+
+      {/* Rich atmospheric backdrop */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: [
+            "radial-gradient(ellipse 80% 60% at 88% 10%, rgba(65,80,95,0.22), transparent 58%)",
+            "radial-gradient(ellipse 60% 50% at 8%  80%, rgba(194,165,123,0.07), transparent 60%)",
+            "radial-gradient(ellipse 100% 40% at 50% 0%,  rgba(65,80,95,0.10), transparent 55%)",
+          ].join(","),
+        }}
+      />
+
+      <Container size="wide" className="relative z-10">
         <SectionHeader
           index="03"
           eyebrow={dict.eyebrow}
@@ -26,72 +46,66 @@ export function WhyManageFlow() {
           sub={dict.sub}
         />
 
-        <Reveal y={14} className="mt-14 sm:mt-16">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {items.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{
-                  delay: i * 0.08,
-                  duration: 0.6,
-                  ease: [0.22, 0.61, 0.36, 1]
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ staggerChildren: 0.1 }}
+          className="mt-16 grid grid-cols-1 gap-4 sm:mt-20 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6"
+        >
+          {items.map((item, i) => (
+            <motion.div key={item.title} variants={cardVariant} className="group relative">
+
+              {/* Outer glow on hover — absolutely positioned behind */}
+              <div
+                aria-hidden
+                className="absolute -inset-px rounded-[20px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                style={{
+                  background:
+                    "radial-gradient(600px 300px at 50% 0%, rgba(194,165,123,0.12), transparent 65%)",
                 }}
-                className="group relative"
-              >
-                {/* Card */}
-                <div className="relative rounded-[16px] border border-paper/15 bg-gradient-to-br from-onyx/80 to-onyx/40 p-6 transition-all duration-500 hover:border-champagne/30 hover:shadow-[0_0_25px_rgba(194,165,123,0.1)]">
-                  {/* Accent line */}
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    viewport={{ once: true }}
-                    transition={{
-                      delay: i * 0.08 + 0.2,
-                      duration: 0.8,
-                      ease: [0.22, 0.61, 0.36, 1]
-                    }}
-                    className="h-px w-0 bg-gradient-to-r from-champagne/60 to-transparent absolute top-0 left-0"
-                  ></motion.div>
+              />
 
-                  {/* Content */}
-                  <div className="space-y-3">
-                    <motion.h3
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.08 + 0.1, duration: 0.5 }}
-                      className="text-[15px] font-medium text-paper leading-snug sm:text-[16px]"
-                    >
-                      {item.title}
-                    </motion.h3>
+              <div className="card-premium relative h-full overflow-hidden rounded-[20px] p-7 sm:p-8">
+                {/* Champagne top-edge accent — grows on hover */}
+                <div
+                  aria-hidden
+                  className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-gradient-to-r from-champagne/70 via-champagne/40 to-transparent transition-transform duration-700 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover:scale-x-100"
+                />
 
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.08 + 0.2, duration: 0.5 }}
-                      className="text-[13px] leading-relaxed text-paper/70 sm:text-[14px]"
-                    >
-                      {item.description}
-                    </motion.p>
-                  </div>
-
-                  {/* Hover accent */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute top-0 right-0 w-px h-6 bg-gradient-to-b from-champagne/40 to-transparent"
-                  ></motion.div>
+                {/* Large faded number — decorative depth layer */}
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -right-3 -top-5 font-display text-[88px] font-bold leading-none tracking-[-0.04em] text-paper/[0.03] select-none transition-colors duration-500 group-hover:text-paper/[0.055]"
+                >
+                  {nums[i]}
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </Reveal>
+
+                {/* Small number indicator */}
+                <span className="font-mono text-[10.5px] tracking-[0.22em] text-champagne/55">
+                  {nums[i]}
+                </span>
+
+                {/* Accent line */}
+                <div
+                  aria-hidden
+                  className="mt-5 h-px w-8 bg-champagne/45 accent-line-expand group-hover:w-16 group-hover:bg-champagne/80"
+                />
+
+                <h3 className="mt-5 text-[15px] font-medium leading-snug text-paper sm:text-[16px]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-[13px] leading-relaxed text-paper/60 sm:text-[14px]">
+                  {item.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </Container>
+
+      {/* Film grain */}
+      <div className="grain pointer-events-none absolute inset-0" aria-hidden />
     </section>
   );
 }

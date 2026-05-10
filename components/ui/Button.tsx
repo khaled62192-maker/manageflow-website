@@ -35,23 +35,15 @@ type Props = AnchorProps | ButtonProps;
 const base =
   "group relative inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-sm font-medium tracking-wide transition-colors duration-500 ease-[cubic-bezier(0.22,0.61,0.36,1)] whitespace-nowrap select-none";
 
-/**
- * Button variants — locked to the brand system.
- *
- *   primary         → paper fill, ink text. Use on dark surfaces (default).
- *   primary-dark    → ink fill, paper text. Use on the paper contrast section.
- *   ghost           → text-only. Inherits parent text colour.
- *   outline         → paper hairline. Use on dark surfaces.
- */
 const variants: Record<Variant, string> = {
   primary:
-    "bg-paper text-ink hover:bg-bone",
+    "bg-paper text-ink hover:bg-bone btn-shimmer btn-lift",
   "primary-dark":
-    "bg-ink text-paper hover:bg-onyx",
+    "bg-ink text-paper hover:bg-onyx btn-shimmer btn-lift",
   ghost:
     "hover:opacity-70",
   outline:
-    "border border-paper/20 text-paper hover:border-paper/45 bg-transparent",
+    "border border-paper/20 text-paper hover:border-champagne/40 bg-transparent btn-outline-glow",
 };
 
 export function Button(props: Props) {
