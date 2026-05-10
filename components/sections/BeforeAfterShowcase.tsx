@@ -33,124 +33,208 @@ const showcases: ShowcaseCard[] = [
     id: "ads",
     label: "Ads Creative",
     description: "From placeholder to compelling"
+  },
+  {
+    id: "automation",
+    label: "AI Automation",
+    description: "From manual to seamless"
   }
 ];
 
-// Brand mockup components using SVG patterns
+// ========== BRAND IDENTITY MOCKUP ==========
 function BrandingMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full flex items-center justify-center">
+    <div className="h-full w-full flex flex-col p-6 gap-6 justify-between">
       {isBefore ? (
-        // Before: Generic type specimen
-        <div className="text-center">
-          <div className="text-6xl font-serif text-gray-400 mb-4">Aa</div>
-          <div className="text-xs text-gray-500">Generic Design</div>
+        // BEFORE: Weak, generic logo
+        <div className="space-y-4">
+          <div className="flex items-center gap-2">
+            <div className="h-10 w-10 bg-gray-500 rounded"></div>
+            <div className="text-sm text-gray-400">Generic Co.</div>
+          </div>
+          <div className="text-xl font-serif text-gray-400">Bad Font</div>
         </div>
       ) : (
-        // After: Brand system
-        <div className="space-y-6 w-full px-8">
-          <div className="flex gap-3">
-            <div className="h-12 w-12 rounded-lg bg-champagne/80"></div>
-            <div className="h-12 w-12 rounded-lg bg-champagne/50"></div>
-            <div className="h-12 w-12 rounded-lg bg-champagne/20"></div>
+        // AFTER: Premium brand system
+        <div className="space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="h-10 w-10 bg-gradient-to-br from-champagne to-champagne/60 rounded-sm"></div>
+            <div className="text-xs font-medium text-champagne tracking-widest">MANAGEFLOW</div>
           </div>
           <div className="space-y-2">
-            <div className="h-3 w-32 bg-paper/20 rounded-full"></div>
-            <div className="h-2 w-24 bg-paper/10 rounded-full"></div>
+            <div className="text-xs text-paper/60">Color System</div>
+            <div className="flex gap-2">
+              <div className="h-6 w-6 bg-champagne rounded-sm"></div>
+              <div className="h-6 w-6 bg-champagne/60 rounded-sm"></div>
+              <div className="h-6 w-6 bg-champagne/30 rounded-sm"></div>
+              <div className="h-6 w-6 bg-paper/30 rounded-sm"></div>
+            </div>
           </div>
-          <div className="text-xs text-champagne font-medium">Premium System</div>
+          <div className="pt-2 border-t border-paper/10">
+            <div className="text-xs text-paper/40">Type System</div>
+            <div className="text-2xl font-serif text-paper mt-2">Aa</div>
+            <div className="text-xs text-paper/60 mt-1">Fraunces</div>
+          </div>
         </div>
       )}
     </div>
   );
 }
 
+// ========== SOCIAL MEDIA MOCKUP ==========
 function SocialMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full flex items-center justify-center p-6">
+    <div className="h-full w-full p-4 flex flex-col">
       {isBefore ? (
-        // Before: Single post
-        <div className="w-full space-y-3">
-          <div className="h-32 rounded-lg bg-gray-600"></div>
-          <div className="h-2 w-full bg-gray-500 rounded"></div>
-          <div className="h-2 w-3/4 bg-gray-500 rounded"></div>
+        // BEFORE: Messy, inconsistent feed
+        <div className="space-y-3">
+          <div className="bg-gray-600 h-16 rounded"></div>
+          <div className="text-xs text-gray-500">Random text...</div>
+          <div className="bg-gray-700 h-20 rounded"></div>
+          <div className="text-xs text-gray-500">No consistency</div>
         </div>
       ) : (
-        // After: Curated grid
-        <div className="grid grid-cols-2 gap-2 w-full">
-          <div className="aspect-square rounded-lg bg-champagne/30"></div>
-          <div className="aspect-square rounded-lg bg-champagne/40"></div>
-          <div className="aspect-square rounded-lg bg-champagne/25"></div>
-          <div className="aspect-square rounded-lg bg-champagne/35"></div>
+        // AFTER: Premium Instagram-style grid
+        <div className="space-y-2">
+          {/* Feed header */}
+          <div className="flex items-center gap-2 pb-2 border-b border-paper/10">
+            <div className="h-6 w-6 rounded-full bg-champagne/40"></div>
+            <div className="text-xs text-paper/70">@brand</div>
+          </div>
+          {/* 2x2 grid */}
+          <div className="grid grid-cols-2 gap-1.5 flex-1">
+            <div className="aspect-square bg-gradient-to-br from-champagne/40 to-champagne/10 rounded-sm"></div>
+            <div className="aspect-square bg-gradient-to-br from-champagne/30 to-champagne/5 rounded-sm"></div>
+            <div className="aspect-square bg-gradient-to-br from-champagne/35 to-champagne/15 rounded-sm"></div>
+            <div className="aspect-square bg-gradient-to-br from-champagne/25 to-champagne/8 rounded-sm"></div>
+          </div>
         </div>
       )}
     </div>
   );
 }
 
+// ========== WEBSITE MOCKUP ==========
 function WebsiteMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full flex flex-col">
-      {/* Header area */}
-      <div className="h-12 border-b border-paper/10 flex items-center px-4">
+    <div className="h-full w-full flex flex-col bg-onyx/50">
+      {/* Header/Nav */}
+      <div className="h-10 border-b border-paper/10 px-4 flex items-center">
         {isBefore ? (
-          <div className="h-2 w-12 bg-gray-500 rounded"></div>
+          <div className="h-2 w-12 bg-gray-600 rounded"></div>
         ) : (
-          <div className="h-2 w-12 bg-champagne rounded"></div>
+          <div className="h-2 w-16 bg-champagne rounded"></div>
         )}
       </div>
 
-      {/* Content area */}
-      <div className="flex-1 flex items-center justify-center p-4">
+      {/* Hero section */}
+      <div className="flex-1 flex flex-col justify-center px-4 py-4 gap-3">
         {isBefore ? (
-          // Before: Outdated layout
-          <div className="space-y-4 w-full">
-            <div className="h-20 bg-gray-600 rounded"></div>
-            <div className="h-3 w-full bg-gray-500 rounded"></div>
-            <div className="h-3 w-4/5 bg-gray-500 rounded"></div>
+          // BEFORE: Outdated layout
+          <div className="space-y-3">
+            <div className="h-12 bg-gray-700 rounded"></div>
+            <div className="h-2 w-full bg-gray-600 rounded"></div>
+            <div className="h-2 w-4/5 bg-gray-600 rounded"></div>
+            <div className="h-6 bg-gray-700 rounded mt-3"></div>
           </div>
         ) : (
-          // After: Modern layout
-          <div className="space-y-4 w-full">
-            <div className="h-16 bg-gradient-to-r from-champagne/40 to-champagne/10 rounded-lg"></div>
-            <div className="flex gap-2">
-              <div className="h-3 flex-1 bg-paper/20 rounded-full"></div>
-              <div className="h-3 flex-1 bg-paper/20 rounded-full"></div>
-              <div className="h-3 flex-1 bg-paper/20 rounded-full"></div>
+          // AFTER: Modern premium layout
+          <div className="space-y-3">
+            <div className="h-10 bg-gradient-to-r from-champagne/30 to-champagne/5 rounded-lg"></div>
+            <div className="space-y-1.5">
+              <div className="h-2 w-full bg-paper/15 rounded-full"></div>
+              <div className="h-2 w-4/5 bg-paper/10 rounded-full"></div>
             </div>
-            <div className="h-3 w-2/3 bg-champagne/30 rounded-full"></div>
+            <div className="pt-2 flex gap-2">
+              <div className="h-6 flex-1 bg-champagne/20 rounded-full"></div>
+              <div className="h-6 flex-1 bg-paper/10 rounded-full"></div>
+            </div>
           </div>
         )}
       </div>
 
-      {/* CTA area */}
-      <div className="h-10 border-t border-paper/10 px-4 flex items-center">
-        {!isBefore && <div className="h-2 w-16 bg-champagne rounded"></div>}
+      {/* Footer */}
+      <div className="h-8 border-t border-paper/10 px-4 flex items-center">
+        <div className="h-1 w-20 bg-paper/15 rounded-full"></div>
       </div>
     </div>
   );
 }
 
+// ========== ADS CREATIVE MOCKUP ==========
 function AdsMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full flex items-center justify-center p-6">
+    <div className="h-full w-full p-5 flex flex-col justify-between gap-3">
       {isBefore ? (
-        // Before: Empty
-        <div className="text-center">
-          <div className="text-lg text-gray-500 mb-2">Placeholder</div>
-          <div className="text-xs text-gray-600">No Creative</div>
+        // BEFORE: Weak generic ad
+        <div className="space-y-2">
+          <div className="h-20 bg-gray-600 rounded"></div>
+          <div className="text-xs text-gray-500">Generic ad text</div>
+          <div className="h-6 bg-gray-700 rounded"></div>
         </div>
       ) : (
-        // After: Campaign concept
-        <div className="w-full space-y-4">
-          <div className="h-6 w-4/5 bg-paper rounded text-xs leading-6 px-2">
-            <span className="text-ink font-medium">Grow Your</span>
+        // AFTER: Premium campaign concept
+        <div className="space-y-2">
+          <div className="text-xs font-medium text-champagne tracking-widest">CAMPAIGN</div>
+          <div className="h-16 bg-gradient-to-br from-champagne/25 to-champagne/5 rounded-lg flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-xs text-paper/60">Creative Asset</div>
+            </div>
           </div>
-          <div className="h-20 bg-gradient-to-br from-champagne/30 to-champagne/10 rounded-lg"></div>
-          <div className="h-3 w-full bg-paper/10 rounded-full"></div>
-          <div className="h-8 bg-champagne/30 rounded flex items-center px-3 text-xs text-paper font-medium">
-            Learn More →
+        </div>
+      )}
+      <div className={isBefore ? "h-6 bg-gray-700 rounded" : "h-7 bg-champagne/20 rounded-full text-xs flex items-center justify-center text-paper font-medium"}>
+        {!isBefore && "Learn More →"}
+      </div>
+    </div>
+  );
+}
+
+// ========== AI AUTOMATION MOCKUP ==========
+function AutomationMockup({ isBefore }: { isBefore: boolean }) {
+  return (
+    <div className="h-full w-full p-4 flex flex-col gap-3">
+      {isBefore ? (
+        // BEFORE: Chaotic manual workflow
+        <div className="space-y-2">
+          <div className="flex gap-1">
+            <div className="h-6 w-6 bg-gray-600 rounded"></div>
+            <div className="flex-1 h-6 bg-gray-700 rounded"></div>
+            <div className="h-6 w-6 bg-gray-600 rounded"></div>
           </div>
+          <div className="h-2 w-4/5 bg-gray-600 rounded"></div>
+          <div className="flex gap-1 mt-2">
+            <div className="flex-1 h-6 bg-gray-700 rounded"></div>
+            <div className="h-6 w-6 bg-gray-600 rounded"></div>
+          </div>
+          <div className="text-xs text-gray-500">Manual tasks...</div>
+        </div>
+      ) : (
+        // AFTER: Elegant automation dashboard
+        <div className="space-y-2">
+          {/* Top bar */}
+          <div className="flex items-center gap-2 pb-2 border-b border-paper/10">
+            <div className="h-4 w-4 rounded-full bg-champagne/40"></div>
+            <div className="text-xs text-paper/70 flex-1">Automation Flow</div>
+            <div className="h-1 w-8 bg-paper/10 rounded-full"></div>
+          </div>
+          {/* Workflow nodes */}
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2">
+              <div className="h-3 w-3 rounded-full bg-champagne/30"></div>
+              <div className="h-1 w-full bg-paper/8 rounded-full"></div>
+              <div className="text-xs text-paper/40">→</div>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-3 w-3 rounded-full bg-champagne/50"></div>
+              <div className="h-1 w-full bg-paper/8 rounded-full"></div>
+              <div className="text-xs text-paper/40">→</div>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-3 w-3 rounded-full bg-champagne/40"></div>
+            </div>
+          </div>
+          <div className="text-xs text-champagne/60 pt-1">Seamless</div>
         </div>
       )}
     </div>
@@ -161,7 +245,8 @@ const mockupComponents: Record<string, React.ComponentType<{ isBefore: boolean }
   branding: BrandingMockup,
   social: SocialMockup,
   website: WebsiteMockup,
-  ads: AdsMockup
+  ads: AdsMockup,
+  automation: AutomationMockup
 };
 
 export function BeforeAfterShowcase() {
@@ -180,7 +265,17 @@ export function BeforeAfterShowcase() {
           sub={dict.subtitle}
         />
 
-        <Reveal y={14} className="mt-12 sm:mt-14">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="text-xs text-paper/40 mt-6 sm:mt-8 text-center"
+        >
+          Concept transformation examples
+        </motion.p>
+
+        <Reveal y={14} className="mt-10 sm:mt-14">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12">
             {showcases.map((showcase, i) => {
               const MockupComponent = mockupComponents[showcase.id];
@@ -203,9 +298,9 @@ export function BeforeAfterShowcase() {
                 >
                   {/* Card container with enhanced contrast */}
                   <div className="relative rounded-[24px] border-2 border-paper/25 bg-gradient-to-br from-onyx to-onyx/50 p-1 transition-all duration-500 hover:border-champagne/40 hover:shadow-[0_0_30px_rgba(194,165,123,0.15)]">
-                    {/* Mockup area with fixed height */}
+                    {/* Mockup area */}
                     <div className="relative h-80 overflow-hidden rounded-[20px] bg-onyx/80">
-                      {/* Before state */}
+                      {/* BEFORE STATE */}
                       <motion.div
                         initial={{ opacity: 1, x: 0 }}
                         animate={
@@ -222,7 +317,7 @@ export function BeforeAfterShowcase() {
                         <MockupComponent isBefore={true} />
                       </motion.div>
 
-                      {/* After state */}
+                      {/* AFTER STATE */}
                       <motion.div
                         initial={{ opacity: 0, x: 40 }}
                         animate={
@@ -239,7 +334,7 @@ export function BeforeAfterShowcase() {
                         <MockupComponent isBefore={false} />
                       </motion.div>
 
-                      {/* State labels - absolutely positioned to prevent overlap */}
+                      {/* STATE LABELS */}
                       <motion.div
                         initial={{ opacity: 1 }}
                         animate={{
@@ -262,7 +357,7 @@ export function BeforeAfterShowcase() {
                         After
                       </motion.div>
 
-                      {/* Hover indicator - subtle */}
+                      {/* HOVER GLOW */}
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{
@@ -273,7 +368,7 @@ export function BeforeAfterShowcase() {
                       ></motion.div>
                     </div>
 
-                    {/* Content area */}
+                    {/* CONTENT */}
                     <div className="space-y-3 p-6">
                       <motion.div
                         initial={{ opacity: 0.8 }}
@@ -300,7 +395,7 @@ export function BeforeAfterShowcase() {
                         {showcase.description}
                       </motion.p>
 
-                      {/* Hover indicator line */}
+                      {/* HOVER LINE */}
                       <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: isHovered ? "100%" : 0 }}
@@ -310,7 +405,7 @@ export function BeforeAfterShowcase() {
                     </div>
                   </div>
 
-                  {/* Outer glow on hover */}
+                  {/* OUTER GLOW */}
                   <motion.div
                     animate={
                       isHovered
