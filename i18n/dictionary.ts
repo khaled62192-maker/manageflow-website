@@ -19,7 +19,7 @@ export const dictionary = {
         "that refuse to look ordinary.",
       ],
       sub: "Premium websites, brand systems, and launch assets — built by an Emirati-led studio for ambitious hospitality, beauty, retail, and real estate businesses across the GCC.",
-      ctaPrimary: "Start a project",
+      ctaPrimary: "Book your strategy call",
       ctaSecondary: "Get your site audited",
       meta: [
         "UAE-based",
@@ -240,6 +240,38 @@ export const dictionary = {
           ],
         },
       ],
+    },
+
+    whyManageFlow: {
+      eyebrow: "Why Choose ManageFlow",
+      title: "Why businesses choose ManageFlow.",
+      sub: "Premium execution, transparent process, built for UAE brands.",
+      items: [
+        {
+          title: "Built for UAE businesses",
+          description: "Designed specifically for GCC brands and local context. We understand your market."
+        },
+        {
+          title: "Premium-first execution",
+          description: "Every deliverable reflects luxury standards. No shortcuts, no compromise on quality."
+        },
+        {
+          title: "Transparent starting pricing",
+          description: "Clear costs from day one. No surprises, no hidden fees. Premium but accessible."
+        },
+        {
+          title: "Bilingual-ready solutions",
+          description: "English and Arabic designed together from the start. Not translated. Considered."
+        },
+        {
+          title: "Founder-led creative direction",
+          description: "You work with the studio lead. Direct vision, personal accountability, genuine craft."
+        },
+        {
+          title: "Fast, focused delivery",
+          description: "Limited projects at a time. Each gets full attention. Quick turnarounds without rushing."
+        }
+      ]
     },
 
     showcase: {
@@ -560,7 +592,7 @@ export const dictionary = {
         "التي ترفض أن تبدو عادية.",
       ],
       sub: "مواقع راقية، أنظمة هويات، وأصول إطلاق — من استوديو يقوده مؤسّس إماراتي للأعمال الطموحة في الضيافة، التجميل، التجزئة، والعقارات في الخليج.",
-      ctaPrimary: "ابدأ مشروعك",
+      ctaPrimary: "احجز استشارة استراتيجية",
       ctaSecondary: "قيّم موقعك",
       meta: [
         "مقرّنا في الإمارات",
@@ -781,6 +813,38 @@ export const dictionary = {
           ],
         },
       ],
+    },
+
+    whyManageFlow: {
+      eyebrow: "لماذا ManageFlow",
+      title: "لماذا تختار الأعمال ManageFlow.",
+      sub: "تنفيذ راقٍ، عملية شفافة، مصمّمة للعلامات الخليجية.",
+      items: [
+        {
+          title: "مصمّمة للعلامات الخليجية",
+          description: "مصنوعة خصيصاً للأعمال في الخليج والسياق المحلي. نفهم سوقك."
+        },
+        {
+          title: "التنفيذ يبدأ من الفخامة",
+          description: "كل عمل يعكس معايير الفخامة. لا حقل للاختصارات، بدون أي تنازلات."
+        },
+        {
+          title: "الأسعار شفافة من البداية",
+          description: "أسعار واضحة منذ اليوم الأول. لا مفاجآت، لا رسوم مخفية. راقي وفي المتناول."
+        },
+        {
+          title: "حلول ثنائية اللغة من البداية",
+          description: "الإنجليزية والعربية مصممة معاً. ليست ترجمة. مدروسة وأصلية."
+        },
+        {
+          title: "إخراج يقوده المؤسّس",
+          description: "تعمل مع قائد الاستوديو مباشرة. رؤية مباشرة، مسؤولية شخصية، حرفية أصيلة."
+        },
+        {
+          title: "تنفيذ سريع ومركّز",
+          description: "عدد قليل من المشاريع. كل واحد يحصل على التركيز الكامل. تنفيذ سريع بدون عجلة."
+        }
+      ]
     },
 
     showcase: {

@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { TrustSignals } from "@/components/sections/TrustSignals";
 import { Services } from "@/components/sections/Services";
+import { WhyManageFlow } from "@/components/sections/WhyManageFlow";
 import { CreativeShowcase } from "@/components/sections/CreativeShowcase";
 import { Process } from "@/components/sections/Process";
 import { StrategyConcierce } from "@/components/sections/StrategyConcierce";
@@ -22,20 +23,22 @@ export default function HomePage() {
         <Hero />
         {/* 2. What we do */}
         <Services />
-        {/* 3. Creative Showcase */}
+        {/* 3. Why ManageFlow */}
+        <WhyManageFlow />
+        {/* 4. Concept Transformations */}
         <BeforeAfterShowcase />
-        {/* 4. Strategy Concierge — lead capture */}
+        {/* 5. Strategy Concierge — lead capture */}
         <StrategyConcierce />
-        {/* 5. Website Audit — engagement tool */}
+        {/* 6. Website Audit — engagement tool */}
         <WebsiteAudit />
-        {/* 6. Pricing Configurator — lead qualification */}
+        {/* 7. Pricing Configurator — lead qualification */}
         <PricingConfigurator />
-        {/* 7. Trust + Process — earned credibility */}
+        {/* 8. Trust + Process — earned credibility */}
         <TrustSignals />
         <Process />
-        {/* 8. FAQ — remove final objections */}
+        {/* 9. FAQ — remove final objections */}
         <FAQ />
-        {/* 9. Contact — single conversion endpoint */}
+        {/* 10. Contact — single conversion endpoint */}
         <Contact />
       </main>
       <Footer />

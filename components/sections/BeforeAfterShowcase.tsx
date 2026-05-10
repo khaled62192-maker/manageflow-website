@@ -46,71 +46,74 @@ function BrandingMockup({ isBefore }: { isBefore: boolean }) {
   return (
     <div className="h-full w-full flex flex-col p-5 gap-6 justify-between">
       {isBefore ? (
-        // BEFORE: Weak fictional brand (Maison Brew)
-        <div className="space-y-4">
-          <div className="space-y-1.5">
+        // BEFORE: Ugly weak brand
+        <div className="space-y-5">
+          {/* Bad logo */}
+          <div className="space-y-2">
             <div className="text-xs text-gray-500 uppercase">Logo</div>
             <div className="flex items-center gap-2">
-              <div className="h-10 w-10 bg-yellow-500 rounded flex items-center justify-center text-xs font-bold text-gray-700">
+              <div className="h-12 w-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded flex items-center justify-center text-xs font-black text-gray-800">
                 MB
               </div>
-              <div className="text-sm font-sans text-gray-600 tracking-widest">
-                MAISON BREW
+              <div className="space-y-1">
+                <div className="text-sm font-black text-gray-600 tracking-wider">MAISON</div>
+                <div className="text-xs text-gray-500 font-bold">BREW co</div>
               </div>
             </div>
           </div>
 
-          <div className="space-y-1.5">
-            <div className="text-xs text-gray-500 uppercase">Colors</div>
-            <div className="flex gap-2">
-              <div className="h-5 w-5 bg-yellow-500 rounded-sm"></div>
-              <div className="h-5 w-5 bg-red-600 rounded-sm"></div>
-              <div className="h-5 w-5 bg-purple-700 rounded-sm"></div>
+          {/* Clashing colors */}
+          <div className="space-y-2">
+            <div className="text-xs text-gray-500 uppercase">Colors (bad)</div>
+            <div className="flex gap-1">
+              <div className="h-6 w-6 bg-yellow-500 rounded"></div>
+              <div className="h-6 w-6 bg-red-600 rounded"></div>
+              <div className="h-6 w-6 bg-purple-700 rounded"></div>
+              <div className="h-6 w-6 bg-cyan-500 rounded"></div>
             </div>
           </div>
 
+          {/* Bad typography */}
           <div className="space-y-1">
-            <div className="text-xs text-gray-500 uppercase">Typography</div>
-            <div className="text-xs text-gray-600">Arial Bold · Times New Roman</div>
+            <div className="text-xs text-gray-500 uppercase">Fonts</div>
+            <div className="text-xs text-gray-600 font-sans">Arial Bold · Times · Comic Sans</div>
           </div>
         </div>
       ) : (
-        // AFTER: Premium brand identity
-        <div className="space-y-4">
-          <div className="space-y-2">
-            <div className="text-xs text-paper/40 uppercase tracking-widest">Logo Mark</div>
-            <div className="flex items-center gap-3">
-              <div className="h-9 w-9 rounded-sm bg-gradient-to-br from-champagne to-champagne/70 flex items-center justify-center">
-                <div className="text-[11px] text-ink font-serif">☕</div>
+        // AFTER: Premium brand system
+        <div className="space-y-5">
+          {/* Premium logo application */}
+          <div className="space-y-3">
+            <div className="text-xs text-champagne/60 uppercase tracking-widest font-medium">Logo System</div>
+
+            {/* Logo mark */}
+            <div className="flex items-center gap-3 pt-2">
+              <div className="h-10 w-10 rounded-sm bg-gradient-to-br from-champagne via-champagne/85 to-champagne/70 flex items-center justify-center shadow-lg">
+                <div className="text-[13px] text-ink font-serif">☕</div>
               </div>
               <div className="flex flex-col gap-0.5">
-                <div className="text-xs font-medium text-paper tracking-[0.12em]">MAISON</div>
-                <div className="text-xs font-light text-paper/60 tracking-[0.08em]">BREW</div>
+                <div className="text-xs font-medium text-paper tracking-[0.15em]">MAISON</div>
+                <div className="text-[10px] text-paper/50 font-light tracking-[0.1em]">BREW</div>
               </div>
             </div>
           </div>
 
+          {/* Business card mockup */}
           <div className="space-y-2">
-            <div className="text-xs text-paper/40 uppercase tracking-widest">Palette</div>
-            <div className="space-y-1">
-              <div className="flex gap-2 items-center">
-                <div className="h-4 w-6 rounded-sm bg-champagne"></div>
-                <div className="text-xs text-paper/60">Gold</div>
-              </div>
-              <div className="flex gap-2 items-center">
-                <div className="h-4 w-6 rounded-sm bg-amber-900/60"></div>
-                <div className="text-xs text-paper/60">Deep</div>
-              </div>
-              <div className="flex gap-2 items-center">
-                <div className="h-4 w-6 rounded-sm bg-paper/20"></div>
-                <div className="text-xs text-paper/60">Cream</div>
-              </div>
+            <div className="text-xs text-champagne/50 uppercase tracking-widest text-[10px]">Business Card</div>
+            <div className="rounded-sm bg-gradient-to-br from-paper/40 to-paper/25 border border-champagne/30 p-3 h-12 flex items-center">
+              <div className="text-xs text-ink font-serif">MAISON BREW</div>
             </div>
           </div>
 
-          <div className="space-y-1 pt-2 border-t border-paper/10">
-            <div className="text-xs text-paper/40 uppercase tracking-widest">Typography</div>
-            <div className="text-xs text-paper/70">Fraunces Serif · Inter</div>
+          {/* Color palette */}
+          <div className="space-y-2">
+            <div className="text-xs text-champagne/50 uppercase tracking-widest text-[10px]">Palette</div>
+            <div className="flex gap-1.5">
+              <div className="h-5 w-5 rounded-sm bg-champagne shadow-sm border border-champagne/40"></div>
+              <div className="h-5 w-5 rounded-sm bg-amber-900/50 border border-amber-900/30"></div>
+              <div className="h-5 w-5 rounded-sm bg-paper/20 border border-paper/10"></div>
+            </div>
           </div>
         </div>
       )}
@@ -123,19 +126,19 @@ function WebsiteMockup({ isBefore }: { isBefore: boolean }) {
   return (
     <div className="h-full w-full flex flex-col bg-onyx/50">
       {/* Navigation */}
-      <div className="h-8 border-b px-3 flex items-center justify-between" style={{ borderColor: isBefore ? "#555" : "#ffffff1a" }}>
+      <div className="h-8 border-b px-3 flex items-center justify-between" style={{ borderColor: isBefore ? "#666" : "#ffffff12" }}>
         {isBefore ? (
           <>
-            <div className="text-xs font-bold text-yellow-600">MAISON BREW CAFE</div>
-            <div className="flex gap-1 text-xs text-gray-600">
+            <div className="text-xs font-black text-yellow-600">MAISON BREW</div>
+            <div className="flex gap-2 text-xs text-gray-600 font-bold">
               <div>HOME</div>
               <div>MENU</div>
             </div>
           </>
         ) : (
           <>
-            <div className="text-xs font-medium text-champagne/70 tracking-widest">MAISON</div>
-            <div className="flex gap-3 text-xs text-paper/50">
+            <div className="text-xs font-medium text-champagne/70 tracking-[0.15em]">MAISON BREW</div>
+            <div className="flex gap-4 text-xs text-paper/50 font-light">
               <div>Coffee</div>
               <div>Reserve</div>
               <div>About</div>
@@ -144,29 +147,37 @@ function WebsiteMockup({ isBefore }: { isBefore: boolean }) {
         )}
       </div>
 
-      {/* Hero */}
-      <div className="flex-1 flex flex-col justify-center px-4 py-3 gap-3">
+      {/* Hero section */}
+      <div className="flex-1 flex flex-col justify-center px-4 py-4 gap-3">
         {isBefore ? (
-          <div className="space-y-2">
-            <div className="text-sm font-bold text-yellow-600">Welcome to Maison!</div>
-            <div className="space-y-1">
+          // BEFORE: Outdated ugly website
+          <div className="space-y-3">
+            <div className="text-sm font-black text-yellow-600">WELCOME TO MAISON BREW!!!</div>
+            <div className="space-y-2">
               <div className="h-2 w-full bg-gray-700 rounded"></div>
               <div className="h-2 w-4/5 bg-gray-700 rounded"></div>
+              <div className="h-2 w-3/5 bg-gray-700 rounded"></div>
             </div>
-            <div className="h-5 w-24 bg-red-600 rounded text-xs text-white flex items-center justify-center font-bold">
-              CLICK NOW
+            <div className="h-6 w-20 bg-red-600 rounded text-xs text-white flex items-center justify-center font-black mt-2">
+              CLICK!!!
             </div>
           </div>
         ) : (
-          <div className="space-y-3">
-            <div className="text-xs text-champagne/50 uppercase tracking-widest">Specialty Coffee</div>
-            <div className="space-y-1.5">
-              <div className="text-sm font-serif text-paper/90">Moments worth savoring</div>
-              <div className="h-0.5 w-8 bg-champagne/40"></div>
-              <div className="text-xs text-paper/60">Heritage roasts in curated spaces.</div>
+          // AFTER: Premium luxury homepage
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <div className="text-xs text-champagne/50 uppercase tracking-[0.2em] font-light">Specialty Coffee</div>
+              <div className="text-sm font-serif text-paper/95 leading-snug">Moments worth<br />savoring</div>
             </div>
-            <div className="flex gap-2 pt-1">
-              <div className="h-5 px-3 bg-champagne/25 rounded-full text-xs text-paper flex items-center">
+
+            <div className="h-0.5 w-12 bg-gradient-to-r from-champagne/60 to-transparent"></div>
+
+            <div className="text-xs text-paper/60 leading-[1.6]">
+              Heritage roasts in<br />curated spaces.
+            </div>
+
+            <div className="flex gap-3 pt-2">
+              <div className="h-5 px-3 bg-champagne/25 rounded-full text-xs text-paper flex items-center font-medium">
                 Reserve →
               </div>
             </div>
@@ -176,12 +187,12 @@ function WebsiteMockup({ isBefore }: { isBefore: boolean }) {
 
       {/* Featured */}
       {!isBefore && (
-        <div className="px-3 pb-3 space-y-2 border-t border-paper/10">
-          <div className="text-xs text-paper/40 uppercase tracking-wider">Featured</div>
+        <div className="px-4 pb-3 space-y-2 border-t border-paper/10">
+          <div className="text-xs text-paper/40 uppercase tracking-wider text-[10px]">Featured</div>
           <div className="grid grid-cols-3 gap-2">
-            <div className="h-7 rounded-sm bg-gradient-to-br from-amber-700/40 to-amber-900/20"></div>
-            <div className="h-7 rounded-sm bg-gradient-to-br from-champagne/30 to-champagne/10"></div>
-            <div className="h-7 rounded-sm bg-paper/8"></div>
+            <div className="h-8 rounded-sm bg-gradient-to-br from-amber-700/40 to-amber-900/15 border border-amber-900/20"></div>
+            <div className="h-8 rounded-sm bg-gradient-to-br from-champagne/30 to-champagne/5 border border-champagne/15"></div>
+            <div className="h-8 rounded-sm bg-paper/10 border border-paper/5"></div>
           </div>
         </div>
       )}
@@ -192,46 +203,49 @@ function WebsiteMockup({ isBefore }: { isBefore: boolean }) {
 // ========== TRUST & CREDIBILITY MOCKUP ==========
 function TrustMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full p-4 flex flex-col gap-3">
+    <div className="h-full w-full p-4 flex flex-col gap-4">
       {isBefore ? (
-        // BEFORE: Weak untrustworthy business
+        // BEFORE: Weak untrustworthy
         <div className="space-y-3">
-          <div className="text-xs text-gray-500">About Us</div>
+          <div className="text-xs text-gray-600 font-bold">About</div>
           <div className="space-y-2">
             <div className="h-2 w-full bg-gray-700 rounded"></div>
             <div className="h-2 w-4/5 bg-gray-700 rounded"></div>
           </div>
-          <div className="text-xs text-gray-500 italic">No reviews shown</div>
-          <div className="text-xs text-gray-500">Contact: unclear</div>
+          <div className="text-xs text-gray-500 italic">Contact: unclear</div>
         </div>
       ) : (
         // AFTER: Premium credible business
-        <div className="space-y-2">
-          <div className="text-xs text-champagne/70 uppercase tracking-wider">Trusted</div>
+        <div className="space-y-3">
+          <div className="text-xs text-champagne/70 uppercase tracking-wider font-medium">Trusted</div>
 
-          {/* Testimonial */}
-          <div className="rounded-sm bg-onyx/50 p-3 border-l-2 border-champagne/40">
-            <div className="text-xs text-paper/70 mb-2 italic">
-              "Exceptional quality and attention to detail."
+          {/* Testimonial card */}
+          <div className="rounded-sm bg-onyx/70 border-l-2 border-champagne/40 p-3 space-y-2">
+            <div className="text-xs text-paper/75 italic leading-[1.5]">
+              "The quality and attention to detail sets them apart."
             </div>
-            <div className="text-xs text-paper/50">— Client</div>
+            <div className="text-xs text-paper/50">— Satisfied Client</div>
           </div>
 
           {/* Trust signals */}
-          <div className="space-y-1">
+          <div className="space-y-1.5">
             <div className="flex items-center gap-2 text-xs">
-              <span className="text-champagne/60">✓</span>
-              <span className="text-paper/60">8 years in operation</span>
+              <span className="text-champagne/70 font-medium">✓</span>
+              <span className="text-paper/65">8 years in business</span>
             </div>
             <div className="flex items-center gap-2 text-xs">
-              <span className="text-champagne/60">✓</span>
-              <span className="text-paper/60">500+ satisfied guests</span>
+              <span className="text-champagne/70 font-medium">✓</span>
+              <span className="text-paper/65">600+ satisfied clients</span>
+            </div>
+            <div className="flex items-center gap-2 text-xs">
+              <span className="text-champagne/70 font-medium">✓</span>
+              <span className="text-paper/65">Founder-led execution</span>
             </div>
           </div>
 
-          {/* Contact clarity */}
+          {/* Contact */}
           <div className="pt-2 border-t border-paper/10">
-            <div className="text-xs text-paper/50">📞 +971-4-... · reserve@</div>
+            <div className="text-xs text-paper/50 font-light">📞 +971-4-xxx-xxxx</div>
           </div>
         </div>
       )}
@@ -246,36 +260,38 @@ function SalesMockup({ isBefore }: { isBefore: boolean }) {
       {isBefore ? (
         // BEFORE: Weak amateur materials
         <div className="space-y-2">
-          <div className="text-xs text-gray-600 font-bold">proposal_final_v3.docx</div>
-          <div className="space-y-1.5">
+          <div className="text-xs text-gray-600 font-bold">proposal_final_v2.docx</div>
+          <div className="space-y-2">
             <div className="h-2 w-full bg-gray-700 rounded"></div>
             <div className="h-2 w-4/5 bg-gray-700 rounded"></div>
             <div className="h-2 w-3/5 bg-gray-700 rounded"></div>
           </div>
-          <div className="text-xs text-gray-500">Default margins</div>
-          <div className="text-xs text-gray-500">Basic formatting</div>
+          <div className="text-xs text-gray-500">Times New Roman · Default margins</div>
         </div>
       ) : (
         // AFTER: Premium pitch deck
         <div className="space-y-2">
-          <div className="text-xs text-champagne/70 uppercase tracking-wider">Pitch Deck</div>
+          <div className="text-xs text-champagne/70 uppercase tracking-wider font-medium">Premium Deck</div>
 
           {/* Slide previews */}
           <div className="space-y-1.5">
-            <div className="h-8 rounded-sm bg-gradient-to-br from-champagne/50 to-champagne/20 flex items-center px-3 border-l-2 border-champagne/40">
-              <div className="text-xs text-paper/80 font-serif">Our Story</div>
+            {/* Title slide */}
+            <div className="h-8 rounded-sm bg-gradient-to-br from-champagne/50 to-champagne/20 border-l-2 border-champagne/50 flex items-center px-3">
+              <div className="text-xs text-paper/85 font-serif font-medium">Our Story</div>
             </div>
 
-            <div className="h-8 rounded-sm bg-gradient-to-br from-paper/15 to-paper/5 flex items-center px-3">
+            {/* Content slide */}
+            <div className="h-8 rounded-sm bg-gradient-to-br from-paper/15 to-paper/5 border border-paper/10 flex items-center px-3">
               <div className="text-xs text-paper/60">What We Do</div>
             </div>
 
-            <div className="h-8 rounded-sm bg-gradient-to-br from-champagne/30 to-champagne/10 flex items-center px-3">
+            {/* CTA slide */}
+            <div className="h-8 rounded-sm bg-gradient-to-br from-champagne/30 to-champagne/10 border border-champagne/15 flex items-center px-3">
               <div className="text-xs text-paper/60">Let's Connect</div>
             </div>
           </div>
 
-          <div className="text-xs text-paper/40 pt-1">10 slides · premium design</div>
+          <div className="text-xs text-paper/40 font-light pt-1">12 slides · Premium design</div>
         </div>
       )}
     </div>
@@ -289,36 +305,37 @@ function CampaignMockup({ isBefore }: { isBefore: boolean }) {
       {isBefore ? (
         // BEFORE: Cheap forgettable ad
         <div className="space-y-2">
-          <div className="h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded flex items-center justify-center text-xs text-white font-bold">
-            SAVE NOW!!!
+          <div className="h-16 bg-gradient-to-r from-purple-600 via-pink-500 to-red-600 rounded flex items-center justify-center text-xs text-white font-black">
+            MEGA SALE NOW!!!
           </div>
           <div className="space-y-1">
-            <div className="text-xs text-gray-600 font-bold">LIMITED TIME 40% OFF</div>
-            <div className="text-xs text-gray-500">Act fast or you'll miss out!!!</div>
+            <div className="text-xs text-gray-600 font-bold">50% OFF EVERYTHING</div>
+            <div className="text-xs text-gray-500 font-bold">ENDS TODAY!!!</div>
           </div>
         </div>
       ) : (
         // AFTER: Premium campaign concept
         <div className="space-y-3">
-          <div className="h-16 bg-gradient-to-br from-champagne/45 via-champagne/25 to-amber-900/15 rounded-sm flex flex-col items-center justify-center relative">
-            <div className="text-xs text-paper/50 font-serif">Premium Campaign</div>
-            <div className="text-[10px] text-paper/30 mt-1">Crafted for elegance</div>
+          <div className="h-16 bg-gradient-to-br from-champagne/50 via-champagne/25 to-amber-900/20 rounded-sm flex flex-col items-center justify-center relative overflow-hidden border border-champagne/20">
+            <div className="absolute top-1 right-2 w-6 h-6 bg-champagne/10 rounded-full blur-md"></div>
+            <div className="text-xs text-paper/60 font-serif font-medium">Premium Campaign</div>
+            <div className="text-[10px] text-paper/35 mt-1 font-light">Elegance in every moment</div>
           </div>
 
-          <div className="space-y-1">
-            <div className="text-xs font-serif text-paper leading-snug">
-              Savor the Moment
+          <div className="space-y-1.5">
+            <div className="text-xs font-serif text-paper/95 leading-tight font-medium">
+              Savor the Craft
             </div>
-            <div className="text-xs text-paper/70">
-              Thoughtfully designed experiences.
+            <div className="text-xs text-paper/70 font-light leading-[1.5]">
+              Thoughtfully designed for discerning tastes.
             </div>
           </div>
         </div>
       )}
 
       {/* CTA */}
-      <div className={isBefore ? "h-6 bg-gray-700 rounded text-xs text-gray-600 flex items-center justify-center font-bold" : "h-6 bg-champagne/25 rounded-full text-xs flex items-center justify-center text-paper font-medium"}>
-        {isBefore ? "CLICK!" : "Explore →"}
+      <div className={isBefore ? "h-6 bg-gray-700 rounded text-xs text-gray-600 flex items-center justify-center font-black" : "h-6 bg-champagne/25 rounded-full text-xs flex items-center justify-center text-paper font-medium"}>
+        {isBefore ? "CLICK NOW!" : "Explore →"}
       </div>
     </div>
   );
@@ -353,9 +370,9 @@ export function BeforeAfterShowcase() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="text-xs text-paper/40 mt-6 sm:mt-8 text-center italic"
+          className="text-xs text-paper/40 mt-6 sm:mt-8 text-center italic font-light"
         >
-          Concept examples showing service capabilities
+          Concept examples showing service potential
         </motion.p>
 
         <Reveal y={14} className="mt-10 sm:mt-14">
