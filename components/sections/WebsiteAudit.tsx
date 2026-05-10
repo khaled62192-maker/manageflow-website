@@ -150,23 +150,34 @@ export function WebsiteAudit() {
                         opacity: currentStep > i ? 1 : 0.4,
                         x: 0
                       }}
+                      transition={{ duration: 0.3 }}
                       className="flex items-center gap-3"
                     >
-                      <div className="relative h-2 w-32 rounded-full bg-paper/10">
+                      <div className="relative h-2 w-32 rounded-full bg-paper/10 overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{
                             width: currentStep > i ? "100%" : "0%"
                           }}
-                          transition={{ duration: 0.5 }}
-                          className="h-full rounded-full bg-champagne/60"
+                          transition={{ duration: 0.8, ease: "easeOut" }}
+                          className="h-full rounded-full bg-gradient-to-r from-champagne/40 to-champagne"
                         />
                       </div>
                       <span className="flex-1 text-[12px] text-paper/60">
                         {step}
                       </span>
                       {currentStep > i && (
-                        <Check size={14} className="text-green-500" />
+                        <motion.div
+                          initial={{ scale: 0, rotate: -180 }}
+                          animate={{ scale: 1, rotate: 0 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 200,
+                            damping: 15
+                          }}
+                        >
+                          <Check size={16} className="text-green-500" strokeWidth={3} />
+                        </motion.div>
                       )}
                     </motion.div>
                   ))}
@@ -191,22 +202,31 @@ export function WebsiteAudit() {
                   {results.map((item, i) => (
                     <motion.div
                       key={i}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: i * 0.1 }}
-                      className="space-y-2 rounded-[12px] bg-onyx/50 p-4 text-center"
+                      initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{
+                        delay: i * 0.15,
+                        duration: 0.5,
+                        ease: [0.22, 0.61, 0.36, 1]
+                      }}
+                      whileHover={{ y: -4, scale: 1.05 }}
+                      className="space-y-2 rounded-[12px] bg-gradient-to-br from-onyx/70 to-onyx/40 border border-paper/10 p-4 text-center transition-all hover:border-champagne/30 hover:shadow-[0_0_15px_rgba(194,165,123,0.1)]"
                     >
-                      <div
-                        className={`text-2xl font-medium ${getScoreColor(
+                      <div className={`text-2xl font-medium ${getScoreColor(
                           item.score
-                        )}`}
-                      >
+                        )} transition-colors`}>
                         {item.score}
                         <span className="text-xs text-paper/40">/10</span>
                       </div>
-                      <p className="text-[11px] text-paper/60">
+                      <p className="text-[11px] text-paper/60 leading-tight">
                         {item.label}
                       </p>
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: "100%" }}
+                        transition={{ delay: i * 0.15 + 0.3, duration: 0.6 }}
+                        className="h-0.5 bg-gradient-to-r from-champagne/0 via-champagne/40 to-champagne/0 mt-2"
+                      ></motion.div>
                     </motion.div>
                   ))}
                 </div>

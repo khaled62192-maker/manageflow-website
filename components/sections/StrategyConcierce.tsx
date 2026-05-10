@@ -109,16 +109,56 @@ export function StrategyConcierce() {
                     </div>
 
                     <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                      {dict.quickOptions.map((option) => (
-                        <button
+                      {dict.quickOptions.map((option, i) => (
+                        <motion.button
                           key={option}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: i * 0.05 }}
                           onClick={() => handleQuickOption(option)}
-                          className="rounded-[8px] border border-paper/20 bg-onyx/50 px-4 py-3 text-[13px] text-paper transition-all hover:border-champagne/55 hover:bg-onyx/80"
+                          className="rounded-[8px] border border-paper/20 bg-onyx/50 px-4 py-3 text-[13px] text-paper transition-all hover:border-champagne/55 hover:bg-onyx/80 hover:scale-105"
                         >
                           {option}
-                        </button>
+                        </motion.button>
                       ))}
                     </div>
+
+                    {/* Suggestion chips */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 }}
+                      className="pt-4 border-t border-paper/10 space-y-3"
+                    >
+                      <p className="text-[11px] text-paper/40">
+                        Or ask anything like:
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {[
+                          "How much does a website cost?",
+                          "What's included in branding?",
+                          "Can you manage social media?",
+                          "Tell me about AI automation",
+                          "When can you start?"
+                        ].map((chip, i) => (
+                          <motion.button
+                            key={chip}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.35 + i * 0.06 }}
+                            whileHover={{ scale: 1.05, backgroundColor: "rgba(244, 239, 229, 0.15)" }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={() => {
+                              setResponses({ ...responses, business: chip });
+                              setCurrentStep("goal");
+                            }}
+                            className="rounded-full px-3 py-1.5 text-[11px] bg-paper/8 text-paper/70 border border-paper/10 transition-all hover:text-paper hover:border-paper/20"
+                          >
+                            {chip}
+                          </motion.button>
+                        ))}
+                      </div>
+                    </motion.div>
                   </motion.div>
                 )}
 

@@ -267,17 +267,24 @@ export function PricingConfigurator() {
               <div className="border-t border-paper/10 pt-6">
                 {selectedServices.length > 0 ? (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
                     className="space-y-3"
                   >
                     <p className="text-[13px] text-paper/60">
                       {dict.estimatedInvestment}
                     </p>
-                    <p className="text-[32px] font-medium text-champagne">
+                    <motion.p
+                      key={`${estimatedPrice.min}-${estimatedPrice.max}`}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.4 }}
+                      className="text-[32px] font-medium text-champagne"
+                    >
                       {formatPrice(estimatedPrice.min)} –{" "}
                       {formatPrice(estimatedPrice.max)}
-                    </p>
+                    </motion.p>
                     <p className="text-[11px] text-paper/40">
                       {dict.disclaimer}
                     </p>
