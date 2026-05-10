@@ -6,8 +6,8 @@ export const BUSINESS = {
   whatsappLink: "https://wa.me/971562126267",
   phone: "+971 56 212 6267",
   phoneLink: "tel:+971562126267",
-  email: "manageflow.ae@gmail.com",
-  emailLink: "mailto:manageflow.ae@gmail.com",
+  email: "hello@manageflow.ae",
+  emailLink: "mailto:hello@manageflow.ae",
 } as const;
 
 export function buildWhatsAppLink(message: string) {

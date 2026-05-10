@@ -135,6 +135,17 @@ html[dir="rtl"] .eyebrow {
 }
 [data-tone="light"] .grain::after { mix-blend-mode: multiply; opacity: 0.05; }
 
+/* Hero ambient orb drift — slow, cinematic, loops seamlessly */
+@keyframes hero-orb-drift {
+  0%,  100% { transform: translate(0px,   0px)  scale(1);    }
+  30%        { transform: translate(28px, -18px) scale(1.06); }
+  65%        { transform: translate(-18px, 14px) scale(0.96); }
+}
+.hero-orb {
+  animation: hero-orb-drift 22s ease-in-out infinite;
+  will-change: transform;
+}
+
 /* Drift marquee */
 @keyframes mf-drift {
   from { transform: translate3d(0,0,0); }

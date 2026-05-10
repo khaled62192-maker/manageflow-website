@@ -145,5 +145,34 @@ export const motionVariants = {
       scale: 1,
       transition: { duration: 0.5, ease: easeSoft }
     }
+  },
+
+  // Slow ambient float — decorative orbs, background elements
+  gentleFloat: {
+    animate: {
+      y: [0, -12, 0],
+      transition: {
+        duration: 8,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  },
+
+  // Premium card/button hover — refined, not jumpy
+  premiumHover: {
+    whileHover: { y: -3, scale: 1.015 },
+    whileTap: { scale: 0.98 },
+    transition: { duration: 0.4, ease: easeSoft }
+  },
+
+  // Hero orb entrance — fades in over 2s
+  heroOrb: {
+    initial: { opacity: 0, scale: 0.85 },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 2.2, ease: easeSoft }
+    }
   }
 };

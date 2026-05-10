@@ -72,7 +72,7 @@ export function Hero() {
               {t.hero.ctaPrimary}
             </Button>
             <a
-              href="#audit"
+              href="#review"
               className="link-underline text-[14px] font-medium tracking-wide text-paper/85 hover:text-paper"
             >
               {t.hero.ctaSecondary}
@@ -102,20 +102,59 @@ export function Hero() {
 function HeroBackdrop() {
   return (
     <>
+      {/* Base gradient — steel top-left, stronger than before */}
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(1100px 600px at 18% 8%, rgba(65,80,95,0.22), transparent 60%), radial-gradient(900px 500px at 92% 0%, rgba(194,165,123,0.06), transparent 65%)",
+            "radial-gradient(1200px 700px at 16% 6%, rgba(65,80,95,0.28), transparent 58%), radial-gradient(1000px 600px at 94% 0%, rgba(194,165,123,0.10), transparent 62%)",
         }}
       />
+
+      {/* Ambient champagne orb — drifts slowly, fades in */}
+      <motion.div
+        aria-hidden
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2.4, ease: [0.22, 0.61, 0.36, 1] }}
+        className="hero-orb pointer-events-none absolute -z-10"
+        style={{
+          top: "-10%",
+          right: "-5%",
+          width: "700px",
+          height: "700px",
+          background:
+            "radial-gradient(circle, rgba(194,165,123,0.09) 0%, rgba(194,165,123,0.04) 45%, transparent 70%)",
+          borderRadius: "50%",
+        }}
+      />
+
+      {/* Secondary steel orb — anchored bottom-left for depth */}
+      <motion.div
+        aria-hidden
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3, delay: 0.6, ease: [0.22, 0.61, 0.36, 1] }}
+        className="pointer-events-none absolute -z-10"
+        style={{
+          bottom: "-15%",
+          left: "-8%",
+          width: "600px",
+          height: "600px",
+          background:
+            "radial-gradient(circle, rgba(65,80,95,0.14) 0%, transparent 65%)",
+          borderRadius: "50%",
+        }}
+      />
+
+      {/* Subtle column grid */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 left-1/2 -z-10 hidden w-[1100px] -translate-x-1/2 sm:block"
         style={{
           backgroundImage:
-            "linear-gradient(to right, rgba(244,239,229,0.04) 1px, transparent 1px)",
+            "linear-gradient(to right, rgba(244,239,229,0.035) 1px, transparent 1px)",
           backgroundSize: "calc(100% / 12) 100%",
           maskImage:
             "linear-gradient(to bottom, transparent, black 18%, black 82%, transparent)",
@@ -123,6 +162,8 @@ function HeroBackdrop() {
             "linear-gradient(to bottom, transparent, black 18%, black 82%, transparent)",
         }}
       />
+
+      {/* Film grain */}
       <div className="grain absolute inset-0 -z-10" aria-hidden />
     </>
   );

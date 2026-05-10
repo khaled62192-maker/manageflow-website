@@ -24,15 +24,15 @@ export function WebsiteAudit() {
   const [currentStep, setCurrentStep] = useState(0);
   const [results, setResults] = useState<AuditScore[] | null>(null);
 
-  // Deterministic pseudo-random score based on URL hash
+  // Deterministic pseudo-random score (4–9 range) based on URL hash
   const generateScores = (website: string) => {
     const hash = website
       .split("")
       .reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    const baseScores = [6, 7, 6, 7, 6];
+    const baseScores = [5, 6, 5, 6, 5];
     return baseScores.map((base, i) => {
-      const variation = ((hash * (i + 1)) % 3) - 1; // -1, 0, or 1
-      return Math.min(10, Math.max(5, base + variation));
+      const variation = ((hash * (i + 3)) % 5) - 2; // -2 to +2
+      return Math.min(9, Math.max(4, base + variation));
     });
   };
 
@@ -69,35 +69,51 @@ export function WebsiteAudit() {
 
   const getRecommendations = () => {
     if (!results) return [];
-    const weakest = results
-      .sort((a, b) => a.score - b.score)
-      .slice(0, 2)
-      .map((r) => r.label);
+    const sorted = [...results].sort((a, b) => a.score - b.score);
+    const weakestLabels = sorted.slice(0, 2).map((r) => r.label);
 
-    const recommendationMap: Record<string, string> = {
-      "Brand Presence": "Strengthen brand visibility with consistent messaging across pages.",
-      "User Experience":
-        "Improve navigation clarity and reduce friction in user flows.",
-      "Conversion Readiness":
-        "Add clear CTAs and optimize conversion paths (contact, booking, purchase).",
-      "Trust & Credibility":
-        "Display trust signals, testimonials, certifications, and social proof.",
-      "Content Clarity":
-        "Simplify copy, use stronger headlines, and clarify value propositions."
+    const recommendationMap: Record<string, { en: string; ar: string }> = {
+      "Brand Presence": {
+        en: "Your brand isn't making a strong first impression. Consistent logo, colour, and tone across all pages will help UAE clients trust you instantly.",
+        ar: "علامتك التجارية لا تترك انطباعاً قوياً في البداية. اتساق الشعار واللون والأسلوب عبر كل الصفحات يُعزّز ثقة العملاء الإماراتيين فوراً.",
+      },
+      "User Experience": {
+        en: "Visitors are likely leaving before they find what they need. Clearer navigation and a faster path to contact or booking will reduce drop-off.",
+        ar: "الزوار على الأرجح يغادرون قبل أن يجدوا ما يبحثون عنه. تحسين التنقل وتوضيح مسار التواصل أو الحجز سيُقلّل معدل المغادرة.",
+      },
+      "Conversion Readiness": {
+        en: "There's no obvious next step for interested visitors. Add a clear WhatsApp button or contact CTA above the fold — UAE clients expect to connect instantly.",
+        ar: "لا توجد خطوة واضحة تالية للزائر المهتم. أضف زر واتساب أو طلب تواصل واضح في أعلى الصفحة — عملاء الإمارات يتوقعون التواصل الفوري.",
+      },
+      "Trust & Credibility": {
+        en: "The site lacks trust signals. Testimonials from UAE clients, certifications, or real project examples will significantly boost credibility.",
+        ar: "الموقع يفتقر إلى عناصر الثقة. آراء عملاء إماراتيين أو شهادات أو نماذج حقيقية من أعمالك ستُعزّز المصداقية بشكل ملحوظ.",
+      },
+      "Content Clarity": {
+        en: "Your messaging is unclear. A single strong headline that tells UAE visitors exactly what you offer — in plain language — will make an immediate difference.",
+        ar: "رسالتك غير واضحة. عنوان رئيسي قوي وحيد يُخبر الزوار الإماراتيين بما تقدّمه بلغة مباشرة — سيُحدث فرقاً فورياً.",
+      },
     };
 
-    return weakest
-      .map((label) => recommendationMap[label] || "Enhance overall performance")
-      .slice(0, 2);
+    const enLabels = ["Brand Presence", "User Experience", "Conversion Readiness", "Trust & Credibility", "Content Clarity"];
+
+    return weakestLabels.map((label, idx) => {
+      // Match by position index in scoreLabels since AR labels differ
+      const enLabel = enLabels[results.findIndex((r) => r.label === label)];
+      const entry = recommendationMap[enLabel];
+      if (!entry) return lang === "ar" ? "تحسين الأداء العام للموقع." : "Improve overall site performance.";
+      return lang === "ar" ? entry.ar : entry.en;
+    }).slice(0, 2);
   };
 
   const recommendations = getRecommendations();
-  const whatsappLink = buildWhatsAppLink(
-    `I'd like a human review of my website: ${url}`
-  );
+  const whatsappMessage = lang === "ar"
+    ? `السلام عليكم ManageFlow، أودّ طلب مراجعة لموقعي: ${url}`
+    : `Hi ManageFlow, I'd like a human review of my website: ${url}`;
+  const whatsappLink = buildWhatsAppLink(whatsappMessage);
 
   return (
-    <section id="audit" className="relative bg-onyx py-24 sm:py-32 lg:py-36">
+    <section id="review" className="relative bg-onyx py-24 sm:py-32 lg:py-36">
       <Container size="wide">
         <SectionHeader
           index="06"
@@ -125,7 +141,7 @@ export function WebsiteAudit() {
                 />
                 <button
                   type="submit"
-                  className="rounded-[8px] bg-champagne/20 px-4 py-3 text-[13px] text-paper transition-colors hover:bg-champagne/30"
+                  className="rounded-[8px] bg-champagne px-4 py-3 text-[13px] font-medium text-ink transition-colors hover:bg-champagne/90"
                 >
                   {dict.submitButton}
                 </button>
@@ -139,7 +155,7 @@ export function WebsiteAudit() {
                 className="space-y-6 rounded-[24px] border border-paper/12 bg-ink p-6 sm:p-8"
               >
                 <p className="text-[13px] text-paper/60">
-                  Analyzing {url}...
+                  {lang === "ar" ? `جارٍ تحليل ${url}...` : `Analyzing ${url}...`}
                 </p>
                 <div className="space-y-4">
                   {dict.scanningSteps.map((step: string, i: number) => (
@@ -254,7 +270,7 @@ export function WebsiteAudit() {
                     href={whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 rounded-[8px] bg-champagne/20 px-4 py-3 text-[13px] text-paper transition-colors hover:bg-champagne/30"
+                    className="flex items-center justify-center gap-2 rounded-[8px] bg-champagne px-4 py-3 text-[13px] font-medium text-ink transition-colors hover:bg-champagne/90"
                   >
                     {dict.cta}
                     <ArrowRight size={14} strokeWidth={2} />
@@ -266,7 +282,7 @@ export function WebsiteAudit() {
                     }}
                     className="w-full rounded-[8px] border border-paper/20 px-4 py-3 text-[13px] text-paper transition-colors hover:border-paper/40"
                   >
-                    Audit another site
+                    {lang === "ar" ? "راجع موقعاً آخر" : "Review another site"}
                   </button>
                 </div>
               </motion.div>

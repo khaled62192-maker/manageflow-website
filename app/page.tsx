@@ -4,7 +4,6 @@ import { Hero } from "@/components/sections/Hero";
 import { TrustSignals } from "@/components/sections/TrustSignals";
 import { Services } from "@/components/sections/Services";
 import { WhyManageFlow } from "@/components/sections/WhyManageFlow";
-import { CreativeShowcase } from "@/components/sections/CreativeShowcase";
 import { Process } from "@/components/sections/Process";
 import { StrategyConcierce } from "@/components/sections/StrategyConcierce";
 import { WebsiteAudit } from "@/components/sections/WebsiteAudit";

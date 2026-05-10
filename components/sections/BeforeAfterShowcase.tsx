@@ -29,39 +29,7 @@ function useTouchDevice() {
   return { isTouch, mounted };
 }
 
-interface ShowcaseCard {
-  id: string;
-  label: string;
-  description: string;
-}
-
-const showcases: ShowcaseCard[] = [
-  {
-    id: "branding",
-    label: "Brand Identity",
-    description: "From weak to memorable"
-  },
-  {
-    id: "website",
-    label: "Website Design",
-    description: "From outdated to premium"
-  },
-  {
-    id: "trust",
-    label: "Trust & Credibility",
-    description: "From weak to confident"
-  },
-  {
-    id: "sales",
-    label: "Sales Materials",
-    description: "From amateur to professional"
-  },
-  {
-    id: "campaign",
-    label: "Campaign Creative",
-    description: "From forgettable to premium"
-  }
-];
+const scenarioIds = ["branding", "website", "trust", "sales", "campaign"];
 
 // ========== BRAND IDENTITY MOCKUP ==========
 function BrandingMockup({ isBefore }: { isBefore: boolean }) {
@@ -434,37 +402,28 @@ export function BeforeAfterShowcase() {
   };
 
   return (
-    <section className="relative bg-onyx py-24 sm:py-32 lg:py-36">
+    <section id="work" className="relative bg-onyx py-24 sm:py-32 lg:py-36">
       <Container size="wide">
         <SectionHeader
           index="04"
           eyebrow={dict.eyebrow}
           title={dict.title}
-          sub={mounted && isTouch ? "Tap to explore what's possible." : dict.subtitle}
+          sub={mounted && isTouch ? dict.subtitleTouch : dict.subtitle}
         />
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="text-xs text-paper/40 mt-6 sm:mt-8 text-center italic"
-        >
-          Concept examples showing service capabilities
-        </motion.p>
 
         <Reveal y={14} className="mt-10 sm:mt-14">
           <div className="relative z-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12">
-            {showcases.map((showcase, i) => {
-              const MockupComponent = mockupComponents[showcase.id];
-              const isHovered = hoveredCard === showcase.id;
-              const isTapped = tappedCard === showcase.id;
+            {dict.scenarios.map((scenario, i) => {
+              const id = scenarioIds[i];
+              const MockupComponent = mockupComponents[id];
+              const isHovered = hoveredCard === id;
+              const isTapped = tappedCard === id;
               // On mobile (isTouch), use tap state; on desktop, use hover state
               const isRevealed = isTouch ? isTapped : isHovered;
 
               return (
                 <motion.div
-                  key={showcase.id}
+                  key={id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
@@ -474,12 +433,12 @@ export function BeforeAfterShowcase() {
                     ease: [0.22, 0.61, 0.36, 1]
                   }}
                   onHoverStart={() => {
-                    if (!isTouch) setHoveredCard(showcase.id);
+                    if (!isTouch) setHoveredCard(id);
                   }}
                   onHoverEnd={() => {
                     if (!isTouch) setHoveredCard(null);
                   }}
-                  onClick={(e) => handleCardClick(showcase.id, e as React.MouseEvent)}
+                  onClick={(e) => handleCardClick(id, e as React.MouseEvent)}
                   className={`group ${isTouch ? "cursor-pointer" : ""}`}
                 >
                   {/* Card container */}
@@ -562,7 +521,7 @@ export function BeforeAfterShowcase() {
                         className="flex items-center justify-between"
                       >
                         <h3 className="text-[16px] font-medium text-paper">
-                          {showcase.label}
+                          {scenario.label}
                         </h3>
                         <motion.span
                           animate={{ opacity: isRevealed ? 1 : 0.4 }}
@@ -578,7 +537,7 @@ export function BeforeAfterShowcase() {
                         whileHover={{ opacity: 0.8 }}
                         className="text-[13px] text-paper/70 transition-colors duration-300"
                       >
-                        {showcase.description}
+                        {scenario.description}
                       </motion.p>
 
                       <motion.div

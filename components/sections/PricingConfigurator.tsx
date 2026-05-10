@@ -14,41 +14,41 @@ interface PricingRange {
   max: number;
 }
 
-const servicePrices: Record<string, PricingRange> = {
-  websitedesign: { min: 6500, max: 15000 },
-  brandidentity: { min: 3500, max: 8000 },
-  trustandcredibility: { min: 2000, max: 5000 },
-  salesmaterials: { min: 2500, max: 6000 },
-  campaigncreative: { min: 3000, max: 8000 }
-};
+// Index matches dict.pricingConfigurator.services order
+const servicePrices: PricingRange[] = [
+  { min: 2500, max: 8000 },  // Website Design
+  { min: 1500, max: 5000 },  // Brand Identity
+  { min: 1200, max: 4000 },  // Professional Presence
+  { min: 900,  max: 3000 },  // Sales Materials
+  { min: 1000, max: 3500 },  // Promotional Campaigns
+];
 
 export function PricingConfigurator() {
   const { t, lang } = useLang();
   const dict = t.pricingConfigurator;
 
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [selectedIndices, setSelectedIndices] = useState<number[]>([]);
   const [bilingual, setBilingual] = useState(false);
   const [urgency, setUrgency] = useState("standard");
 
-  const toggleService = (service: string) => {
-    setSelectedServices((prev) =>
-      prev.includes(service)
-        ? prev.filter((s) => s !== service)
-        : [...prev, service]
+  const toggleService = (index: number) => {
+    setSelectedIndices((prev) =>
+      prev.includes(index)
+        ? prev.filter((i) => i !== index)
+        : [...prev, index]
     );
   };
 
   const estimatedPrice = useMemo(() => {
-    if (selectedServices.length === 0) {
+    if (selectedIndices.length === 0) {
       return { min: 0, max: 0 };
     }
 
     let min = 0;
     let max = 0;
 
-    selectedServices.forEach((service) => {
-      const serviceKey = service.toLowerCase().replace(/\s+/g, "");
-      const price = servicePrices[serviceKey];
+    selectedIndices.forEach((index) => {
+      const price = servicePrices[index];
       if (price) {
         min += price.min;
         max += price.max;
@@ -68,7 +68,7 @@ export function PricingConfigurator() {
     }
 
     return { min, max };
-  }, [selectedServices, bilingual, urgency]);
+  }, [selectedIndices, bilingual, urgency]);
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat(lang === "ar" ? "ar-AE" : "en-US", {
@@ -103,19 +103,14 @@ export function PricingConfigurator() {
                 </h3>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {dict.services.map((service: any, i: number) => {
-                    const serviceKey = service.label
-                      .toLowerCase()
-                      .replace(/\s+/g, "");
-                    const isSelected = selectedServices.includes(
-                      service.label
-                    );
+                    const isSelected = selectedIndices.includes(i);
 
                     return (
                       <motion.button
                         key={i}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        onClick={() => toggleService(service.label)}
+                        onClick={() => toggleService(i)}
                         className={`rounded-[12px] border-2 p-4 text-left transition-all ${
                           isSelected
                             ? "border-champagne/60 bg-champagne/10"
@@ -218,7 +213,7 @@ export function PricingConfigurator() {
 
               {/* Price Display */}
               <div className="border-t border-paper/10 pt-6">
-                {selectedServices.length > 0 ? (
+                {selectedIndices.length > 0 ? (
                   <motion.div
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -244,13 +239,13 @@ export function PricingConfigurator() {
                   </motion.div>
                 ) : (
                   <p className="text-[13px] text-paper/60">
-                    Select services to see pricing estimate
+                    {lang === "ar" ? "اختر خدمات لرؤية التقدير" : "Select services to see pricing estimate"}
                   </p>
                 )}
               </div>
 
               {/* CTA */}
-              {selectedServices.length > 0 && (
+              {selectedIndices.length > 0 && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -258,7 +253,9 @@ export function PricingConfigurator() {
                 >
                   <a
                     href={buildWhatsAppLink(
-                      `I'm interested in: ${selectedServices.join(", ")}. Estimated budget: ${formatPrice(estimatedPrice.min)} - ${formatPrice(estimatedPrice.max)}`
+                      lang === "ar"
+                        ? `السلام عليكم ManageFlow، أودّ الاستفسار عن مشروعي. الخدمات المطلوبة: ${selectedIndices.map((i) => dict.services[i].label).join("، ")}. الميزانية المتوقعة: ${formatPrice(estimatedPrice.min)} - ${formatPrice(estimatedPrice.max)}`
+                        : `Hi ManageFlow, I'm interested in: ${selectedIndices.map((i) => dict.services[i].label).join(", ")}. Estimated budget: ${formatPrice(estimatedPrice.min)} - ${formatPrice(estimatedPrice.max)}`
                     )}
                     target="_blank"
                     rel="noopener noreferrer"

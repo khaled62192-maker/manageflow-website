@@ -67,10 +67,11 @@ export function StrategyConcierce() {
     setCurrentStep("summary");
   };
 
-  const summaryText = `${responses.business} | Goal: ${responses.goal} | ${responses.bilingual} | Timeline: ${responses.timeline}`;
-  const whatsappLink = buildWhatsAppLink(
-    `I'm interested in discussing my project: ${summaryText}`
-  );
+  const summaryText = `${responses.business} | ${responses.goal} | ${responses.bilingual} | ${responses.timeline}`;
+  const whatsappMessage = lang === "ar"
+    ? `السلام عليكم ManageFlow، أودّ الاستفسار عن مشروعي: ${summaryText}`
+    : `Hi ManageFlow, I'd like to discuss my project: ${summaryText}`;
+  const whatsappLink = buildWhatsAppLink(whatsappMessage);
 
   return (
     <section className="relative bg-ink py-24 sm:py-32 lg:py-36">
@@ -98,12 +99,9 @@ export function StrategyConcierce() {
                     exit={{ opacity: 0, y: -10 }}
                     className="space-y-6"
                   >
-                    <div className="space-y-2">
+                    <div>
                       <p className="text-[14px] leading-relaxed text-paper">
                         {dict.greeting}
-                      </p>
-                      <p className="text-[12px] text-paper/40">
-                        ~2 minutes to personalized insights
                       </p>
                     </div>
 
@@ -115,49 +113,13 @@ export function StrategyConcierce() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: i * 0.05 }}
                           onClick={() => handleQuickOption(option)}
-                          className="rounded-[8px] border border-paper/20 bg-onyx/50 px-4 py-3 text-[13px] text-paper transition-all hover:border-champagne/55 hover:bg-onyx/80 hover:scale-105"
+                          className="rounded-[8px] border border-paper/20 bg-onyx/50 px-4 py-3 text-[13px] text-paper transition-all hover:border-champagne/55 hover:bg-onyx/80 hover:scale-105 active:scale-95"
                         >
                           {option}
                         </motion.button>
                       ))}
                     </div>
 
-                    {/* Suggestion chips */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 }}
-                      className="pt-4 border-t border-paper/10 space-y-3"
-                    >
-                      <p className="text-[11px] text-paper/40">
-                        Or ask anything like:
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {[
-                          "How much does a website cost?",
-                          "What's included in branding?",
-                          "How do you build trust signals?",
-                          "What sales materials do you create?",
-                          "When can you start?"
-                        ].map((chip, i) => (
-                          <motion.button
-                            key={chip}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 0.35 + i * 0.06 }}
-                            whileHover={{ scale: 1.05, backgroundColor: "rgba(244, 239, 229, 0.15)" }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={() => {
-                              setResponses({ ...responses, business: chip });
-                              setCurrentStep("goal");
-                            }}
-                            className="rounded-full px-3 py-1.5 text-[11px] bg-paper/8 text-paper/70 border border-paper/10 transition-all hover:text-paper hover:border-paper/20"
-                          >
-                            {chip}
-                          </motion.button>
-                        ))}
-                      </div>
-                    </motion.div>
                   </motion.div>
                 )}
 
@@ -208,7 +170,7 @@ export function StrategyConcierce() {
                         <button
                           key={goal}
                           onClick={() => handleGoalSelect(goal)}
-                          className="w-full rounded-[8px] border border-paper/20 bg-onyx/50 px-4 py-3 text-left text-[13px] text-paper transition-all hover:border-champagne/55 hover:bg-onyx/80"
+                          className="w-full rounded-[8px] border border-paper/20 bg-onyx/50 px-4 py-3 text-left text-[13px] text-paper transition-all hover:border-champagne/55 hover:bg-onyx/80 active:scale-95"
                         >
                           {goal}
                         </button>
@@ -233,7 +195,7 @@ export function StrategyConcierce() {
                         <button
                           key={option}
                           onClick={() => handleBilingualSelect(option)}
-                          className="rounded-[8px] border border-paper/20 bg-onyx/50 px-4 py-3 text-[13px] text-paper transition-all hover:border-champagne/55 hover:bg-onyx/80"
+                          className="rounded-[8px] border border-paper/20 bg-onyx/50 px-4 py-3 text-[13px] text-paper transition-all hover:border-champagne/55 hover:bg-onyx/80 active:scale-95"
                         >
                           {option}
                         </button>
@@ -258,7 +220,7 @@ export function StrategyConcierce() {
                         <button
                           key={timeline}
                           onClick={() => handleTimelineSelect(timeline)}
-                          className="w-full rounded-[8px] border border-paper/20 bg-onyx/50 px-4 py-3 text-left text-[13px] text-paper transition-all hover:border-champagne/55 hover:bg-onyx/80"
+                          className="w-full rounded-[8px] border border-paper/20 bg-onyx/50 px-4 py-3 text-left text-[13px] text-paper transition-all hover:border-champagne/55 hover:bg-onyx/80 active:scale-95"
                         >
                           {timeline}
                         </button>
@@ -294,7 +256,7 @@ export function StrategyConcierce() {
                       href={whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 rounded-[8px] bg-champagne/20 px-4 py-3 text-[13px] text-paper transition-colors hover:bg-champagne/30"
+                      className="flex items-center justify-center gap-2 rounded-[8px] bg-champagne px-4 py-3 text-[13px] font-medium text-ink transition-colors hover:bg-champagne/90"
                     >
                       {dict.ctaPrimary}
                       <ChevronRight size={14} strokeWidth={2} />

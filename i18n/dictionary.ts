@@ -4,7 +4,7 @@ export const dictionary = {
   en: {
     nav: {
       services: "What we do",
-      work: "Our work",
+      work: "Creative Concepts",
       process: "Process",
       contact: "Contact",
       cta: "Start a project",
@@ -20,7 +20,7 @@ export const dictionary = {
       ],
       sub: "Premium websites, brand systems, and launch assets — built by an Emirati-led studio for ambitious hospitality, beauty, retail, and real estate businesses across the GCC.",
       ctaPrimary: "Book your strategy call",
-      ctaSecondary: "Get your site audited",
+      ctaSecondary: "Get your free website review",
       meta: [
         "UAE-based",
         "GCC-focused",
@@ -46,7 +46,7 @@ export const dictionary = {
         },
         {
           title: "Transparent starting points",
-          body: "Clear starting points listed openly on this site. Final commercial terms are defined during project scoping, not implied here.",
+          body: "We share clear starting prices here so you can plan with confidence. The final investment is confirmed together during our scoping conversation — no surprises, no hidden costs.",
         },
         {
           title: "Limited capacity for quality control",
@@ -61,7 +61,7 @@ export const dictionary = {
         "Brand strategy",
         "Visual identity",
         "Editorial websites",
-        "Campaign creative",
+        "Promotional campaigns",
         "Bilingual delivery",
         "Launch direction",
         "Premium content",
@@ -148,18 +148,18 @@ export const dictionary = {
         },
         {
           n: "03",
-          tag: "Trust",
-          title: "Trust & Credibility",
-          summary: "Build confidence before the first conversation.",
+          tag: "Presence",
+          title: "Professional Presence",
+          summary: "Look more professional and build trust before the first conversation.",
           tiers: [
             {
               name: "Starting Package",
               price: "1,200",
-              position: "Trust-focused design enhancements.",
+              position: "Professional design upgrades that build immediate trust.",
               includes: [
-                "Trust-focused design enhancements",
+                "Professional visual upgrades",
                 "Google Business profile polish",
-                "Testimonial/credibility section setup",
+                "Testimonials & reviews section",
                 "Contact clarity improvements",
                 "Trust signal enhancements",
               ],
@@ -167,10 +167,10 @@ export const dictionary = {
             {
               name: "Premium Upsells",
               price: "",
-              position: "Strengthen your credibility.",
+              position: "Deepen your professional standing.",
               includes: [
                 "Review generation assets",
-                "Trust collateral",
+                "Credibility collateral",
                 "Certification display design",
                 "Full credibility audit",
               ],
@@ -211,27 +211,28 @@ export const dictionary = {
         },
         {
           n: "05",
-          tag: "Campaign",
-          title: "Campaign Creative",
-          summary: "Creative campaigns designed to capture attention.",
+          tag: "Promo",
+          title: "Promotional Campaigns",
+          summary: "Clear, branded campaigns that promote your business and drive action.",
           tiers: [
             {
               name: "Starting Package",
               price: "1,000",
               position: "Essential campaign creative assets.",
               includes: [
-                "Campaign concept",
-                "Promo visual design",
-                "Ad creative asset(s)",
+                "Campaign concept & direction",
+                "Promotional visual design",
+                "Ad creative assets (2–3 formats)",
               ],
             },
             {
               name: "Premium Upsells",
               price: "",
-              position: "Expand your campaign.",
+              position: "Expand your campaign reach.",
               includes: [
                 "Multiple creatives",
                 "Campaign bundles",
+                "Ramadan & Eid campaign packages",
                 "Bilingual campaign assets",
                 "Motion/video assets",
                 "Launch campaign packages",
@@ -243,7 +244,7 @@ export const dictionary = {
     },
 
     showcase: {
-      eyebrow: "Our work",
+      eyebrow: "Creative Concepts",
       title: "Studio capability studies.",
       sub: "Creative explorations demonstrating how we think, execute, and position premium brands.",
       tag: "Studio capability",
@@ -364,10 +365,10 @@ export const dictionary = {
           helper: "Pick more than one if relevant.",
           type: "multi",
           options: [
-            "Website Systems",
+            "Website Design",
             "Brand Identity",
-            "Campaign Creative",
-            "Social Content & Brand Presence",
+            "Promotional Campaigns",
+            "Sales Materials",
           ],
         },
         {
@@ -387,7 +388,7 @@ export const dictionary = {
       items: [
         {
           q: "How do we begin?",
-          a: "Send a brief through the contact section, or request a Private Brand Review. We respond within one working day with the next steps.",
+          a: "Send a brief through the contact section. We respond within one working day with the next steps.",
         },
         {
           q: "Do you work with all businesses?",
@@ -399,15 +400,15 @@ export const dictionary = {
         },
         {
           q: "How are projects scoped?",
-          a: "Each project opens with a Private Brand Review. From there we agree on scope and deliverables before any work begins. Commercial terms are defined during scoping, not implied on this page.",
+          a: "Each project opens with a brief conversation about your goals. From there we agree on scope and deliverables before any work begins. Final pricing is confirmed during scoping.",
         },
         {
           q: "Can you refine an existing brand?",
-          a: "Often. We work as much with refinement and rebrands as with first-time launches. A Private Brand Review is the cleanest way to assess whether a refinement, evolution, or full rebrand is the right path.",
+          a: "Often. We work as much with refinement and rebrands as with first-time launches. A brief conversation is the cleanest way to assess the right path.",
         },
         {
           q: "Do you support ongoing retainers?",
-          a: "Yes. Ongoing content and brand presence support is available for select clients after a project completes and the system is established. Available after scoping.",
+          a: "Yes. Ongoing content and brand presence support is available for select clients after a project completes and the system is established.",
         },
       ],
     },
@@ -452,57 +453,57 @@ export const dictionary = {
     floatingWhats: "WhatsApp",
 
     strategyConcierce: {
-      eyebrow: "AI Strategy Concierge",
-      title: "Chat with a premium digital strategist.",
-      subtitle: "Get personalized insights in 2 minutes. No forms, no wait.",
-      greeting: "Hi! I'm ManageFlow's strategy concierge. Let me understand your business.",
+      eyebrow: "Build Your Package",
+      title: "Build your perfect package.",
+      subtitle: "Tell us what you need. We'll put the right package together for you.",
+      greeting: "Hi! Select what you need and we'll build your package together.",
       quickOptions: [
         "Website Design",
         "Brand Identity",
-        "Trust & Credibility",
+        "Professional Presence",
         "Sales Materials",
-        "Campaign Creative",
+        "Promotional Campaigns",
         "Pricing",
-        "Book a Call"
+        "Book a Call",
       ],
       questions: {
         business: "What type of business do you run?",
         goal: "What's your main goal right now?",
         bilingual: "Do you need Arabic + English?",
-        timeline: "What's your timeline?"
+        timeline: "What's your timeline?",
       },
       followUpOptions: {
-        goal: ["Build a website", "Refresh branding", "Build trust & credibility", "Create sales materials", "Develop campaign creative"],
-        timeline: ["Urgent (2-4 weeks)", "Standard (4-8 weeks)", "Flexible (whenever)"]
+        goal: ["Build a website", "Refresh branding", "Build professional presence", "Create sales materials", "Run a promotional campaign"],
+        timeline: ["Urgent (2-4 weeks)", "Standard (4-8 weeks)", "Flexible (whenever)"],
       },
       summary: "Here's what I understand...",
       ctaPrimary: "Chat on WhatsApp",
-      ctaSecondary: "Book 45-min strategy session"
+      ctaSecondary: "Book a Strategy Call",
     },
 
     websiteAudit: {
-      eyebrow: "Free Website Audit",
-      title: "Get a free audit of your website.",
-      subtitle: "See what's working, what's not, and what to fix next.",
+      eyebrow: "Free Website Review",
+      title: "Get a free review of your website.",
+      subtitle: "See what's working, what's holding you back, and what to fix first.",
       inputPlaceholder: "Enter your website URL (e.g., yoursite.com)",
-      submitButton: "Get Audit",
+      submitButton: "Get My Free Review",
       scanningSteps: [
         "Reviewing brand impression...",
         "Checking UX clarity...",
         "Checking conversion flow...",
         "Reviewing Arabic/English readiness...",
-        "Checking trust signals..."
+        "Checking trust signals...",
       ],
-      resultTitle: "Your Website Audit Results",
+      resultTitle: "Your Website Review",
       scoreLabels: [
         "Brand Presence",
         "User Experience",
         "Conversion Readiness",
         "Trust & Credibility",
-        "Content Clarity"
+        "Content Clarity",
       ],
-      recommendations: "Key areas to improve:",
-      cta: "Send us your website for a real human review"
+      recommendations: "Areas to focus on:",
+      cta: "Get a real human review from our team",
     },
 
     pricingConfigurator: {
@@ -512,17 +513,17 @@ export const dictionary = {
       services: [
         { label: "Website Design", description: "Premium responsive business websites" },
         { label: "Brand Identity", description: "Logo, visual system, brand foundations" },
-        { label: "Trust & Credibility", description: "Trust signals, credibility upgrades" },
+        { label: "Professional Presence", description: "Professional presence, credibility upgrades" },
         { label: "Sales Materials", description: "Company profiles, proposals, decks" },
-        { label: "Campaign Creative", description: "Campaign concepts and creative assets" }
+        { label: "Promotional Campaigns", description: "Promotional campaigns and creative assets" },
       ],
       options: {
         bilingual: "Bilingual (EN/AR)",
-        urgency: "Urgency level"
+        urgency: "Urgency level",
       },
       estimatedInvestment: "Estimated investment:",
-      disclaimer: "Final pricing depends on scope after consultation.",
-      cta: "Book your 45-minute strategy session"
+      disclaimer: "Final pricing confirmed after a scoping conversation.",
+      cta: "Book your strategy call",
     },
 
     whyManageFlow: {
@@ -532,49 +533,50 @@ export const dictionary = {
       items: [
         {
           title: "Built for UAE businesses",
-          description: "Designed specifically for GCC brands and local context. We understand your market."
+          description: "Designed specifically for GCC brands and local context. We understand your market.",
         },
         {
           title: "Premium-first execution",
-          description: "Every deliverable reflects luxury standards. No shortcuts, no compromise on quality."
+          description: "Every deliverable reflects luxury standards. No shortcuts, no compromise on quality.",
         },
         {
           title: "Transparent starting pricing",
-          description: "Clear price points. No hidden costs. Final quotes depend on scope during consultation."
+          description: "Clear price points listed openly. Final quotes depend on scope — confirmed together.",
         },
         {
           title: "Bilingual-ready solutions",
-          description: "English and Arabic considered equally from concept. Both languages feel native."
+          description: "English and Arabic considered equally from concept. Both languages feel native.",
         },
         {
           title: "Founder-led creative direction",
-          description: "The studio lead works directly on your project. Your work gets personal attention."
+          description: "The studio lead works directly on your project. Your work gets personal attention.",
         },
         {
           title: "Fast, focused delivery",
-          description: "Limited capacity means your project is a priority. Scoped timelines, defined milestones."
-        }
-      ]
+          description: "Limited capacity means your project is a priority. Scoped timelines, defined milestones.",
+        },
+      ],
     },
 
     beforeAfter: {
-      eyebrow: "Concept Transformations",
+      eyebrow: "Creative Concepts",
       title: "Concept transformations. Real potential.",
-      subtitle: "Hover to explore what's possible.",
+      subtitle: "Hover to reveal what's possible.",
+      subtitleTouch: "Tap to explore what's possible.",
       scenarios: [
         { label: "Brand Identity", description: "From weak to memorable" },
         { label: "Website Design", description: "From outdated to premium" },
-        { label: "Trust & Credibility", description: "From weak to confident" },
+        { label: "Professional Presence", description: "From invisible to trusted" },
         { label: "Sales Materials", description: "From amateur to professional" },
-        { label: "Campaign Creative", description: "From forgettable to premium" }
-      ]
+        { label: "Promotional Campaigns", description: "From forgettable to premium" },
+      ],
     },
   },
 
   ar: {
     nav: {
       services: "ما نقدّمه",
-      work: "أعمالنا",
+      work: "نماذج إبداعية",
       process: "أسلوب العمل",
       contact: "تواصل",
       cta: "ابدأ مشروعك",
@@ -588,9 +590,9 @@ export const dictionary = {
         "حضور رقمي لعلامات الخليج",
         "التي ترفض أن تبدو عادية.",
       ],
-      sub: "مواقع راقية، أنظمة هويات، وأصول إطلاق — من استوديو يقوده مؤسّس إماراتي للأعمال الطموحة في الضيافة، التجميل، التجزئة، والعقارات في الخليج.",
+      sub: "مواقع راقية، أنظمة هويات، وأصول إطلاق — من استوديو يقوده مؤسّس إماراتي لأعمال الضيافة، التجميل، التجزئة، والعقارات الطموحة في الخليج.",
       ctaPrimary: "احجز استشارة استراتيجية",
-      ctaSecondary: "قيّم موقعك",
+      ctaSecondary: "احصل على مراجعة مجانية لموقعك",
       meta: [
         "مقرّنا في الإمارات",
         "تركيزنا على الخليج",
@@ -604,34 +606,34 @@ export const dictionary = {
       items: [
         {
           title: "يقوده مؤسّسه، من الإمارات",
-          body: "تتواصل مباشرة مع قائد الاستوديو. لا سلاسل حسابات ولا تسليمات — سياق محلي، حسّ خليجي.",
+          body: "تتواصل مباشرة مع قائد الاستوديو. لا وسطاء ولا تسليمات — سياق محلي، وحسّ خليجي حقيقي.",
         },
         {
           title: "بلغتين منذ البداية",
-          body: "العربية والإنجليزية معاً — كتابةً، تصميماً، وتفكيراً، لكلا الجمهورين منذ أول رسمة.",
+          body: "العربية والإنجليزية معاً — كتابةً وتصميماً وتفكيراً لكلا الجمهورين منذ أول رسمة.",
         },
         {
           title: "بلا إسناد خارجي",
-          body: "كل عمل يُصمَّم ويُنفَّذ داخل الاستوديو. لا تعهيد ولا عمل خارجي — يدُ الاستوديو على كل التفاصيل.",
+          body: "كل عمل يُصمَّم ويُنفَّذ داخل الاستوديو. لا تعهيد ولا إسناد خارجي — يد الاستوديو على كل تفصيلة.",
         },
         {
-          title: "نقاط بداية شفافة",
-          body: "نقاط بداية واضحة على هذا الموقع. الشروط التجارية النهائية تُحدَّد أثناء تحديد المشروع، لا تُفترض هنا.",
+          title: "أسعار بداية شفافة",
+          body: "نشاركك أسعار بداية واضحة حتى تتمكّن من التخطيط براحة. التكلفة النهائية تُحدَّد معاً في محادثة التحديد — بلا مفاجآت.",
         },
         {
           title: "طاقة محدودة للحفاظ على الجودة",
-          body: "عدد قليل من المشاريع في وقت واحد. كل مشروع يحظى بكامل تركيز الاستوديو.",
+          body: "عدد محدود من المشاريع في آنٍ واحد. كل مشروع يحظى بكامل تركيز الاستوديو.",
         },
         {
           title: "نطاق محدّد، لا ارتجال",
-          body: "تسليمات وجداول زمنية متّفق عليها كتابةً قبل البدء. النطاق، المراحل، والمراجعات تُحدَّد أثناء التحديد — لا تُفترض.",
+          body: "تسليمات وجداول زمنية متّفق عليها كتابةً قبل البدء. النطاق، المراحل، والمراجعات تُحدَّد مسبقاً — لا تُفترض أبداً.",
         },
       ],
       drift: [
         "استراتيجية العلامة",
         "الهوية البصرية",
         "مواقع راقية",
-        "إبداع الحملات",
+        "حملات ترويجية",
         "تنفيذ بلغتين",
         "إخراج الإطلاق",
         "محتوى راقٍ",
@@ -642,7 +644,7 @@ export const dictionary = {
     services: {
       eyebrow: "ما نقدّمه",
       title: "خمس خدمات واضحة. مستوى واحد لا يتغير.",
-      sub: "راقي، واضح، مصمّم للعلامات الإماراتية والخليجية. خيارات بداية واضحة. أسعار شفافة.",
+      sub: "راقٍ، واضح، مصمّم للعلامات الإماراتية والخليجية. خيارات بداية واضحة. أسعار شفافة.",
       pricePrefix: "من",
       currency: "درهم",
       customLabel: "سعر مخصّص",
@@ -654,12 +656,12 @@ export const dictionary = {
           n: "٠١",
           tag: "هوية",
           title: "الهوية البصرية",
-          summary: "هوية بصرية لا تُنسى.",
+          summary: "هوية بصرية تُعبّر عن علامتك وتبقى في الذهن.",
           tiers: [
             {
               name: "الحزمة الأساسية",
               price: "١,٥٠٠",
-              position: "أساس الهوية البصرية.",
+              position: "أساس هوية بصرية متكاملة.",
               includes: [
                 "تصميم شعار مخصّص",
                 "لوحة ألوان",
@@ -676,7 +678,7 @@ export const dictionary = {
                 "بطاقات عمل",
                 "تصميم العبوة",
                 "أنظمة هوية متكاملة",
-                "قوالب وسائل تواصل",
+                "قوالب وسائل التواصل",
                 "أدلة هوية متقدّمة",
               ],
             },
@@ -686,18 +688,18 @@ export const dictionary = {
           n: "٠٢",
           tag: "ويب",
           title: "تصميم الموقع",
-          summary: "تجارب رقمية راقية مصمّمة للتحويل.",
+          summary: "تجارب رقمية راقية تبني الثقة وتُحوّل الزوار إلى عملاء.",
           tiers: [
             {
               name: "الحزمة الأساسية",
               price: "٢,٥٠٠",
-              position: "أساس الموقع الراقي المتجاوب.",
+              position: "موقع راقٍ متجاوب ومُحسَّن للتحويل.",
               includes: [
                 "موقع راقٍ متجاوب",
-                "تحسين الموبايل",
+                "تحسين الجوال",
                 "تكامل واتساب والتواصل",
-                "واجهة مستخدم راقية نظيفة",
-                "بنية متعدّدة أقسام أساسية",
+                "واجهة مستخدم نظيفة وراقية",
+                "بنية متعدّدة الأقسام",
               ],
             },
             {
@@ -705,9 +707,9 @@ export const dictionary = {
               price: "",
               position: "عزّز وجودك الرقمي.",
               includes: [
-                "عربي وإنجليزي ثنائي اللغة",
+                "موقع بلغتين عربي وإنجليزي",
                 "أنظمة حجز",
-                "رسوم متحركة متقدّمة",
+                "رسوم متحرّكة متقدّمة",
                 "صفحات إضافية",
                 "صفحات هبوط",
                 "كتابة نصوص",
@@ -718,31 +720,31 @@ export const dictionary = {
         },
         {
           n: "٠٣",
-          tag: "ثقة",
-          title: "الثقة والمصداقية",
-          summary: "بناء الثقة قبل أول محادثة.",
+          tag: "حضور",
+          title: "الحضور المهني",
+          summary: "اجعل عملك يبدو أكثر احترافيةً وثقةً — الانطباع الأول يُحدث الفارق.",
           tiers: [
             {
               name: "الحزمة الأساسية",
               price: "١,٢٠٠",
-              position: "تحسينات تصميم تركّز على الثقة.",
+              position: "اترك انطباعاً أول لا يُنسى.",
               includes: [
-                "تحسينات تصميم تركّز على الثقة",
+                "تحسين الصورة المهنية الرقمية",
                 "تحسين ملف Google Business",
-                "إعداد قسم شهادات والمصداقية",
-                "تحسينات وضوح التواصل",
-                "تحسينات إشارات الثقة",
+                "تصميم قسم آراء العملاء والشهادات",
+                "تحسين وضوح التواصل",
+                "عناصر بصرية تُعزّز المصداقية",
               ],
             },
             {
               name: "إضافات مميزة",
               price: "",
-              position: "قوّ مصداقيتك.",
+              position: "قوّ حضورك المهني بشكل أعمق.",
               includes: [
-                "أصول توليد التقييمات",
-                "تدرجات الثقة",
-                "تصميم عرض الشهادات",
-                "تدقيق مصداقية متكامل",
+                "نظام توليد التقييمات",
+                "مواد تعزيز المصداقية",
+                "تصميم عرض الشهادات والجوائز",
+                "تدقيق شامل على المصداقية",
               ],
             },
           ],
@@ -751,18 +753,18 @@ export const dictionary = {
           n: "٠٤",
           tag: "مبيعات",
           title: "المواد التسويقية",
-          summary: "مواد احترافية تساعد عملك على البيع بثقة.",
+          summary: "مواد احترافية تُساعد عملك على إغلاق الصفقات بثقة.",
           tiers: [
             {
               name: "الحزمة الأساسية",
               price: "٩٠٠",
               position: "اختر مادة تسويقية مميزة واحدة.",
               includes: [
-                "ملف الشركة",
-                "قالب العرض",
-                "الكتيب",
-                "عرض الملعب",
-                "عرض الكفاءات",
+                "ملف تعريفي للشركة",
+                "قالب عرض تقديمي",
+                "كتيب تعريفي",
+                "ملف عرض استثماري",
+                "ملف قدرات",
               ],
             },
             {
@@ -773,7 +775,7 @@ export const dictionary = {
                 "صفحات إضافية",
                 "نسخ ثنائية اللغة",
                 "تصميم عرض تقديمي مميز",
-                "رسوم عرض تقديمي",
+                "رسوم متحرّكة للعروض",
                 "حزم وثائق متعدّدة",
               ],
             },
@@ -781,30 +783,30 @@ export const dictionary = {
         },
         {
           n: "٠٥",
-          tag: "حملات",
-          title: "إبداع الحملات",
-          summary: "حملات إبداعية مصمّمة لتجذب الانتباه.",
+          tag: "ترويج",
+          title: "الحملات الترويجية",
+          summary: "حملات ترويجية احترافية تُبرز علامتك وتُوصل رسالتك للعملاء.",
           tiers: [
             {
               name: "الحزمة الأساسية",
               price: "١,٠٠٠",
-              position: "أصول حملة إبداعية أساسية.",
+              position: "كل ما تحتاجه لحملة ترويجية احترافية.",
               includes: [
-                "مفهوم الحملة",
-                "تصميم صورة ترويجية",
-                "أصول إبداعية إعلانية",
+                "مفهوم الحملة والاتجاه الإبداعي",
+                "تصاميم ترويجية احترافية",
+                "أصول إعلانية (٢-٣ صيغ)",
               ],
             },
             {
               name: "إضافات مميزة",
               price: "",
-              position: "وسّع حملتك.",
+              position: "وسّع وضاعف تأثير حملتك.",
               includes: [
                 "إبداعيات متعدّدة",
-                "حزم حملات",
-                "أصول حملة ثنائية اللغة",
-                "أصول حركة وفيديو",
-                "حزم حملات إطلاق",
+                "حزم حملات متكاملة",
+                "حملات رمضان والأعياد",
+                "أصول فيديو وموشن",
+                "حزم إطلاق متكاملة",
               ],
             },
           ],
@@ -813,11 +815,11 @@ export const dictionary = {
     },
 
     showcase: {
-      eyebrow: "أعمالنا",
+      eyebrow: "نماذج إبداعية",
       title: "دراسات قدرات الاستوديو.",
-      sub: "استكشافات إبداعية تُظهر كيف نفكّر ننفّذ، ونضع العلامات الراقية.",
+      sub: "استكشافات إبداعية تُظهر أسلوبنا في التفكير والتنفيذ وتموضع العلامات الراقية.",
       tag: "قدرات الاستوديو",
-      note: "هذه الدراسات المفاهيمية الداخلية تُظهر نهجنا في تنفيذ العلامات الراقية. لا تمثّل أعمالاً موكّلة حقيقية.",
+      note: "هذه الدراسات المفاهيمية تُظهر نهجنا في تنفيذ العلامات الراقية. لا تمثّل أعمالاً موكّلة من عملاء.",
       deliverablesLabel: "العناصر",
       sectorLabel: "القطاع",
       items: [
@@ -851,12 +853,12 @@ export const dictionary = {
     process: {
       eyebrow: "أسلوب العمل",
       title: "كيف نعمل.",
-      sub: "خمس خطوات من أول محادثة حتى الإطلاق. نطاق واضح في كل مرحلة — لا مفاجآت بين الموجز والتسليم.",
+      sub: "خمس خطوات من أول محادثة حتى الإطلاق. نطاق واضح في كل مرحلة — بلا مفاجآت.",
       steps: [
         { n: "٠١", title: "مراجعة العلامة", body: "نبدأ بمراجعة موجزة ومنظّمة لنشاطك، جمهورك، وطموحك." },
         { n: "٠٢", title: "التحديد", body: "الموقع، التسليمات، والجدول الزمني — متّفق عليه كتابةً قبل أي تنفيذ." },
         { n: "٠٣", title: "التصميم", body: "كل تفصيل مدروس: الطباعة، الحركة، الكلمة، الصورة." },
-        { n: "٠٤", title: "الصقل", body: "نُحرّر ونصقل عند نقاط متّفق عليها حتى يبدو كل شيء بسيطاً وطبيعياً." },
+        { n: "٠٤", title: "الصقل", body: "نُحرّر ونصقل عند نقاط متّفق عليها حتى يبدو كل شيء طبيعياً وسلساً." },
         { n: "٠٥", title: "الإطلاق", body: "نُخرج العمل إلى السوق — وندعم ما يأتي بعده." },
       ],
     },
@@ -934,10 +936,10 @@ export const dictionary = {
           helper: "يمكنك اختيار أكثر من خدمة.",
           type: "multi",
           options: [
-            "أنظمة المواقع",
+            "تصميم الموقع",
             "الهوية البصرية",
-            "إبداع الحملات",
-            "محتوى السوشيال وحضور العلامة",
+            "الحملات الترويجية",
+            "المواد التسويقية",
           ],
         },
         {
@@ -953,15 +955,15 @@ export const dictionary = {
     faq: {
       eyebrow: "أسئلة العملاء",
       title: "العمل مع الاستوديو.",
-      sub: "إجابات عملية للأسئلة الأكثر شيوعاً. سؤال آخر؟ أرسل لنا ملخصاً.",
+      sub: "إجابات عملية على أكثر الأسئلة شيوعاً. سؤال آخر؟ أرسل لنا ملخصاً.",
       items: [
         {
           q: "كيف نبدأ؟",
-          a: "أرسل ملخصاً عبر قسم التواصل، أو اطلب مراجعة علامة خاصة. نرد خلال يوم عمل واحد بالخطوات التالية.",
+          a: "أرسل ملخصاً عبر قسم التواصل. سنرد خلال يوم عمل واحد بالخطوات التالية.",
         },
         {
           q: "هل تعملون مع جميع الأعمال؟",
-          a: "نركّز على الضيافة الراقية، المطاعم، التجميل والعافية، العقارات، والشركات الطموحة التي يقودها مؤسّسوها في الإمارات والخليج. للمشاريع خارج هذا النطاق، تواصل معنا — وسنكون صريحين بشأن ما إذا كان الاستوديو هو الخيار المناسب.",
+          a: "نركّز على الضيافة الراقية، المطاعم، التجميل والعافية، العقارات، والشركات الطموحة في الإمارات والخليج. للمشاريع خارج هذا النطاق، تواصل معنا وسنكون صريحين.",
         },
         {
           q: "هل توفّرون التنفيذ بالعربية؟",
@@ -969,15 +971,15 @@ export const dictionary = {
         },
         {
           q: "كيف يتم تحديد نطاق المشاريع؟",
-          a: "يبدأ كل مشروع بمراجعة علامة خاصة. بعدها نتفق على النطاق والتسليمات قبل أي عمل. تُحدَّد الشروط التجارية أثناء التحديد، لا تُفترض على هذه الصفحة.",
+          a: "يبدأ كل مشروع بمحادثة قصيرة عن أهدافك. بعدها نتفق على النطاق والتسليمات كتابةً قبل أي تنفيذ. التسعير النهائي يُحدَّد في التحديد.",
         },
         {
           q: "هل يمكنكم صقل علامة قائمة؟",
-          a: "غالباً. نعمل مع الصقل وإعادة العلامات بقدر عملنا مع الإطلاقات الأولى. مراجعة العلامة الخاصة هي أنظف طريقة لتقييم ما إذا كان الصقل، التطوّر، أو إعادة العلامة الكاملة هو المسار الصحيح.",
+          a: "غالباً نعم. نعمل مع الصقل وإعادة العلامات بقدر عملنا مع الإطلاقات الجديدة. محادثة قصيرة تُحدّد المسار الأنسب.",
         },
         {
           q: "هل تدعمون الاتفاقيات المستمرة؟",
-          a: "نعم. دعم المحتوى وحضور العلامة المستمر متاح لعملاء مختارين بعد اكتمال المشروع وترسّخ النظام. متاح بعد التحديد.",
+          a: "نعم. دعم المحتوى وحضور العلامة المستمر متاح لعملاء مختارين بعد اكتمال المشروع.",
         },
       ],
     },
@@ -995,7 +997,7 @@ export const dictionary = {
         "تنفيذ بقيادة المؤسّس",
       ],
       whatsapp: "واتساب",
-      email: "البريد",
+      email: "البريد الإلكتروني",
       phone: "هاتف",
       form: {
         name: "اسمك",
@@ -1004,7 +1006,7 @@ export const dictionary = {
         submit: "أرسل الملخّص",
         submitNote: "يفتح في برنامج البريد لديك",
         privacy: "تفتح بياناتك في برنامج البريد لديك. لا نخزّن شيئاً على هذا الموقع.",
-        trustNote: "نراجع كل استفسار شخصياً ونرد عادة خلال يوم عمل واحد.",
+        trustNote: "نراجع كل استفسار شخصياً ونرد عادةً خلال يوم عمل واحد.",
         subject: "ملخّص مشروع جديد · manageflow.ae",
       },
     },
@@ -1022,57 +1024,57 @@ export const dictionary = {
     floatingWhats: "واتساب",
 
     strategyConcierce: {
-      eyebrow: "مستشار الإستراتيجية الذكي",
-      title: "تحدث مع إستراتيجي رقمي متخصص.",
-      subtitle: "احصل على رؤية شخصية في دقيقتين. بدون نماذج معقدة.",
-      greeting: "مرحباً! أنا مستشار ManageFlow. دعني أفهم احتياجات عملك.",
+      eyebrow: "اختر خدماتك",
+      title: "أخبرنا بما تحتاجه.",
+      subtitle: "اختر ما تريد، وسنُعدّ لك الباقة المناسبة.",
+      greeting: "مرحباً! اختر من خدماتنا وسنساعدك في بناء باقتك.",
       quickOptions: [
         "تصميم الموقع",
-        "هوية العلامة",
-        "الثقة والمصداقية",
+        "الهوية البصرية",
+        "الحضور المهني",
         "المواد التسويقية",
-        "إبداع الحملات",
+        "الحملات الترويجية",
         "الأسعار",
-        "احجز استشارة"
+        "احجز مكالمة",
       ],
       questions: {
-        business: "ما نوع عملك؟",
-        goal: "ما أهدافك الرئيسية؟",
+        business: "ما نوع نشاطك التجاري؟",
+        goal: "ما هدفك الرئيسي الآن؟",
         bilingual: "هل تحتاج إلى عربي وإنجليزي؟",
-        timeline: "ما الجدول الزمني لديك؟"
+        timeline: "ما الجدول الزمني لديك؟",
       },
       followUpOptions: {
-        goal: ["بناء موقع ويب", "تحديث الهوية", "بناء الثقة والمصداقية", "إنشاء مواد تسويقية", "تطوير إبداعات حملات"],
-        timeline: ["عاجل (٢-٤ أسابيع)", "عادي (٤-٨ أسابيع)", "مرن (في أي وقت)"]
+        goal: ["بناء موقع ويب", "تحديث الهوية البصرية", "تعزيز الحضور المهني", "إنشاء مواد تسويقية", "تنفيذ حملة ترويجية"],
+        timeline: ["عاجل (٢-٤ أسابيع)", "عادي (٤-٨ أسابيع)", "مرن (في أي وقت)"],
       },
       summary: "إليك ما فهمته...",
       ctaPrimary: "تحدث على الواتساب",
-      ctaSecondary: "احجز استشارة ٤٥ دقيقة"
+      ctaSecondary: "احجز مكالمة استراتيجية",
     },
 
     websiteAudit: {
-      eyebrow: "تقييم موقعك مجاني",
-      title: "احصل على تقييم مجاني لموقعك.",
-      subtitle: "شاهد ما ينجح وما لا ينجح والخطوات التالية.",
-      inputPlaceholder: "أدخل رابط موقعك (مثل: yoursite.com)",
-      submitButton: "احصل على التقييم",
+      eyebrow: "مراجعة موقعك المجانية",
+      title: "احصل على مراجعة مجانية لموقعك.",
+      subtitle: "اكتشف ما يعمل، وما يحتاج تحسيناً.",
+      inputPlaceholder: "أدخل رابط موقعك (مثال: yoursite.com)",
+      submitButton: "احصل على مراجعتك المجانية",
       scanningSteps: [
         "مراجعة انطباع العلامة...",
-        "التحقق من وضوح التجربة...",
-        "فحص سير التحويل...",
-        "مراجعة الجاهزية للعربية والإنجليزية...",
-        "فحص إشارات الثقة..."
+        "فحص وضوح تجربة المستخدم...",
+        "تحليل مسار التحويل...",
+        "التحقق من الجاهزية للعربية والإنجليزية...",
+        "فحص عناصر الثقة والمصداقية...",
       ],
-      resultTitle: "نتائج تقييم موقعك",
+      resultTitle: "نتائج مراجعة موقعك",
       scoreLabels: [
         "حضور العلامة",
         "تجربة المستخدم",
         "جاهزية التحويل",
         "الثقة والمصداقية",
-        "وضوح المحتوى"
+        "وضوح المحتوى",
       ],
-      recommendations: "المجالات الرئيسية للتحسين:",
-      cta: "أرسل موقعك للمراجعة الحقيقية من فريقنا"
+      recommendations: "أبرز مجالات التحسين:",
+      cta: "احصل على مراجعة حقيقية من فريقنا",
     },
 
     pricingConfigurator: {
@@ -1080,64 +1082,65 @@ export const dictionary = {
       title: "احسب تكلفة مشروعك.",
       subtitle: "أسعار شفافة ومرنة حسب احتياجاتك.",
       services: [
-        { label: "تصميم الموقع", description: "مواقع ويب راقية وسريعة التجاوب" },
-        { label: "هوية العلامة", description: "لوغو، نظام بصري، أساسيات الهوية" },
-        { label: "الثقة والمصداقية", description: "إشارات الثقة، تحسينات المصداقية" },
-        { label: "المواد التسويقية", description: "ملفات تعريفية، عروض توضيحية" },
-        { label: "إبداع الحملات", description: "مفاهيم حملات وأصول إبداعية" }
+        { label: "تصميم الموقع", description: "مواقع أعمال راقية ومتجاوبة" },
+        { label: "الهوية البصرية", description: "شعار، نظام بصري، أساسيات الهوية" },
+        { label: "الحضور المهني", description: "الحضور المهني وتعزيز المصداقية" },
+        { label: "المواد التسويقية", description: "ملفات تعريفية، عروض، كتيبات" },
+        { label: "الحملات الترويجية", description: "حملات ترويجية وأصول إبداعية" },
       ],
       options: {
         bilingual: "ثنائي اللغة (عربي/إنجليزي)",
-        urgency: "سرعة التنفيذ"
+        urgency: "سرعة التنفيذ",
       },
       estimatedInvestment: "الاستثمار المتوقع:",
-      disclaimer: "السعر النهائي يعتمد على التفاصيل بعد استشارة.",
-      cta: "احجز استشارة ٤٥ دقيقة"
+      disclaimer: "السعر النهائي يُحدَّد بعد محادثة التحديد.",
+      cta: "احجز مكالمة استراتيجية",
     },
 
     whyManageFlow: {
-      eyebrow: "لماذا اختر مانجفلو",
+      eyebrow: "لماذا ManageFlow",
       title: "بُنيت لنجاحك",
-      sub: "نحن لسنا وكالة عامة. إليك ما يميزنا.",
+      sub: "لسنا وكالة عامة. إليك ما يجعلنا مختلفين.",
       items: [
         {
-          title: "مصنوعة للأعمال الخليجية",
-          description: "مصممة خصيصاً لعلامات الخليج والسياق المحلي. نفهم سوقك."
+          title: "مصنوعة لأعمال الخليج",
+          description: "مصمّمة خصيصاً لعلامات الخليج والسياق المحلي. نعرف سوقك جيداً.",
         },
         {
-          title: "التنفيذ يبدأ من الفخامة",
-          description: "كل عمل يعكس معايير الفخامة. لا حقل للاختصارات، بدون أي تنازلات على الجودة."
+          title: "تنفيذ يبدأ من الجودة",
+          description: "كل عمل يعكس معايير الجودة العالية. لا اختصارات، ولا تنازل عن الإتقان.",
         },
         {
-          title: "أسعار شفافة",
-          description: "نقاط سعر واضحة. لا تكاليف خفية. العروض النهائية تعتمد على التفاصيل."
+          title: "أسعار بداية شفافة",
+          description: "نقاط سعر واضحة على الموقع. السعر النهائي يُحدَّد حسب تفاصيل مشروعك.",
         },
         {
-          title: "حلول بلغتين جاهزة",
-          description: "الإنجليزية والعربية متعادلتان منذ الفكرة الأولى. كلا اللغتين تشعران بالطبيعية."
+          title: "حلول بلغتين",
+          description: "العربية والإنجليزية متساويتان منذ أول فكرة. كلا اللغتين تشعران بالطبيعية والاحتراف.",
         },
         {
-          title: "الاتجاه الإبداعي من المؤسِّس",
-          description: "قائد الاستوديو يعمل مباشرة على مشروعك. عملك يحظى برعاية شخصية."
+          title: "الإخراج الإبداعي من المؤسّس",
+          description: "قائد الاستوديو يعمل مباشرة على مشروعك. مشروعك يحظى برعاية حقيقية ومباشرة.",
         },
         {
-          title: "تسليم سريع ومركز",
-          description: "الطاقة المحدودة تعني مشروعك له أولوية. جداول زمنية محددة، مراحل واضحة."
-        }
-      ]
+          title: "تسليم سريع ومنضبط",
+          description: "الطاقة المحدودة تعني مشروعك له أولوية فعلية. جداول زمنية واضحة ومراحل محدّدة.",
+        },
+      ],
     },
 
     beforeAfter: {
-      eyebrow: "أمثلة تصورية",
-      title: "أمثلة تصورية. إمكانات حقيقية.",
-      subtitle: "مرّر الماوس لاستكشاف ما هو ممكن.",
+      eyebrow: "نماذج إبداعية",
+      title: "نماذج إبداعية. إمكانات حقيقية.",
+      subtitle: "مرّر للاستكشاف.",
+      subtitleTouch: "اضغط للاستكشاف.",
       scenarios: [
         { label: "الهوية البصرية", description: "من ضعيفة إلى لا تُنسى" },
         { label: "تصميم الموقع", description: "من قديم إلى راقٍ" },
-        { label: "الثقة والمصداقية", description: "من ضعيفة إلى واثقة" },
+        { label: "الحضور المهني", description: "من غائب إلى موثوق" },
         { label: "المواد التسويقية", description: "من بدائية إلى احترافية" },
-        { label: "إبداع الحملات", description: "من منسية إلى راقية" }
-      ]
+        { label: "الحملات الترويجية", description: "من عادية إلى راقية" },
+      ],
     },
   },
 } as const;
