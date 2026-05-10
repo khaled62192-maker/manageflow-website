@@ -1,11 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLang } from "@/i18n/LanguageProvider";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
+
+// Detect if device is touch-capable (mobile/tablet)
+function useTouchDevice() {
+  const [isTouch, setIsTouch] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Detect touch capability
+    const isTouchDevice = () => {
+      return (
+        ("ontouchstart" in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (window.matchMedia("(pointer: coarse)").matches)
+      );
+    };
+
+    setIsTouch(isTouchDevice());
+    setMounted(true);
+  }, []);
+
+  return { isTouch, mounted };
+}
 
 interface ShowcaseCard {
   id: string;
@@ -394,8 +416,22 @@ const mockupComponents: Record<string, React.ComponentType<{ isBefore: boolean }
 export function BeforeAfterShowcase() {
   const { t } = useLang();
   const dict = t.beforeAfter;
+  const { isTouch, mounted } = useTouchDevice();
 
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const [tappedCard, setTappedCard] = useState<string | null>(null);
+
+  const handleCardClick = (cardId: string, e?: React.MouseEvent) => {
+    // Prevent any event bubbling
+    if (e) {
+      e.stopPropagation();
+    }
+
+    // On mobile/touch devices, toggle the tapped state
+    if (isTouch) {
+      setTappedCard(prev => prev === cardId ? null : cardId);
+    }
+  };
 
   return (
     <section className="relative bg-onyx py-24 sm:py-32 lg:py-36">
@@ -404,7 +440,7 @@ export function BeforeAfterShowcase() {
           index="04"
           eyebrow={dict.eyebrow}
           title={dict.title}
-          sub={dict.subtitle}
+          sub={mounted && isTouch ? "Tap to explore what's possible." : dict.subtitle}
         />
 
         <motion.p
@@ -418,10 +454,13 @@ export function BeforeAfterShowcase() {
         </motion.p>
 
         <Reveal y={14} className="mt-10 sm:mt-14">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12">
+          <div className="relative z-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12">
             {showcases.map((showcase, i) => {
               const MockupComponent = mockupComponents[showcase.id];
               const isHovered = hoveredCard === showcase.id;
+              const isTapped = tappedCard === showcase.id;
+              // On mobile (isTouch), use tap state; on desktop, use hover state
+              const isRevealed = isTouch ? isTapped : isHovered;
 
               return (
                 <motion.div
@@ -434,9 +473,14 @@ export function BeforeAfterShowcase() {
                     duration: 0.7,
                     ease: [0.22, 0.61, 0.36, 1]
                   }}
-                  onHoverStart={() => setHoveredCard(showcase.id)}
-                  onHoverEnd={() => setHoveredCard(null)}
-                  className="group"
+                  onHoverStart={() => {
+                    if (!isTouch) setHoveredCard(showcase.id);
+                  }}
+                  onHoverEnd={() => {
+                    if (!isTouch) setHoveredCard(null);
+                  }}
+                  onClick={(e) => handleCardClick(showcase.id, e as React.MouseEvent)}
+                  className={`group ${isTouch ? "cursor-pointer" : ""}`}
                 >
                   {/* Card container */}
                   <div className="relative rounded-[24px] border-2 border-paper/25 bg-gradient-to-br from-onyx to-onyx/50 p-1 transition-all duration-500 hover:border-champagne/40 hover:shadow-[0_0_30px_rgba(194,165,123,0.15)]">
@@ -446,7 +490,7 @@ export function BeforeAfterShowcase() {
                       <motion.div
                         initial={{ opacity: 1, x: 0 }}
                         animate={
-                          isHovered
+                          isRevealed
                             ? { opacity: 0.15, x: -40 }
                             : { opacity: 1, x: 0 }
                         }
@@ -463,7 +507,7 @@ export function BeforeAfterShowcase() {
                       <motion.div
                         initial={{ opacity: 0, x: 40 }}
                         animate={
-                          isHovered
+                          isRevealed
                             ? { opacity: 1, x: 0 }
                             : { opacity: 0, x: 40 }
                         }
@@ -480,7 +524,7 @@ export function BeforeAfterShowcase() {
                       <motion.div
                         initial={{ opacity: 1 }}
                         animate={{
-                          opacity: isHovered ? 0 : 1
+                          opacity: isRevealed ? 0 : 1
                         }}
                         transition={{ duration: 0.3 }}
                         className="absolute bottom-4 left-4 z-30 text-xs text-paper/60"
@@ -491,7 +535,7 @@ export function BeforeAfterShowcase() {
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{
-                          opacity: isHovered ? 1 : 0
+                          opacity: isRevealed ? 1 : 0
                         }}
                         transition={{ duration: 0.3 }}
                         className="absolute bottom-4 right-4 z-30 text-xs text-champagne font-medium"
@@ -503,7 +547,7 @@ export function BeforeAfterShowcase() {
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{
-                          opacity: isHovered ? 1 : 0
+                          opacity: isRevealed ? 1 : 0
                         }}
                         transition={{ duration: 0.4 }}
                         className="absolute inset-0 z-5 bg-gradient-to-r from-transparent via-champagne/5 to-transparent pointer-events-none"
@@ -521,7 +565,7 @@ export function BeforeAfterShowcase() {
                           {showcase.label}
                         </h3>
                         <motion.span
-                          animate={{ opacity: isHovered ? 1 : 0.4 }}
+                          animate={{ opacity: isRevealed ? 1 : 0.4 }}
                           transition={{ duration: 0.3 }}
                           className="text-xs text-champagne font-medium"
                         >
@@ -539,7 +583,7 @@ export function BeforeAfterShowcase() {
 
                       <motion.div
                         initial={{ width: 0 }}
-                        animate={{ width: isHovered ? "100%" : 0 }}
+                        animate={{ width: isRevealed ? "100%" : 0 }}
                         transition={{ duration: 0.5 }}
                         className="h-0.5 bg-gradient-to-r from-champagne to-champagne/0 mt-4"
                       ></motion.div>
@@ -549,7 +593,7 @@ export function BeforeAfterShowcase() {
                   {/* Outer glow */}
                   <motion.div
                     animate={
-                      isHovered
+                      isRevealed
                         ? {
                             boxShadow:
                               "0 0 40px rgba(194, 165, 123, 0.2), 0 0 80px rgba(194, 165, 123, 0.1)"
