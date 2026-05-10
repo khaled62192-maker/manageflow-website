@@ -529,15 +529,15 @@ export const dictionary = {
     },
 
     beforeAfter: {
-      eyebrow: "Our Services in Action",
-      title: "Real transformations. Real value.",
-      subtitle: "Hover to see the difference.",
+      eyebrow: "Concept Transformations",
+      title: "Concept transformations. Real potential.",
+      subtitle: "Hover to explore what's possible.",
       scenarios: [
-        { label: "Brand Identity", description: "From generic to premium" },
-        { label: "Social Media", description: "From zero to growth-ready" },
-        { label: "Website", description: "From outdated to conversion-focused" },
-        { label: "Ads Creative", description: "From placeholder to compelling" },
-        { label: "AI Automation", description: "From manual to seamless" }
+        { label: "Brand Identity", description: "From weak to memorable" },
+        { label: "Website Design", description: "From outdated to premium" },
+        { label: "Trust & Credibility", description: "From weak to confident" },
+        { label: "Sales Materials", description: "From amateur to professional" },
+        { label: "Campaign Creative", description: "From forgettable to premium" }
       ]
     },
   },
@@ -1070,15 +1070,15 @@ export const dictionary = {
     },
 
     beforeAfter: {
-      eyebrow: "خدماتنا في العمل",
-      title: "تحولات حقيقية. قيمة حقيقية.",
-      subtitle: "مرّر الماوس لرؤية الفرق.",
+      eyebrow: "أمثلة تصورية",
+      title: "أمثلة تصورية. إمكانات حقيقية.",
+      subtitle: "مرّر الماوس لاستكشاف ما هو ممكن.",
       scenarios: [
-        { label: "هوية العلامة", description: "من عام إلى متميز" },
-        { label: "وسائل التواصل", description: "من صفر إلى النمو الفعلي" },
-        { label: "الموقع", description: "من قديم إلى محقق نتائج" },
-        { label: "الإعلانات الإبداعية", description: "من اختبار إلى احترافي" },
-        { label: "أتمتة الذكاء الاصطناعي", description: "من يدوي إلى سلس" }
+        { label: "الهوية البصرية", description: "من ضعيفة إلى لا تُنسى" },
+        { label: "تصميم الموقع", description: "من قديم إلى راقٍ" },
+        { label: "الثقة والمصداقية", description: "من ضعيفة إلى واثقة" },
+        { label: "المواد التسويقية", description: "من بدائية إلى احترافية" },
+        { label: "إبداع الحملات", description: "من منسية إلى راقية" }
       ]
     },
   },
