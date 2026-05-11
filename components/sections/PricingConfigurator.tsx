@@ -99,7 +99,7 @@ export function PricingConfigurator() {
               {/* Services Selection */}
               <div>
                 <h3 className="text-[14px] font-medium text-paper mb-4">
-                  Select Services
+                  {dict.selectServices}
                 </h3>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {dict.services.map((service: any, i: number) => {
@@ -111,7 +111,7 @@ export function PricingConfigurator() {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => toggleService(i)}
-                        className={`rounded-[12px] border-2 p-4 text-left transition-all ${
+                        className={`rounded-[12px] border-2 p-4 text-start transition-all ${
                           isSelected
                             ? "border-champagne/60 bg-champagne/10"
                             : "border-paper/20 bg-onyx/50 hover:border-paper/40"
@@ -173,7 +173,7 @@ export function PricingConfigurator() {
                         {dict.options.bilingual}
                       </p>
                       <p className="text-[12px] text-paper/60">
-                        +30% to estimate
+                        {dict.bilingualHelper}
                       </p>
                     </div>
                     <input
@@ -192,8 +192,8 @@ export function PricingConfigurator() {
                   </p>
                   <div className="flex gap-2">
                     {[
-                      { value: "standard", label: "Standard (4-8 weeks)" },
-                      { value: "rush", label: "Rush (+20%)" }
+                      { value: "standard", label: dict.urgencyStandard },
+                      { value: "rush", label: dict.urgencyRush }
                     ].map((option) => (
                       <button
                         key={option.value}

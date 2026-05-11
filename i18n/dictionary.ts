@@ -447,13 +447,16 @@ export const dictionary = {
       contactTitle: "Contact",
       studioTitle: "Studio",
       handcrafted: "Handcrafted in the UAE.",
-      humanTouch: "Working directly with founders and operators who care about details, positioning, and digital trust.",
+      humanTouch: "We work directly with founders and operators who care about detail, positioning, and digital trust.",
+      byAppointment: "By appointment",
+      whatsappCall: "WhatsApp / Call",
     },
 
     floatingWhats: "WhatsApp",
-
     strategyConcierce: {
-      eyebrow: "Build Your Package",
+      eyebrow: "Choose Your Services",
+      businessPlaceholder: "E.g., Restaurant, Beauty, Real Estate…",
+      bilingualOptions: ["Yes", "No"],
       title: "Build your perfect package.",
       subtitle: "Tell us what you need. We'll put the right package together for you.",
       greeting: "Hi! Select what you need and we'll build your package together.",
@@ -510,6 +513,10 @@ export const dictionary = {
       eyebrow: "Pricing Estimator",
       title: "Estimate your project cost.",
       subtitle: "Transparent, flexible pricing based on your scope.",
+      selectServices: "Select Services",
+      bilingualHelper: "+30% to estimate",
+      urgencyStandard: "Standard (4–8 weeks)",
+      urgencyRush: "Rush (+20%)",
       services: [
         { label: "Website Design", description: "Premium responsive business websites" },
         { label: "Brand Identity", description: "Logo, visual system, brand foundations" },
@@ -1019,12 +1026,16 @@ export const dictionary = {
       studioTitle: "الاستوديو",
       handcrafted: "صُنع بحرفية في الإمارات.",
       humanTouch: "نعمل مباشرة مع المؤسّسين والمشغّلين الذين يهتمّون بالتفاصيل والتموضع والثقة الرقمية.",
+      byAppointment: "بموعد مسبق",
+      whatsappCall: "واتساب / اتصال",
     },
 
     floatingWhats: "واتساب",
 
     strategyConcierce: {
       eyebrow: "اختر خدماتك",
+      businessPlaceholder: "مثال: مطعم، تجميل، عقارات…",
+      bilingualOptions: ["نعم", "لا"],
       title: "أخبرنا بما تحتاجه.",
       subtitle: "اختر ما تريد، وسنُعدّ لك الباقة المناسبة.",
       greeting: "مرحباً! اختر من خدماتنا وسنساعدك في بناء باقتك.",
@@ -1081,6 +1092,10 @@ export const dictionary = {
       eyebrow: "حاسبة الأسعار",
       title: "احسب تكلفة مشروعك.",
       subtitle: "أسعار شفافة ومرنة حسب احتياجاتك.",
+      selectServices: "اختر الخدمات",
+      bilingualHelper: "+٣٠٪ على التقدير",
+      urgencyStandard: "عادي (٤–٨ أسابيع)",
+      urgencyRush: "عاجل (+٢٠٪)",
       services: [
         { label: "تصميم الموقع", description: "مواقع أعمال راقية ومتجاوبة" },
         { label: "الهوية البصرية", description: "شعار، نظام بصري، أساسيات الهوية" },

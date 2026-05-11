@@ -25,10 +25,22 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
+    if (open) {
+      // iOS Safari: body overflow:hidden alone doesn't prevent scroll.
+      // Save scroll position, fix body in place, then restore on close.
+      const scrollY = window.scrollY;
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+      return () => {
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.width = "";
+        window.scrollTo(0, scrollY);
+      };
+    }
   }, [open]);
 
   const links = [
@@ -104,11 +116,11 @@ export function Navbar() {
         {open && (
           <motion.div
             key="menu"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-[60] bg-ink text-paper lg:hidden"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.35, ease: [0.22, 0.61, 0.36, 1] }}
+            className="fixed inset-0 z-[60] bg-ink text-paper lg:hidden overflow-y-auto"
           >
             <Container size="wide">
               <div className="flex h-[64px] items-center justify-between sm:h-[72px]">

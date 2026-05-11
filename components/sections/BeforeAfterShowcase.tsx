@@ -34,7 +34,7 @@ const scenarioIds = ["branding", "website", "trust", "sales", "campaign"];
 // ========== BRAND IDENTITY MOCKUP ==========
 function BrandingMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full flex flex-col p-4 gap-4 justify-between bg-onyx/30">
+    <div className="h-full w-full flex flex-col p-4 gap-4 justify-between bg-onyx/60">
       {isBefore ? (
         // BEFORE: Weak fictional brand
         <div className="space-y-3">
@@ -210,7 +210,7 @@ function WebsiteMockup({ isBefore }: { isBefore: boolean }) {
 // ========== TRUST & CREDIBILITY MOCKUP ==========
 function TrustMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full p-4 flex flex-col gap-3 justify-between bg-onyx/30">
+    <div className="h-full w-full p-4 flex flex-col gap-3 justify-between bg-onyx/60">
       {isBefore ? (
         // BEFORE: Weak untrustworthy business
         <div className="space-y-3">
@@ -273,7 +273,7 @@ function TrustMockup({ isBefore }: { isBefore: boolean }) {
 // ========== SALES MATERIALS MOCKUP ==========
 function SalesMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full p-4 flex flex-col gap-3 justify-between bg-onyx/30">
+    <div className="h-full w-full p-4 flex flex-col gap-3 justify-between bg-onyx/60">
       {isBefore ? (
         // BEFORE: Amateur document
         <div className="space-y-2">
@@ -326,7 +326,7 @@ function SalesMockup({ isBefore }: { isBefore: boolean }) {
 // ========== CAMPAIGN CREATIVE MOCKUP ==========
 function CampaignMockup({ isBefore }: { isBefore: boolean }) {
   return (
-    <div className="h-full w-full p-4 flex flex-col justify-between gap-3 bg-onyx/30">
+    <div className="h-full w-full p-4 flex flex-col justify-between gap-3 bg-onyx/60">
       {isBefore ? (
         // BEFORE: Cheap forgettable ad
         <div className="space-y-2 flex-1 flex flex-col justify-center">
@@ -423,7 +423,7 @@ export function BeforeAfterShowcase() {
           index="04"
           eyebrow={dict.eyebrow}
           title={dict.title}
-          sub={mounted && isTouch ? dict.subtitleTouch : dict.subtitle}
+          sub={mounted ? (isTouch ? dict.subtitleTouch : dict.subtitle) : dict.subtitle}
         />
 
         <Reveal y={14} className="mt-10 sm:mt-14">
@@ -454,7 +454,7 @@ export function BeforeAfterShowcase() {
                     if (!isTouch) setHoveredCard(null);
                   }}
                   onClick={(e) => handleCardClick(id, e as React.MouseEvent)}
-                  className={`group ${isTouch ? "cursor-pointer" : ""}`}
+                  className={`group ${isTouch ? "cursor-pointer select-none" : ""}`}
                 >
                   {/* Card container */}
                   <div className="relative rounded-[28px] border border-paper/[0.12] bg-gradient-to-br from-[#171f29] via-onyx/90 to-ink/80 p-1.5 transition-all duration-500 card-lift hover:border-champagne/30">
