@@ -57,6 +57,10 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export const viewport: Viewport = {
@@ -64,6 +68,7 @@ export const viewport: Viewport = {
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -78,6 +83,45 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} ${tajawal.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "ManageFlow",
+              description:
+                "Boutique digital studio crafting premium brand systems, websites, and visual content for ambitious companies across the UAE.",
+              url: "https://manageflow.ae",
+              telephone: "+971568115344",
+              email: "hello@manageflow.ae",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "United Arab Emirates",
+                addressCountry: "AE",
+              },
+              areaServed: {
+                "@type": "Country",
+                name: "United Arab Emirates",
+              },
+              serviceType: [
+                "Brand Identity",
+                "Website Design",
+                "Professional Presence",
+                "Sales Materials",
+                "Promotional Campaigns",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+971568115344",
+                contactType: "customer service",
+                availableLanguage: ["English", "Arabic"],
+              },
+            }),
+          }}
+        />
+      </head>
       <body className="bg-ink text-paper antialiased">
         <LanguageProvider>{children}</LanguageProvider>
       </body>

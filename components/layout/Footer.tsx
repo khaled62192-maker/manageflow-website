@@ -110,6 +110,13 @@ export function Footer() {
           </span>
           <span>{BUSINESS.location}</span>
         </div>
+
+        {/* Privacy notice */}
+        <p className="mt-8 text-center text-[10px] leading-relaxed text-paper/25 max-w-2xl mx-auto">
+          {t.lang === "ar"
+            ? "لا يجمع هذا الموقع بياناتك الشخصية دون موافقتك. تُستخدم المعلومات المُدخلة في النموذج فقط للردّ على استفسارك."
+            : "This website does not collect personal data without your consent. Contact information submitted via forms is used solely to respond to your enquiry."}
+        </p>
       </Container>
     </footer>
   );

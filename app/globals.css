@@ -335,7 +335,100 @@ html[dir="rtl"] .link-underline::after { transform-origin: right; }
 }
 .orb-drift-2 { animation: orb-drift-2 32s ease-in-out infinite; will-change: transform; }
 
-/* Reduce motion */
+/* ================================================================ */
+/* MOBILE / SAFARI / ACCESSIBILITY FIXES                              */
+/* ================================================================ */
+
+/* Safe area insets for iPhone notch/home bar */
+html {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Minimum 48px touch targets on all interactive elements */
+button,
+a,
+input,
+textarea,
+select,
+[role="button"] {
+  min-height: 48px;
+  min-width: 48px;
+}
+button:is(a, .text-sm, .text-xs),
+a:is(.text-sm, .text-xs),
+[role="button"]:is(.text-sm, .text-xs) {
+  min-height: 44px;
+  min-width: auto;
+}
+
+/* Optimize backdrop-filter on mobile */
+@media (max-width: 768px) {
+  .backdrop-blur-sm { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .backdrop-blur-md { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .backdrop-blur-lg { backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .backdrop-blur-xl { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+}
+
+/* iOS form input fixes — prevent auto-zoom and preserve appearance */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 16px; /* Prevents iOS auto-zoom below 16px */
+}
+@media (min-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: inherit;
+  }
+}
+
+/* Hide select arrow on iOS, show custom one instead */
+select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 20px;
+  padding-right: 32px;
+}
+
+/* Disable hover animations on touch-only devices */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover states on buttons and cards */
+  .btn-lift:hover,
+  .card-premium:hover,
+  .card-lift:hover {
+    transform: none;
+    box-shadow: inherit;
+  }
+  /* Disable marquee on touch (battery drain) */
+  .marquee-track {
+    animation: none;
+  }
+  /* Disable orb animations on touch */
+  .orb-1,
+  .orb-2,
+  .orb-3,
+  .orb-drift-2,
+  .hero-orb {
+    animation: none;
+  }
+  /* Reduce motion for ring rotate on touch */
+  .ring-rotate {
+    animation: none;
+  }
+}
+
+/* Reduce motion accessibility — honour OS-level preference */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
