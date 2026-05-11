@@ -1,18 +1,45 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Check, ArrowRight, AlertCircle } from "lucide-react";
 import { useLang } from "@/i18n/LanguageProvider";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
 import { buildWhatsAppLink } from "@/lib/constants";
 
 interface AuditScore {
   label: string;
   score: number;
+}
+
+// Domains we will never audit — our own properties
+const BLOCKED_DOMAINS = [
+  "manageflow.ae",
+  "www.manageflow.ae",
+  "manageflowstudio.ae",
+  "www.manageflowstudio.ae",
+  "manageflowstudio.com",
+  "www.manageflowstudio.com",
+  "manageflow-website.vercel.app",
+  "manageflow-audit-app.vercel.app",
+];
+
+function extractDomain(raw: string): string {
+  try {
+    const withProtocol = raw.startsWith("http") ? raw : `https://${raw}`;
+    return new URL(withProtocol).hostname.toLowerCase().replace(/^www\./, "");
+  } catch {
+    return raw.toLowerCase();
+  }
+}
+
+function isBlockedUrl(raw: string): boolean {
+  const hostname = extractDomain(raw);
+  return BLOCKED_DOMAINS.some(
+    (blocked) => hostname === blocked.replace(/^www\./, "")
+  );
 }
 
 export function WebsiteAudit() {
@@ -23,6 +50,7 @@ export function WebsiteAudit() {
   const [scanning, setScanning] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [results, setResults] = useState<AuditScore[] | null>(null);
+  const [blocked, setBlocked] = useState(false);
 
   // Deterministic pseudo-random score (4–9 range) based on URL hash
   const generateScores = (website: string) => {
@@ -40,6 +68,13 @@ export function WebsiteAudit() {
     e.preventDefault();
     if (!url.trim()) return;
 
+    // Block our own domains from being audited
+    if (isBlockedUrl(url.trim())) {
+      setBlocked(true);
+      return;
+    }
+
+    setBlocked(false);
     setScanning(true);
     setCurrentStep(0);
     setResults(null);
@@ -131,10 +166,36 @@ export function WebsiteAudit() {
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-4 rounded-[24px] border border-paper/12 bg-ink p-6 sm:p-8"
               >
+                {/* Honest disclosure */}
+                <div className="flex items-start gap-2 rounded-[8px] bg-paper/5 border border-paper/10 px-3 py-2.5">
+                  <AlertCircle size={13} className="mt-0.5 shrink-0 text-champagne/70" strokeWidth={2} />
+                  <p className="text-[11px] leading-relaxed text-paper/50">
+                    {lang === "ar"
+                      ? "هذا فحص سريع للمظهر العام — وليس تدقيقاً تقنياً كاملاً. النتائج تعكس انطباعاً أولياً لا تحليلاً معمّقاً."
+                      : "This is a quick surface check — not a full technical audit. Scores reflect a first-impression review, not deep analysis."}
+                  </p>
+                </div>
+
+                {/* Blocked domain message */}
+                {blocked && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-start gap-2 rounded-[8px] bg-red-500/10 border border-red-500/20 px-3 py-2.5"
+                  >
+                    <AlertCircle size={13} className="mt-0.5 shrink-0 text-red-400" strokeWidth={2} />
+                    <p className="text-[11px] leading-relaxed text-red-300">
+                      {lang === "ar"
+                        ? "لا يمكننا مراجعة موقعنا الخاص. جرّب موقعاً آخر!"
+                        : "We can't audit our own website. Try a different URL!"}
+                    </p>
+                  </motion.div>
+                )}
+
                 <input
                   type="url"
                   value={url}
-                  onChange={(e) => setUrl(e.target.value)}
+                  onChange={(e) => { setUrl(e.target.value); setBlocked(false); }}
                   placeholder={dict.inputPlaceholder}
                   className="rounded-[8px] border border-paper/20 bg-onyx px-4 py-3 text-[13px] text-paper placeholder:text-paper/40 outline-none transition-colors focus:border-champagne/55"
                   required
@@ -266,6 +327,11 @@ export function WebsiteAudit() {
                 )}
 
                 <div className="space-y-2 pt-4 border-t border-paper/10">
+                  <p className="text-[10px] text-paper/30 text-center leading-relaxed pb-1">
+                    {lang === "ar"
+                      ? "هذا الفحص تقديري وليس تقنياً — للحصول على تقييم احترافي شامل، تواصل مع فريقنا."
+                      : "These scores are indicative, not technical. For a comprehensive professional review, reach out to our team."}
+                  </p>
                   <a
                     href={whatsappLink}
                     target="_blank"
@@ -279,6 +345,7 @@ export function WebsiteAudit() {
                     onClick={() => {
                       setResults(null);
                       setUrl("");
+                      setBlocked(false);
                     }}
                     className="w-full rounded-[8px] border border-paper/20 px-4 py-3 text-[13px] text-paper transition-colors hover:border-paper/40"
                   >

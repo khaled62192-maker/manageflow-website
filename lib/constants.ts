@@ -1,11 +1,11 @@
 export const BUSINESS = {
   name: "ManageFlow",
   location: "United Arab Emirates",
-  whatsapp: "+971 56 212 6267",
-  whatsappRaw: "971562126267",
-  whatsappLink: "https://wa.me/971562126267",
-  phone: "+971 56 212 6267",
-  phoneLink: "tel:+971562126267",
+  whatsapp: "+971 56 811 5344",
+  whatsappRaw: "9715681115344",
+  whatsappLink: "https://wa.me/9715681115344",
+  phone: "+971 56 811 5344",
+  phoneLink: "tel:+9715681115344",
   email: "hello@manageflow.ae",
   emailLink: "mailto:hello@manageflow.ae",
 } as const;
