@@ -7,9 +7,8 @@ import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import { BUSINESS } from "@/lib/constants";
 
 export function Footer() {
-  const { t, lang } = useLang();
+  const { t } = useLang();
   const year = new Date().getFullYear();
-
 
   const navLinks = [
     { href: "#services", label: t.nav.services },
@@ -114,9 +113,7 @@ export function Footer() {
 
         {/* Privacy notice */}
         <p className="mt-8 text-center text-[10px] leading-relaxed text-paper/25 max-w-2xl mx-auto">
-          {lang === "ar"
-            ? "لا يجمع هذا الموقع بياناتك الشخصية دون موافقتك. تُستخدم المعلومات المُدخلة في النموذج فقط للردّ على استفسارك."
-            : "This website does not collect personal data without your consent. Contact information submitted via forms is used solely to respond to your enquiry."}
+          This website does not collect personal data without your consent. Contact information submitted via forms is used solely to respond to your enquiry.
         </p>
       </Container>
     </footer>
